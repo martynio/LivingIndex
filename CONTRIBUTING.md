@@ -9,6 +9,8 @@ Thank you for your interest. Living Index is currently in the **proposal and dat
 - Evidence about historical coverage, publication revisions, and licensing/attribution conditions.
 - Accessibility and interpretation issues in the proposed product.
 
+Before work, read [AGENTS.md](AGENTS.md), [project status](docs/project/PROJECT_STATUS.md), [roadmap](docs/project/ROADMAP.md), and [work protocol](docs/governance/WORK_PROTOCOL.md). Every substantive human or AI change must be recorded in the [work log](docs/logs/WORK_LOG.md) and [latest handoff](docs/logs/HANDOFF.md), with actual verification evidence and an immutable checkpoint. The repository operator must accept a dependent phase before the next one begins.
+
 Please **open an issue before preparing a substantive pull request**. Describe the problem, source, timeframe, population, unit, and expected interpretation. Research findings are not automatically accepted as production data.
 
 ## Standards

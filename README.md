@@ -50,7 +50,9 @@ The next project gate is a **Poland / Netherlands data-feasibility assessment**,
 | [`web/`](web/) | Future static interface, assets, and PL/EN/NL localization |
 | [`tests/`](tests/) | Future repeatable validation and regression checks |
 
-See the [documentation index](docs/README.md) for navigation.
+For contributors and AI agents, start with [AGENTS.md](AGENTS.md), [current project status](docs/project/PROJECT_STATUS.md), and the [roadmap](docs/project/ROADMAP.md). All substantive changes follow the [work protocol](docs/governance/WORK_PROTOCOL.md) and are recorded in the [work log](docs/logs/WORK_LOG.md).
+
+See the [documentation index](docs/README.md) for full navigation.
 
 ## Data integrity and licensing
 
