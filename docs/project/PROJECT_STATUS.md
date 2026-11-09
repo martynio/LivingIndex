@@ -17,7 +17,7 @@
 
 | Gate | State | Required action |
 | --- | --- | --- |
-| LI-001 documentation quality | In review | Initial documentation check passed (14 paths, 80 internal links); review final PR diff and consistency |
+| LI-001 documentation quality | In review | Initial and independent checks passed (14 PR paths, 80 internal links, 0 unresolved); recheck final amended PR diff and operator review |
 | LI-001 operator acceptance | Pending | Review and approve the PR before `main` merge |
 | LI-002 source feasibility | Not started | Accept LI-001, then define and authorize data-research scope |
 | Publication/legal readiness | Not established | Evaluate actual hosting, telemetry, data provenance, licenses, and policy requirements before LI-003/004 |

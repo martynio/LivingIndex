@@ -16,8 +16,8 @@
 - Work item / authorized scope:
 - Contributor (human or AI tool; exact model if known):
 - Branch and relevant baseline checkpoint:
-- Work log entry: 
-- Updated handoff: 
+- Work log entry:
+- Updated handoff:
 - Operator acceptance gate: **PENDING** until approved
 
 ## Verification

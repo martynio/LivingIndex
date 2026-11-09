@@ -35,3 +35,20 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Handoff:** review PR #1, accept or request corrections, merge only after approval, then refresh status/checkpoint and separately authorize the LI-002 research scope.
 
 ---
+
+---
+
+## LI-LOG-0003 — Independent LI-001 PR verification and editorial correction
+
+- **Date:** 2026-11-09.
+- **Contributor:** ChatGPT (OpenAI GPT-6 assistant, connected GitHub tools); independent review of existing PR #1.
+- **Work item / phase:** LI-001 / VERIFY; documentation-only correction on the existing review branch.
+- **Objective:** Independently examine the open governance PR, correct two trailing-whitespace issues in the PR template, and record verified evidence before the operator gate.
+- **Changed paths:** `.github/pull_request_template.md`, `docs/logs/WORK_LOG.md`, `docs/logs/HANDOFF.md`, `docs/project/PROJECT_STATUS.md`.
+- **Evidence:** [LI-001 PR #1](https://github.com/martynio/LivingIndex/pull/1), examined at pre-review branch HEAD `69044528ba55b53e0c15903e72cb69721b97a063` against baseline `67ccc38d8a29f9300d741e49351d1f65a765f3a7`. The final corrective checkpoint is the Git commit that introduces this record (see PR commit history).
+- **Verification:** **PASS for inspected documentation scope** — 14 changed files; 80 relative Markdown references inspected against the actual Git tree, 0 unresolved paths; no unmatched fenced code blocks; source Project Proposal identical to `main`; no application/data/test files introduced. Two whitespace issues found and corrected as part of this review. **NOT RUN:** application tests (no implemented runtime), CI tests (no configured suite), external URL availability checks, legal/regulatory approval.
+- **Checkpoint / acceptance:** This record is committed on `docs/li-001-governance-roadmap` as part of the corrective review commit; operator acceptance and merge are **PENDING**. A branch commit is not an accepted `main` checkpoint.
+- **Handoff:** recheck current PR HEAD and diff, then review/approve or request corrections. Do not start LI-002 until LI-001 is accepted and checkpointed on `main`.
+
+---
+
