@@ -1,0 +1,36 @@
+# OS/editor local files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.local
+*.secret
+secrets/
+credentials/
+
+# Node/tool caches and build output (if tooling is introduced later)
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+*.log
+
+# Python local tooling (research only, if introduced)
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+
+# Private or licensed datasets must be reviewed before inclusion
+data/private/
+data/tmp/
