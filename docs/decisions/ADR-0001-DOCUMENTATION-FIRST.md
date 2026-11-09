@@ -1,11 +1,11 @@
 # ADR-0001 — Documentation-first project sequence
 
 - **Date:** 2026-11-09
-- **Status:** Proposed for operator acceptance with LI-001 (not merged policy)
+- **Status:** Accepted by operator on 2026-11-09; merged via [PR #1](https://github.com/martynio/LivingIndex/pull/1) at [2192e95](https://github.com/martynio/LivingIndex/commit/2192e95f331aaafab8ee2a10adb217cc7ae2f85b)
 - **Decision owner:** Living Index repository operator
 - **Context:** The project is public, depends on potentially inconsistent historical economic data, and may be worked on by different humans and AI models.
 
-## Decision proposed
+## Decision accepted
 
 Adopt documented project gates, contributor work logs and handoffs **before** building the public website. Verify the internal source registry before displaying sources to visitors. Create the lightweight website shell and accurately grounded legal pages before implementing the public Sources Explorer. Defer charts until data provenance and calculations can be verified.
 

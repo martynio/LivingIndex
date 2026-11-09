@@ -52,3 +52,16 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 
 ---
 
+## LI-LOG-0004 — Operator-approved merge and LI-001 gate closure
+
+- **Date:** 2026-11-09.
+- **Contributor:** Repository operator (explicit LI-001 approval and merge instruction); ChatGPT (OpenAI GPT-6 assistant, connected GitHub tools) performed the merge, verification, and documentation closeout.
+- **Work item / phase:** LI-001 / COMMIT / GATE closure.
+- **Authorization:** Operator explicitly approved LI-001 and instructed to merge [PR #1](https://github.com/martynio/LivingIndex/pull/1), verify the merge/checkpoint, and close the stage gate.
+- **Purpose:** Record that governance documentation was accepted and that the project may proceed to a **separately authorized** LI-002 scoping decision.
+- **Changed paths for closure:** `docs/project/ROADMAP.md`, `docs/project/PROJECT_STATUS.md`, `docs/logs/WORK_LOG.md`, `docs/logs/HANDOFF.md`, `docs/decisions/ADR-0001-DOCUMENTATION-FIRST.md`.
+- **Evidence:** [PR #1](https://github.com/martynio/LivingIndex/pull/1), approved source branch `93b28be8aa4035c30e2efe6208173013e6e1dcf7`, [merge commit `2192e95`](https://github.com/martynio/LivingIndex/commit/2192e95f331aaafab8ee2a10adb217cc7ae2f85b). The follow-up closeout PR and commit can be found in Git history.
+- **Verification:** **PASS (Git / documentation)** — GitHub reported `merged=true`, PR read-back showed `closed` and `merged=true`, `main` HEAD matched the merge SHA, merged commit parents matched baseline and PR head, and both `AGENTS.md` and `ROADMAP.md` were readable from `main`. Previous independent documentation verification: 81 relative links, 0 broken. **NOT RUN:** application/unit tests or CI (not configured); legal review and statistical dataset verification (out of scope).
+- **Checkpoint and gate:** LI-001 **ACCEPTED / CLOSED**; immutable `main` merge checkpoint `2192e95f331aaafab8ee2a10adb217cc7ae2f85b`. Documentation closeout is recorded in a follow-up reviewable commit.
+- **Next step:** LI-002 can be scoped and researched only on separately agreed requirements; no website, legal page, source ingestion or chart implementation is authorized by this gate.
+

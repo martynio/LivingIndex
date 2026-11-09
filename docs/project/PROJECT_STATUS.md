@@ -5,25 +5,27 @@
 ## Current snapshot
 
 - **Product stage:** planning / research preparation; no deployed application.
-- **Last confirmed baseline on `main` when LI-001 began:** [67ccc38](https://github.com/martynio/LivingIndex/commit/67ccc38d8a29f9300d741e49351d1f65a765f3a7).
-- **Current work:** **LI-001 — Governance & Roadmap**, [PR #1 open for operator review](https://github.com/martynio/LivingIndex/pull/1) on `docs/li-001-governance-roadmap`. Initial verification checkpoint: `60062cf`. **Not accepted or merged merely because files exist.**
-- **Next authorized production stage:** **none** until operator accepts LI-001. [LI-002](ROADMAP.md) is the proposed follow-up research stage.
-- **Proposal:** [LI-PP-001 v1.0](LI-PP-001-PROJECT-PROPOSAL-v1.0.md) is recorded as a proposal. Product implementation remains gated.
-- **Application code:** none; web directories are placeholders.
+- **LI-001 — Governance & Roadmap:** **ACCEPTED / GATE CLOSED** by explicit operator decision on 2026-11-09.
+- **Verified accepted merge checkpoint:** [`2192e95f331aaafab8ee2a10adb217cc7ae2f85b`](https://github.com/martynio/LivingIndex/commit/2192e95f331aaafab8ee2a10adb217cc7ae2f85b) on `main`, via [merged PR #1](https://github.com/martynio/LivingIndex/pull/1).
+- **Closure audit:** this status, the roadmap, `WORK_LOG`, `HANDOFF` and ADR-0001 were updated in a separate, reviewable documentation-only closeout change. Consult `main` HEAD and PR history for the subsequent closeout commit; the accepted LI-001 implementation baseline is the merge SHA above.
+- **Next proposed stage:** **LI-002 — Source Registry & Legal Research**. LI-001 no longer blocks its scoping, but LI-002 has **not** been individually scoped or authorized for execution.
+- **Project Proposal:** [LI-PP-001 v1.0](LI-PP-001-PROJECT-PROPOSAL-v1.0.md) remains a project proposal; accepting governance does not automatically authorize product implementation.
+- **Application code:** none; web directories remain placeholders.
 - **Validated economic datasets:** none.
-- **Automated CI / application test suite:** none at the baseline; documentation consistency checks may be recorded for LI-001.
+- **Automated CI / application tests:** no configured application test suite.
 
-## Active gates and blockers
+## Gate register
 
-| Gate | State | Required action |
+| Gate | State | Evidence / next requirement |
 | --- | --- | --- |
-| LI-001 documentation quality | In review | Initial and independent checks passed (14 PR paths, 80 internal links, 0 unresolved); recheck final amended PR diff and operator review |
-| LI-001 operator acceptance | Pending | Review and approve the PR before `main` merge |
-| LI-002 source feasibility | Not started | Accept LI-001, then define and authorize data-research scope |
-| Publication/legal readiness | Not established | Evaluate actual hosting, telemetry, data provenance, licenses, and policy requirements before LI-003/004 |
+| LI-001 documentation quality | **PASS** | Verified 14 PR files; post-review link/path checks passed; proposal unchanged |
+| LI-001 operator approval and merge | **CLOSED / ACCEPTED** | Explicit operator approval, [PR #1 merged](https://github.com/martynio/LivingIndex/pull/1), `main` HEAD verified at `2192e95` following merge |
+| LI-001 closure documentation | **RECORDED** | `ROADMAP`, `PROJECT_STATUS`, `WORK_LOG`, `HANDOFF`, ADR-0001 updated in a dedicated closeout |
+| LI-002 source feasibility | **NOT STARTED** | Separate scope/authorization; inspect current `main` and LI-001 acceptance before work |
+| Publication/legal readiness | **NOT ESTABLISHED** | Verify hosting, data processing, telemetry, source rights and attribution before any public policy claims |
 
 ## Handoff
 
-Start with [AGENTS.md](../../AGENTS.md), [ROADMAP](ROADMAP.md), the [latest handoff](../logs/HANDOFF.md), and the [work log](../logs/WORK_LOG.md). The repository and PR state are the authoritative source for actual commit status.
+Read [AGENTS.md](../../AGENTS.md), [ROADMAP](ROADMAP.md), [WORK_LOG](../logs/WORK_LOG.md) and the [latest handoff](../logs/HANDOFF.md). Before each iteration, independently verify Git HEAD, relevant PRs, current files and open gates.
 
-Do not replace this page with an inferred deployment status or a report copied from an AI run.
+**Acceptance of LI-001 closes only the governance stage.** It does not approve LI-002 implementation, publishing any website, the legal pages or data import.
