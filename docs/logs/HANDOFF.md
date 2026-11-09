@@ -1,6 +1,6 @@
 # Living Index — latest contributor handoff
 
-**Updated:** 2026-11-09 · **Work item:** LI-001 · **State:** documentation changes prepared for PR review, not yet accepted on `main`.
+**Updated:** 2026-11-09 · **Work item:** LI-001 · **State:** [PR #1](https://github.com/martynio/LivingIndex/pull/1) **OPEN / REVIEW PENDING**; not accepted on `main`.
 
 ## Read this first
 
@@ -13,7 +13,7 @@
 
 - Repository: `martynio/LivingIndex` (public).
 - Confirmed `main` starting checkpoint: `67ccc38d8a29f9300d741e49351d1f65a765f3a7`.
-- LI-001 content is on a feature branch for review; inspect live Git/PR for its actual current head and acceptance state.
+- LI-001 content is on branch `docs/li-001-governance-roadmap`; initial verified commit `60062cf2065ba23a3cad4229946e6f797c83cf47`. Review [PR #1](https://github.com/martynio/LivingIndex/pull/1) and inspect Git for the most recent head (this log update may add another commit).
 - No deployed web interface, verified statistical dataset, or application CI/test suite.
 
 ## LI-001 delivered for review
@@ -26,7 +26,7 @@
 
 ## Verification to preserve
 
-Before acceptance, check the complete changed-file list; resolve Markdown links; verify no unintended code/data additions; check status versus roadmap versus Proposal; ensure the history log carries a real commit reference and honest test outcomes.
+Initial checks passed: 14 changed paths, 80 internal links, 0 broken, no code/data/test edits, Proposal preserved. **NOT RUN:** app tests (no runtime). Before acceptance, confirm the final PR diff and verify no subsequent changes introduced issues.
 
 ## Blocking gate
 

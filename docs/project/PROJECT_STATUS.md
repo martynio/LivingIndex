@@ -6,7 +6,7 @@
 
 - **Product stage:** planning / research preparation; no deployed application.
 - **Last confirmed baseline on `main` when LI-001 began:** [67ccc38](https://github.com/martynio/LivingIndex/commit/67ccc38d8a29f9300d741e49351d1f65a765f3a7).
-- **Current work:** **LI-001 — Governance & Roadmap**, prepared for review on a separate branch. **Not accepted or merged merely because files exist.**
+- **Current work:** **LI-001 — Governance & Roadmap**, [PR #1 open for operator review](https://github.com/martynio/LivingIndex/pull/1) on `docs/li-001-governance-roadmap`. Initial verification checkpoint: `60062cf`. **Not accepted or merged merely because files exist.**
 - **Next authorized production stage:** **none** until operator accepts LI-001. [LI-002](ROADMAP.md) is the proposed follow-up research stage.
 - **Proposal:** [LI-PP-001 v1.0](LI-PP-001-PROJECT-PROPOSAL-v1.0.md) is recorded as a proposal. Product implementation remains gated.
 - **Application code:** none; web directories are placeholders.
@@ -17,7 +17,7 @@
 
 | Gate | State | Required action |
 | --- | --- | --- |
-| LI-001 documentation quality | In review | Verify Markdown links, internal consistency, and change scope |
+| LI-001 documentation quality | In review | Initial documentation check passed (14 paths, 80 internal links); review final PR diff and consistency |
 | LI-001 operator acceptance | Pending | Review and approve the PR before `main` merge |
 | LI-002 source feasibility | Not started | Accept LI-001, then define and authorize data-research scope |
 | Publication/legal readiness | Not established | Evaluate actual hosting, telemetry, data provenance, licenses, and policy requirements before LI-003/004 |
