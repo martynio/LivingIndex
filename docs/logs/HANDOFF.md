@@ -1,39 +1,40 @@
 # Living Index — latest contributor handoff
 
-**Updated:** 2026-11-09 · **Work item:** LI-001 closeout · **State:** **ACCEPTED / GATE CLOSED** by the repository operator; [PR #1](https://github.com/martynio/LivingIndex/pull/1) merged on `main`.
+**Updated:** 2026-11-10 · **Work item:** LI-002 / source and legal discovery · **State:** first-pass research **IN REVIEW**, full LI-002 gate **OPEN**.
 
-## Read before continuing
+## Start here
 
-- [Current status](../project/PROJECT_STATUS.md)
+- [Project status](../project/PROJECT_STATUS.md)
 - [Roadmap](../project/ROADMAP.md)
+- [AGENTS.md](../../AGENTS.md)
 - [Work protocol](../governance/WORK_PROTOCOL.md)
+- [Research scope](../research/LI-002-SCOPE-AND-GATE.md)
+- [Source registry](../research/SOURCE_REGISTRY.md) / [CSV](../research/SOURCE_REGISTRY.csv)
+- [Feasibility matrix](../research/FEASIBILITY_MATRIX.md)
+- [Legal research](../research/LEGAL_RESEARCH.md)
 - [Work log](WORK_LOG.md)
-- [Proposal](../project/LI-PP-001-PROJECT-PROPOSAL-v1.0.md)
 
-## Accepted checkpoint
+## Verified baseline
 
-- Repository: public `martynio/LivingIndex`, default branch `main`.
-- Operator-approved LI-001 branch commit: `93b28be8aa4035c30e2efe6208173013e6e1dcf7`.
-- Verified merge commit on `main`: [`2192e95f331aaafab8ee2a10adb217cc7ae2f85b`](https://github.com/martynio/LivingIndex/commit/2192e95f331aaafab8ee2a10adb217cc7ae2f85b).
-- LI-001 closeout state is recorded in a follow-up documentation-only change. Always query the live branch HEAD and PR history; do not assume the fixed merge SHA remains the most recent commit.
+- Repository `martynio/LivingIndex`; accepted LI-001 main checkpoint: `af9362d71f11c65f16532ca568372e003fb0c0ee`.
+- Before LI-002, `main` had no open PRs and there was no implemented application/data-ingestion test suite.
+- This LI-002 research tranche is on branch `research/li-002-source-and-legal-discovery`; query Git for exact current head and PR state.
 
-## What is delivered
+## Research delivered for review
 
-- `AGENTS.md` for model-independent contributor onboarding.
-- Sequenced roadmap and work approval gates.
-- Human/AI work protocol, append-only audit log, and short handoff.
-- ADR-0001 documenting documentation-first design.
-- Contributor instructions and traceable pull-request template.
+- Official publisher metadata for CPI, wages, household budgets and life satisfaction, registered with stable IDs.
+- PL/NL coverage and comparability gap assessment (especially the proposed 2020 HBS scenario).
+- Separate source reuse and methodological suitability statuses.
+- Preliminary official-source legal requirements for cookies/privacy/operator identity/hosting/terms and data attribution.
+- No values downloaded, no application implemented, and no public legal pages created.
 
-## Verification evidence
+## Verification and blockers
 
-- PR #1 was verified on a review branch, and after merge GitHub returned `merged=true` with merge SHA `2192e95...`.
-- Independent reads confirmed PR #1 in state `closed`/`merged`, the expected merge commit with both parents, and `main` at that commit.
-- Prior documentation verification: **PASS** for 81 relative links, 0 broken; no unmatched fences or trailing whitespace in reviewed paths; Project Proposal preserved.
-- **NOT RUN:** application tests (no implementation), CI tests (no configured suite), external link uptime checks, legal compliance review.
+- Public primary source pages reviewed on 2026-11-10; see exact links in research documents.
+- **NOT RUN:** numeric cross-country validation, app tests/CI (none exist), a deployed-site request/cookie audit, legal counsel review.
+- **CRITICAL BLOCKER:** no demonstrated compatible net paid-hours denominator and household expense basket across both countries.
+- Rights conditions must be confirmed per actual data table and output; CBS microdata cannot be treated as open redistribution material.
 
-## Current blockers and next permitted work
+## Next permitted action
 
-There is **no LI-001 dependency blocker**. The next project stage, **LI-002 — Source Registry & Legal Research**, may be **discussed/scoped**; its execution needs its own explicit authorization and source-evidence acceptance criteria. Do not begin LI-003 website production, legal text publication, or chart/data production.
-
-Future contributors must verify `main` HEAD, record a new work-log entry, and follow the reviewed change protocol.
+Review this research PR and decide whether to accept the **discovery tranche**, continue detailed LI-002 dataset checks, and which sources deserve numerical proof. **Do not begin LI-003 or close LI-002 merely because the registry exists.**

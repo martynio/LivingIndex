@@ -65,3 +65,16 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Checkpoint and gate:** LI-001 **ACCEPTED / CLOSED**; immutable `main` merge checkpoint `2192e95f331aaafab8ee2a10adb217cc7ae2f85b`. Documentation closeout is recorded in a follow-up reviewable commit.
 - **Next step:** LI-002 can be scoped and researched only on separately agreed requirements; no website, legal page, source ingestion or chart implementation is authorized by this gate.
 
+## LI-LOG-0005 — LI-002 official-source discovery, reuse and website requirements
+
+- **Date:** 2026-11-10.
+- **Contributor:** ChatGPT (OpenAI GPT-6 assistant; official public web research and connected GitHub tools), following operator request to continue Living Index.
+- **Work item / phase:** LI-002 / first-pass RESEARCH; **not** complete-data sign-off.
+- **Baseline:** Accepted and closed LI-001; `main` at `af9362d71f11c65f16532ca568372e003fb0c0ee` on 2026-11-10 with no open PRs before the research branch was created.
+- **Objective:** Build a provenance-oriented registry for PL/NL source candidates, evaluate historical-data limitations and research preliminary legal/data-rights requirements for future web publication.
+- **Changed paths:** `docs/research/` index and new source registry (Markdown/CSV), feasibility matrix, legal research and tranche scope; `docs/project/ROADMAP.md`, `docs/project/PROJECT_STATUS.md`, `docs/logs/WORK_LOG.md` and `docs/logs/HANDOFF.md`.
+- **Sources:** Official CBS StatLine data portal (`71905ned`), CBS `81432ENG`, GUS CPI/wage/budget publications, Eurostat HBS/`ilc_pw01`, CBS/GUS/Eurostat reuse notices, Dutch government/Autoriteit Persoonsgegevens and EU GDPR transparency guidance. See linked primary pages and verification dates in `SOURCE_REGISTRY.md` and `LEGAL_RESEARCH.md`.
+- **Verification:** Publisher pages reviewed; record distinguishes metadata verification from checked numeric observations. No statistical import or legal-compliance claim. **NOT RUN:** runtime/unit/CI tests (no application); numerical reconciliation, every country-specific HBS cell, hosting scan, and legal counsel review.
+- **Checkpoint / review:** Research branch `research/li-002-source-and-legal-discovery`; commit and PR are traceable in Git history. **Operator acceptance pending**; no automatic merge or LI-003 authorization.
+- **Handoff:** Review evidence and source statuses, then investigate actual PL/NL HBS cells, paired net-income/hour inputs, dataset-specific reuse and real site hosting before closing the LI-002 gate.
+
