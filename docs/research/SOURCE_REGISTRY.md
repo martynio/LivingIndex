@@ -16,6 +16,9 @@ The canonical machine-readable index is [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.cs
 | LI-SRC-006 | GUS (PL) | Household income and spending | 2025 household-budget publication and publicly linked historical archive | Single publication checked; historical harmonization **unverified** |
 | LI-SRC-007 | CBS (NL) | Household expenditure microdata | CBS microdata listing 1978–2004, 2012, 2013, 2015, 2020 | **Not approved for redistribution**; avoid using as public data |
 | LI-SRC-008 | Eurostat | Life satisfaction survey | EU-SILC indicator `ilc_pw01`, 2022 wave, score 0–10 | Candidate, not % respondents satisfied |
+| LI-SRC-009 | Eurostat | HBS household mean expenditure | Exact table `hbs_exp_t121`, 1988–2020 table coverage; PL/NL 2020 country wave confirmed in official metadata | **Dataset identified; cell values / flags still unchecked** |
+| LI-SRC-010 | Eurostat | HBS expenditure structure by household type | Exact table `hbs_str_t224`, 1988–2020; per-mille proportions | **Not equivalent to absolute expenditure** |
+| LI-SRC-011 | CBS (NL) | 2020 household income / expenditure public summary | CBS article cites annual disposable income, expenditure and savings for 2015/2020 | 2020 publication flags preliminary figures; COVID spending anomaly |
 
 ## Publisher sources
 
@@ -24,6 +27,10 @@ The canonical machine-readable index is [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.cs
 - [GUS average monthly earnings 1950–2025](https://stat.gov.pl/obszary-tematyczne/rynek-pracy/pracujacy-zatrudnieni-wynagrodzenia-koszty-pracy/przecietne-miesieczne-wynagrodzenie-w-gospodarce-narodowej-w-latach-1950-2025%2C2%2C1.html).
 - [CBS `81432ENG` earnings / hours](https://www.cbs.nl/en-gb/figures/detail/81432ENG).
 - [Eurostat HBS — information on data](https://ec.europa.eu/eurostat/en/web/household-budget-surveys/information-data).
+- [Eurostat official HBS country/year metadata](https://ec.europa.eu/eurostat/cache/metadata/en/hbs_esms.htm) — NL and PL both marked as participating in 2020.
+- [Eurostat `hbs_exp_t121` expenditure table](https://ec.europa.eu/eurostat/databrowser/product/view/hbs_exp_t121?lang=en) — DOI `10.2908/hbs_exp_t121`, 1988–2020 reported table coverage.
+- [Eurostat `hbs_str_t224` structure by household type](https://ec.europa.eu/eurostat/databrowser/view/hbs_str_t224/default/table?category=livcon.hbs.hbs_struc&lang=en) — DOI `10.2908/hbs_str_t224`, 1988–2020 table coverage.
+- [CBS 2020 budget/income public summary](https://www.cbs.nl/item?sc_itemid=f6a7ad70-31b4-47bd-a7cf-bca7a7e58978&sc_lang=nl-nl) — 2020 observations described as provisional in the original publication.
 - [GUS 2025 household budget report](https://stat.gov.pl/obszary-tematyczne/warunki-zycia/dochody-wydatki-i-warunki-zycia-ludnosci/budzety-gospodarstw-domowych-w-2025-r-%2C9%2C24.html).
 - [CBS budget survey microdata listing](https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/budgetonderzoek-bestedingen-particuliere-huishoudens).
 - [Eurostat life satisfaction indicator `ilc_pw01`](https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20240115-1).
@@ -46,3 +53,9 @@ A public source card may be built from independently verifiable metadata after r
 - `source_url` is a stable publisher reference where possible; exact data exports and timestamps remain future work.
 
 For feasibility and blockers, see [FEASIBILITY_MATRIX.md](FEASIBILITY_MATRIX.md). For rights and site requirements, see [LEGAL_RESEARCH.md](LEGAL_RESEARCH.md).
+
+## 2020 discovery addendum (2026-11-10)
+
+Eurostat's [HBS metadata table](https://ec.europa.eu/eurostat/cache/metadata/en/hbs_esms.htm) lists both **Netherlands and Poland** as 2020 wave participants. The source reports historical wave participation (NL from 1988; PL from 1999), but participation does **not** prove that every category x household-type x unit cell is non-missing. The next task is to inspect actual selected observations and flags in `hbs_exp_t121` and `hbs_str_t224`.
+
+This improves confidence in the 2020 research anchor but **does not** establish a complete comparable household budget or net-hourly economic model.

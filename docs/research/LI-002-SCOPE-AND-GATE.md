@@ -32,7 +32,7 @@ Create a credible, traceable first-pass **Poland / Netherlands** primary-source 
 
 ## Full LI-002 stage exit (not yet satisfied)
 
-- Verify exact public HBS observations and comparative units for PL/NL, particularly 2020.
+- Using verified public HBS IDs `hbs_exp_t121` and `hbs_str_t224`, retrieve actual PL/NL 2020 observations, units, flags and harmonization details.
 - Verify one complete, consistent scenario **per country**, or revise proposed MVP scope.
 - Resolve dataset-specific reuse and attribution decisions for proposed public cards.
 - Confirm actual hosting/data-flow decisions needed for LI-003 policy writing.

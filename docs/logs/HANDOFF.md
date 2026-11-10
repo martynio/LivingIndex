@@ -22,7 +22,7 @@
 
 ## Research delivered for review
 
-- Official publisher metadata for CPI, wages, household budgets and life satisfaction, registered with stable IDs.
+- Official publisher metadata for CPI, wages, household budgets and life satisfaction, registered with stable IDs (now including HBS dataset codes `hbs_exp_t121` and `hbs_str_t224` plus a public CBS 2020 reference).
 - PL/NL coverage and comparability gap assessment (especially the proposed 2020 HBS scenario).
 - Separate source reuse and methodological suitability statuses.
 - Preliminary official-source legal requirements for cookies/privacy/operator identity/hosting/terms and data attribution.
@@ -32,7 +32,7 @@
 
 - Public primary source pages reviewed on 2026-11-10; see exact links in research documents.
 - **NOT RUN:** numeric cross-country validation, app tests/CI (none exist), a deployed-site request/cookie audit, legal counsel review.
-- **CRITICAL BLOCKER:** no demonstrated compatible net paid-hours denominator and household expense basket across both countries.
+- **CRITICAL BLOCKER:** PL/NL 2020 HBS country/wave presence is confirmed, but individual selected **value cells/flags and comparability** remain unverified; no demonstrated compatible net paid-hours denominator.
 - Rights conditions must be confirmed per actual data table and output; CBS microdata cannot be treated as open redistribution material.
 
 ## Next permitted action
