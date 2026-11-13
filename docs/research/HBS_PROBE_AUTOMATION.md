@@ -1,6 +1,6 @@
 # LI-002 — Manual Eurostat HBS API probe (GitHub Actions)
 
-**Status:** proposed for review in the current LI-002 probe PR. The automated network run is **NOT YET EXECUTED**.  
+**Status:** proposed for review in the current LI-002 probe PR. The automated network run is **NOT YET EXECUTED**.
 **Purpose:** get reproducible first-party JSON-stat 2.0 evidence for a narrow 2020 PL/NL subset without deploying the website.
 
 ## Scope and operation

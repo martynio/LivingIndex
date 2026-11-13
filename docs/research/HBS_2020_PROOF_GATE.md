@@ -72,4 +72,4 @@ Run the documented official API probe in a network-enabled environment; attach a
 
 ## Automation proposed after accepted PR #4
 
-A separate, manual-only [GitHub Actions research probe](HBS_PROBE_AUTOMATION.md) has been drafted to execute this request from a GitHub-hosted runner. Its local synthetic-unit tests passed, but it **cannot** establish a successful Eurostat retrieval until the workflow is reviewed, merged into \`main\`, and actually run. A web-domain setup is not needed.
+A separate, manual-only [GitHub Actions research probe](HBS_PROBE_AUTOMATION.md) has been drafted to execute this request from a GitHub-hosted runner. Its local synthetic-unit tests passed, but it **cannot** establish a successful Eurostat retrieval until the workflow is reviewed, merged into `main`, and actually run. A web-domain setup is not needed.
