@@ -1,0 +1,27 @@
+name: LI-002 Eurostat HBS research probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hbs-2020-observation-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out research code
+        uses: actions/checkout@v4
+      - name: Validate the probe against synthetic fixtures
+        run: python3 -m unittest discover -s tests -p 'test_hbs_probe.py' -v
+      - name: Retrieve official Eurostat 2020 PL/NL observations
+        run: python3 scripts/hbs_probe.py --output research-output/hbs-2020-report.json
+      - name: Preserve report even when the API request fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: li-002-hbs-2020-probe-report
+          path: research-output/hbs-2020-report.json
+          if-no-files-found: warn
+          retention-days: 7
