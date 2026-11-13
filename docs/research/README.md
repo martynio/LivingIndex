@@ -10,6 +10,7 @@
 | [SOURCE_REGISTRY.md](SOURCE_REGISTRY.md) | Human-readable source inventory and publisher references |
 | [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.csv) | Model-readable registry; stable source IDs and independent status fields |
 | [FEASIBILITY_MATRIX.md](FEASIBILITY_MATRIX.md) | Historical PL/NL coverage candidates and critical missing links |
+| [HBS_2020_PROOF_GATE.md](HBS_2020_PROOF_GATE.md) | Reproducible 2020 HBS PL/NL cell probe, dimensions, methodology and blocker verdict |
 | [LEGAL_RESEARCH.md](LEGAL_RESEARCH.md) | Source reuse, privacy/cookie and hosting/legal readiness research |
 
 ## Integrity rules

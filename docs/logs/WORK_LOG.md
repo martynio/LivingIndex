@@ -103,3 +103,16 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Checkpoint:** `229062bfbd7183399ec10f1762680b5a550d25c9` accepted on `main`; this administrative record is committed and reviewed separately.
 - **Next step:** Narrow, reproducible HBS 2020 sample proof and definitions audit; stop if the actual API observations remain inaccessible.
 
+## LI-LOG-0008 — HBS 2020 proof design and blocked data retrieval
+
+- **Date:** 2026-11-13.
+- **Contributor:** ChatGPT (OpenAI GPT-6 assistant using official-source public web research, local access probe and GitHub connector).
+- **Work item:** LI-002 / 2020 observation-proof research; separate from accepted PR #3 discovery.
+- **Purpose:** Define reproducible exact-cell criteria for Eurostat `hbs_exp_t121`, surface PPS-per-household interpretation and owner-occupied imputed-rent caveat, and document the inability to substantiate numeric PL/NL cells in the current environment.
+- **Changed paths:** `docs/research/HBS_2020_PROOF_GATE.md`, `docs/research/README.md`, `docs/research/FEASIBILITY_MATRIX.md`, `docs/project/PROJECT_STATUS.md`, `docs/logs/WORK_LOG.md`, `docs/logs/HANDOFF.md`.
+- **External evidence:** Eurostat `hbs_exp_t121` (DOI 10.2908/hbs_exp_t121), HBS 2020 scientific-use wave country listing, HBS metadata/methodology, Eurostat API guidance, and reuse notice; links and verified scope in the proof document.
+- **Execution evidence:** API requests through available web interface did not return dataset JSON; local network test returned `URLError: [Errno -3] Temporary failure in name resolution`. **Do not interpret this as an Eurostat outage**: it is an access limitation of the execution environment.
+- **Verification:** **PASS** for documented source IDs, schema-aware proof recipe and clearly described limitations. **BLOCKED / NOT RUN**: dataset response download, hash, numeric observation reconciliation, source flags, end-to-end HBS numerical comparison, CI/app tests (none configured).
+- **Checkpoint:** research commit and review PR on `research/li-002-hbs-2020-proof-gate`; exact SHA in repository history. **Operator approval pending**; LI-002 full stage remains OPEN.
+- **Handoff:** run the official API query where network access is available, document actual source observations and flags, then decide whether PL/NL 2020 expenditure is comparably representable in the first dashboard.
+

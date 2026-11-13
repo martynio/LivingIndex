@@ -1,6 +1,6 @@
 # Living Index — latest contributor handoff
 
-**Updated:** 2026-11-13 · **Phase:** LI-002 / official data feasibility · **State:** first discovery tranche accepted; full numerical and legal gate **OPEN**.
+**Updated:** 2026-11-13 · **Phase:** LI-002 / HBS 2020 observation proof · **State:** discovery tranche merged; numerical retrieval **BLOCKED**, full LI-002 gate **OPEN**.
 
 ## Project baseline
 
@@ -19,6 +19,10 @@
 - PR #3 independently verified: 11 source IDs; 34 internal links with 0 missing; no runtime/data changes.
 - **NOT RUN:** selected 2020 HBS numeric cells, harmonization of net wages and paid hours, site/host privacy scan, runtime CI.
 
+## Latest research result
+
+The [HBS 2020 proof gate](../research/HBS_2020_PROOF_GATE.md) defines the exact `PL/NL` 2020 API query and required cell-status checks. Actual response JSON could not be retrieved in this environment; the work deliberately records **no invented numeric observations**. Dataset `hbs_exp_t121` is displayed in **PPS per household**, not directly in local-currency monthly budgets. Owner-occupied imputed rent requires separate methodological treatment.
+
 ## Next permitted task
 
-Continue bounded LI-002 research on actual 2020 HBS observations and definitions. Record sources, retrieve and preserve flags, avoid interpreting PPS/household as national-currency monthly spending. No LI-003 implementation without full LI-002 decision gate.
+Run the bounded LI-002 2020 HBS API observation probe in a network-enabled environment, preserve retrieval evidence, and then evaluate matched PL/NL values and definitions. Record sources, retrieve and preserve flags, avoid interpreting PPS/household as national-currency monthly spending. No LI-003 implementation without full LI-002 decision gate.
