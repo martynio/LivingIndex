@@ -68,3 +68,8 @@ curl --fail-with-body --location --show-error \
 ## Next action
 
 Run the documented official API probe in a network-enabled environment; attach actual response checksum and selected metadata/flags as evidence; decide `PASS` or `ISSUES` on each gate. The **full LI-002 stage must not close until an accepted reproducible scenario per country or an explicit scope change exists**.
+
+
+## Automation proposed after accepted PR #4
+
+A separate, manual-only [GitHub Actions research probe](HBS_PROBE_AUTOMATION.md) has been drafted to execute this request from a GitHub-hosted runner. Its local synthetic-unit tests passed, but it **cannot** establish a successful Eurostat retrieval until the workflow is reviewed, merged into \`main\`, and actually run. A web-domain setup is not needed.

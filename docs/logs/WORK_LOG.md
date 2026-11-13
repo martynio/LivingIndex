@@ -116,3 +116,26 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Checkpoint:** research commit and review PR on `research/li-002-hbs-2020-proof-gate`; exact SHA in repository history. **Operator approval pending**; LI-002 full stage remains OPEN.
 - **Handoff:** run the official API query where network access is available, document actual source observations and flags, then decide whether PL/NL 2020 expenditure is comparably representable in the first dashboard.
 
+## LI-LOG-0009 — Reviewed and merged HBS 2020 proof contract
+
+- **Date:** 2026-11-13.
+- **Contributor:** ChatGPT (OpenAI GPT-6 assistant; connected GitHub tools) following operator instruction to proceed with a manual Eurostat probe.
+- **Work item:** LI-002 / audit and merge of previous [PR #4](https://github.com/martynio/LivingIndex/pull/4).
+- **Scope:** verify PR #4 against \`main\`, check documentation scope, continuity of work log and cross-links; merge the accepted research-proof contract before dependent automation work.
+- **Evidence:** PR #4 head \`8f930e0650964f11807e7fc378da361b7947b670\`, baseline \`229062bfbd7183399ec10f1762680b5a550d25c9\`; clean merge; 7 changed documents and 33 valid relative Markdown references; no runtime or economic dataset changes.
+- **Verification:** **PASS** — GitHub returned \`merged=true\`, PR was closed, and \`main\` HEAD matched [\`e9fcb1cb6c953e356a06e4b2910f99a183180a7f\`](https://github.com/martynio/LivingIndex/commit/e9fcb1cb6c953e356a06e4b2910f99a183180a7f), with correct two merge parents. No numerical API retrieval.
+- **Checkpoint:** \`e9fcb1cb6c953e356a06e4b2910f99a183180a7f\` on \`main\`, first prior research contract accepted. LI-002 full gate remains **OPEN**.
+- **Handoff:** Implement a read-only, manually invoked GitHub-hosted Eurostat API check in an isolated PR; no website or automatic publishing.
+
+## LI-LOG-0010 — LI-002 manual Eurostat HBS observation probe
+
+- **Date:** 2026-11-13.
+- **Contributor:** ChatGPT (OpenAI GPT-6 assistant; tested with local Python 3.13 and connected GitHub tools).
+- **Work item:** LI-002 / manually triggered, read-only research runner.
+- **Objective:** Produce a reproducible, bounded official Eurostat JSON-stat \`PL/NL\` 2020 \`CP01\` \`PPS_HH\` probe, preserving source flags/checksum and failing closed on missing or ambiguous data.
+- **Changed paths:** \`.github/workflows/li-002-hbs-probe.yml\`, \`scripts/hbs_probe.py\`, \`tests/test_hbs_probe.py\`, \`docs/research/HBS_PROBE_AUTOMATION.md\`, research indexes/proof-gate, project status/roadmap and work log/handoff.
+- **Scope / safeguards:** workflow dispatch only, read-only \`contents\` permission, timeout, bounded HTTP response, 7-day report artifact, no raw source redistribution, no auto-commit, no deploy, no secrets or new service.
+- **Evidence:** Local \`python3 -m unittest discover -s tests -p 'test_hbs_probe.py' -v\`: **8/8 PASS**. \`python3 -m py_compile\`: **PASS**. Local live network attempt: **BLOCKED**, DNS resolution failure; JSON report emitted with error, no fabricated observations. After GitHub push, repository blob hashes for the three executable files matched locally tested files (see PR diff and blob SHA).
+- **NOT RUN:** GitHub Actions execution (workflow must first be on default branch); actual Eurostat observation comparison, dataset licensing approval, production application tests.
+- **Checkpoint and acceptance:** implementation branch \`research/li-002-hbs-action-probe\`, traceable commit and review PR. **Operator acceptance PENDING**; no automatic merge of this new iteration.
+- **Handoff:** approve/reject this specific PR, then manually dispatch workflow from \`main\`, inspect report/status/flags, record run and independently check methodology before any LI-002 stage gate.
