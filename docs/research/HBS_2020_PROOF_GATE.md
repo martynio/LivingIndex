@@ -1,8 +1,8 @@
 # LI-002 — HBS 2020 observation proof gate (Poland / Netherlands)
 
-**Date:** 2026-11-13  
-**Stage:** LI-002 research, numerical proof not yet obtained  
-**Verification verdict:** **BLOCKED — no successfully retrieved PL/NL numeric observation pair**  
+**Date:** 2026-11-13
+**Stage:** LI-002 research, numerical proof not yet obtained
+**Verification verdict:** **BLOCKED — no successfully retrieved PL/NL numeric observation pair**
 **Producer:** ChatGPT (GPT-6, official-publication review and GitHub repository tools)
 
 ## Question
