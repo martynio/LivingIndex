@@ -90,3 +90,16 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Checkpoint / gate:** correction committed to LI-002 branch (exact SHA in Git PR history); **operator review pending**, no stage or website acceptance.
 - **Handoff:** inspect numeric 2020 PL/NL HBS records and flags, make reproducible subset and check coherence; preserve COVID-2020 warning.
 
+## LI-LOG-0007 — Operator-directed review and merge of LI-002 discovery tranche
+
+- **Date:** 2026-11-13.
+- **Contributor:** ChatGPT (OpenAI GPT-6 assistant using connected GitHub tools); repository operator instructed PR #3 audit and continuation.
+- **Work item:** LI-002 discovery tranche / VERIFY and COMMIT-GATE; NOT the full LI-002 stage exit.
+- **Baseline:** `main` at `af9362d71f11c65f16532ca568372e003fb0c0ee` before merge, [PR #3](https://github.com/martynio/LivingIndex/pull/3) at `e19a373d68f83fd73eba1d0ab9e3ea027507ff36`.
+- **Scope:** Independently review source registry, official source statements, internal links, source IDs, scope changes and audit continuity; merge only after checks.
+- **Verification:** **PASS** — 11 distinct source IDs, 34 valid internal links, 0 broken, 0 unmatched Markdown fences/trailing whitespace in checked files; all 6 previous work log IDs preserved. No `data/` or `web/` edits, PR marked clean before merge. Publisher pages for GUS historical salaries and Eurostat HBS table identification inspected. **NOT RUN:** original numeric HBS cell retrieval, app/CI tests (none configured), legal advice.
+- **Outcome:** [PR #3 merged](https://github.com/martynio/LivingIndex/pull/3) on `main`. GitHub independently returned `merged=true`, branch HEAD matching [`229062bfbd7183399ec10f1762680b5a550d25c9`](https://github.com/martynio/LivingIndex/commit/229062bfbd7183399ec10f1762680b5a550d25c9), and two expected merge parents. Full LI-002 research gate remains open.
+- **Changed paths for closeout:** `docs/project/ROADMAP.md`, `docs/project/PROJECT_STATUS.md`, `docs/logs/WORK_LOG.md`, `docs/logs/HANDOFF.md`.
+- **Checkpoint:** `229062bfbd7183399ec10f1762680b5a550d25c9` accepted on `main`; this administrative record is committed and reviewed separately.
+- **Next step:** Narrow, reproducible HBS 2020 sample proof and definitions audit; stop if the actual API observations remain inaccessible.
+
