@@ -139,3 +139,17 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **NOT RUN:** GitHub Actions execution (workflow must first be on default branch); actual Eurostat observation comparison, dataset licensing approval, production application tests.
 - **Checkpoint and acceptance:** implementation branch `research/li-002-hbs-action-probe`, traceable commit and review PR. **Operator acceptance PENDING**; no automatic merge of this new iteration.
 - **Handoff:** approve/reject this specific PR, then manually dispatch workflow from `main`, inspect report/status/flags, record run and independently check methodology before any LI-002 stage gate.
+
+## LI-LOG-0011 — PR #5 operator acceptance, merge and dispatch-capability check
+
+- **Date:** 2026-11-13.
+- **Contributor:** Repository operator authorized PR #5 merge and checkpoint verification; ChatGPT (OpenAI GPT-6 assistant, connected GitHub tools) performed the merge, Git inspection and read-only Actions audit.
+- **Work item:** LI-002 / acceptance of manual HBS research automation; **not** complete LI-002 numerical verification.
+- **Authorization:** Operator expressly directed: approve PR #5, merge to `main`, verify checkpoint, check ability to start GitHub Actions manually and register result.
+- **Changed paths for this administrative closeout:** `docs/project/PROJECT_STATUS.md`, `docs/project/ROADMAP.md`, `docs/logs/WORK_LOG.md`, `docs/logs/HANDOFF.md`, `docs/research/HBS_PROBE_AUTOMATION.md`. The workflow code itself is unchanged by this closeout.
+- **Git evidence:** [PR #5](https://github.com/martynio/LivingIndex/pull/5) reported `merged=true`, `state=closed`. Verified merge commit [`74ac245412c9df800720e34875affd7209bd9f2c`](https://github.com/martynio/LivingIndex/commit/74ac245412c9df800720e34875affd7209bd9f2c) on `main`, parents `e9fcb1cb6c953e356a06e4b2910f99a183180a7f` and `712109643c7bd3456abe1f30f5fd632c0e9f80a9`.
+- **Dispatch evidence:** Workflow `.github/workflows/li-002-hbs-probe.yml` retrieved directly from `main`, with `on: workflow_dispatch`, read-only `contents` permission and no schedule. The connected GitHub tooling has **no workflow-dispatch operation**, and workflow-list/detail endpoints were inaccessible, so UI dispatch button **NOT independently verified**.
+- **Actions-run evidence:** Recent repository Actions listed 2 runs: [`43428015863`](https://github.com/martynio/LivingIndex/actions/runs/43428015863) was a successful `pages build and deployment` run for the new merge; `43427960831` was a canceled earlier Pages run. Neither is an HBS/Eurostat research run.
+- **Verification classification:** **PASS** for requested PR merge, merge ancestry, `main` checkpoint, workflow file/trigger presence. **BLOCKED / NOT RUN** for manual GitHub Actions dispatch (connector limitation), actual Eurostat API probe, response/report values/flags, and methodology/right approval. Earlier synthetic local tests were reported as 8/8 PASS; no fresh hosted test results were observed.
+- **Accepted checkpoint:** `74ac245412c9df800720e34875affd7209bd9f2c` on `main`. Administrative closeout is recorded in a separate focused review/merge commit, as visible in Git history. **Full LI-002 gate remains open.**
+- **Handoff:** Operator should manually select **LI-002 Eurostat HBS research probe** in GitHub Actions, choose branch `main`, start the workflow and return the run URL. Next contributor verifies logs/artifact and adds a new append-only entry; no publication or LI-003 implementation before evidence and operator gate.
