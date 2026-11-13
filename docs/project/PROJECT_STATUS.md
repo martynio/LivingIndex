@@ -11,8 +11,9 @@
 - **Current stage:** **LI-002 — Source Registry & Legal Research**. The first official-source discovery tranche was accepted and merged through [PR #3](https://github.com/martynio/LivingIndex/pull/3), with verified `main` checkpoint [`229062bf`](https://github.com/martynio/LivingIndex/commit/229062bfbd7183399ec10f1762680b5a550d25c9). **The full LI-002 numerical-feasibility and operator gate remains open.**
 - **Project Proposal:** [LI-PP-001 v1.0](LI-PP-001-PROJECT-PROPOSAL-v1.0.md) remains a project proposal; accepting governance does not automatically authorize product implementation.
 - **Application code:** none; web directories remain placeholders.
+- **LI-002 proof contract:** [PR #4](https://github.com/martynio/LivingIndex/pull/4) merged and verified on `main` at [`e9fcb1c`](https://github.com/martynio/LivingIndex/commit/e9fcb1cb6c953e356a06e4b2910f99a183180a7f). A manual research probe with offline unit tests is proposed in a separate review branch and has **not run on GitHub**.
 - **Validated economic datasets:** none. The 2020 HBS PL/NL observation-proof run remains **BLOCKED** due to unavailable API response; see [HBS proof gate](../research/HBS_2020_PROOF_GATE.md). First-pass publisher metadata and source leads do **not** constitute validated dataset observations.
-- **Automated CI / application tests:** no configured application test suite.
+- **Automated CI / application tests:** no application suite. A standalone synthetic research-unit test and manual GitHub Actions probe are **proposed for operator acceptance**; GitHub-hosted workflow not yet run.
 
 ## Gate register
 
@@ -22,7 +23,7 @@
 | LI-001 operator approval and merge | **CLOSED / ACCEPTED** | Explicit operator approval, [PR #1 merged](https://github.com/martynio/LivingIndex/pull/1), `main` HEAD verified at `2192e95` following merge |
 | LI-001 closure documentation | **RECORDED** | `ROADMAP`, `PROJECT_STATUS`, `WORK_LOG`, `HANDOFF`, ADR-0001 updated in a dedicated closeout |
 | LI-002 initial metadata/rights research | **ACCEPTED / CHECKPOINTED** | [PR #3](https://github.com/martynio/LivingIndex/pull/3), merge `229062bf`; 11 source leads, no accepted numeric observations |
-| LI-002 numerical feasibility | **BLOCKED / RESEARCH CONTINUES** | Official HBS API response not retrieved; run [2020 proof gate](../research/HBS_2020_PROOF_GATE.md) in network-enabled environment, then validate paired cells, flags, methodology and rights |
+| LI-002 numerical feasibility | **BLOCKED / RESEARCH CONTINUES** | [PR #4 merged](https://github.com/martynio/LivingIndex/pull/4); manual [HBS research automation](../research/HBS_PROBE_AUTOMATION.md) proposed; real numeric observations, flags, rights and methodology unverified |
 | Publication/legal readiness | **NOT ESTABLISHED** | Verify hosting, data processing, telemetry, source rights and attribution before any public policy claims |
 
 ## Handoff

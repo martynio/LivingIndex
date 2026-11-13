@@ -1,6 +1,6 @@
 # Research — source feasibility
 
-**Status: LI-002 first-pass research in review, 2026-11-10.** Neither source metadata nor exploratory availability authorizes a production chart.
+**Status: LI-002 discovery accepted; HBS observation-proof automation proposed, 2026-11-13.** Neither source metadata nor exploratory availability authorizes a production chart.
 
 ## Research artifacts
 
@@ -11,6 +11,7 @@
 | [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.csv) | Model-readable registry; stable source IDs and independent status fields |
 | [FEASIBILITY_MATRIX.md](FEASIBILITY_MATRIX.md) | Historical PL/NL coverage candidates and critical missing links |
 | [HBS_2020_PROOF_GATE.md](HBS_2020_PROOF_GATE.md) | Reproducible 2020 HBS PL/NL cell probe, dimensions, methodology and blocker verdict |
+| [HBS_PROBE_AUTOMATION.md](HBS_PROBE_AUTOMATION.md) | Manual GitHub Actions probe, artifact interpretation, local tests and research handoff |
 | [LEGAL_RESEARCH.md](LEGAL_RESEARCH.md) | Source reuse, privacy/cookie and hosting/legal readiness research |
 
 ## Integrity rules
