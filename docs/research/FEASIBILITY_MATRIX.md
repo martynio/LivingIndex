@@ -30,6 +30,10 @@ To close the data-feasibility portion of LI-002:
 5. Design a provisional harmonization mapping with **missing/incomparable** states; do not invent backfill.
 6. Review feasibility independently before accepting **one real scenario per country**.
 
+## Current observation-proof status (2026-11-13)
+
+The exact country/cell **API retrieval did not succeed in the available execution environment**. See [HBS_2020_PROOF_GATE.md](HBS_2020_PROOF_GATE.md) for a reproducible query, unit semantics (`PPS_HH`) and hard acceptance gates. **No numeric 2020 PL/NL pair has been verified or added.** Do not label 2020 HBS expenditure in PPS as local monthly EUR/PLN cash expense.
+
 ## Non-negotiable methodology
 
 - Historical Poland has currency redenomination and major market/availability discontinuities; do not compare unadjusted pre-1995 nominal PLN with modern PLN.

@@ -1,40 +1,28 @@
 # Living Index — latest contributor handoff
 
-**Updated:** 2026-11-10 · **Work item:** LI-002 / source and legal discovery · **State:** first-pass research **IN REVIEW**, full LI-002 gate **OPEN**.
+**Updated:** 2026-11-13 · **Phase:** LI-002 / HBS 2020 observation proof · **State:** discovery tranche merged; numerical retrieval **BLOCKED**, full LI-002 gate **OPEN**.
 
-## Start here
+## Project baseline
 
-- [Project status](../project/PROJECT_STATUS.md)
-- [Roadmap](../project/ROADMAP.md)
-- [AGENTS.md](../../AGENTS.md)
-- [Work protocol](../governance/WORK_PROTOCOL.md)
-- [Research scope](../research/LI-002-SCOPE-AND-GATE.md)
-- [Source registry](../research/SOURCE_REGISTRY.md) / [CSV](../research/SOURCE_REGISTRY.csv)
-- [Feasibility matrix](../research/FEASIBILITY_MATRIX.md)
-- [Legal research](../research/LEGAL_RESEARCH.md)
-- [Work log](WORK_LOG.md)
+- Public repository: `martynio/LivingIndex`.
+- [PR #3](https://github.com/martynio/LivingIndex/pull/3) merged, verified `main` checkpoint [`229062bfbd7183399ec10f1762680b5a550d25c9`](https://github.com/martynio/LivingIndex/commit/229062bfbd7183399ec10f1762680b5a550d25c9).
+- Eleven research source IDs `LI-SRC-001` through `LI-SRC-011` and legal-feasibility notes present on `main`.
+- No published website, curated observations or application tests/CI.
 
-## Verified baseline
+## Read first
 
-- Repository `martynio/LivingIndex`; accepted LI-001 main checkpoint: `af9362d71f11c65f16532ca568372e003fb0c0ee`.
-- Before LI-002, `main` had no open PRs and there was no implemented application/data-ingestion test suite.
-- This LI-002 research tranche is on branch `research/li-002-source-and-legal-discovery`; query Git for exact current head and PR state.
+[AGENTS.md](../../AGENTS.md), [status](../project/PROJECT_STATUS.md), [roadmap](../project/ROADMAP.md), [source registry](../research/SOURCE_REGISTRY.md), [feasibility](../research/FEASIBILITY_MATRIX.md), [work log](WORK_LOG.md), and [work protocol](../governance/WORK_PROTOCOL.md).
 
-## Research delivered for review
+## Accepted outcome
 
-- Official publisher metadata for CPI, wages, household budgets and life satisfaction, registered with stable IDs (now including HBS dataset codes `hbs_exp_t121` and `hbs_str_t224` plus a public CBS 2020 reference).
-- PL/NL coverage and comparability gap assessment (especially the proposed 2020 HBS scenario).
-- Separate source reuse and methodological suitability statuses.
-- Preliminary official-source legal requirements for cookies/privacy/operator identity/hosting/terms and data attribution.
-- No values downloaded, no application implemented, and no public legal pages created.
+- Documented source discovery and reuse/cross-country limits, not a comparable living-cost calculation.
+- PR #3 independently verified: 11 source IDs; 34 internal links with 0 missing; no runtime/data changes.
+- **NOT RUN:** selected 2020 HBS numeric cells, harmonization of net wages and paid hours, site/host privacy scan, runtime CI.
 
-## Verification and blockers
+## Latest research result
 
-- Public primary source pages reviewed on 2026-11-10; see exact links in research documents.
-- **NOT RUN:** numeric cross-country validation, app tests/CI (none exist), a deployed-site request/cookie audit, legal counsel review.
-- **CRITICAL BLOCKER:** PL/NL 2020 HBS country/wave presence is confirmed, but individual selected **value cells/flags and comparability** remain unverified; no demonstrated compatible net paid-hours denominator.
-- Rights conditions must be confirmed per actual data table and output; CBS microdata cannot be treated as open redistribution material.
+The [HBS 2020 proof gate](../research/HBS_2020_PROOF_GATE.md) defines the exact `PL/NL` 2020 API query and required cell-status checks. Actual response JSON could not be retrieved in this environment; the work deliberately records **no invented numeric observations**. Dataset `hbs_exp_t121` is displayed in **PPS per household**, not directly in local-currency monthly budgets. Owner-occupied imputed rent requires separate methodological treatment.
 
-## Next permitted action
+## Next permitted task
 
-Review this research PR and decide whether to accept the **discovery tranche**, continue detailed LI-002 dataset checks, and which sources deserve numerical proof. **Do not begin LI-003 or close LI-002 merely because the registry exists.**
+Run the bounded LI-002 2020 HBS API observation probe in a network-enabled environment, preserve retrieval evidence, and then evaluate matched PL/NL values and definitions. Record sources, retrieve and preserve flags, avoid interpreting PPS/household as national-currency monthly spending. No LI-003 implementation without full LI-002 decision gate.
