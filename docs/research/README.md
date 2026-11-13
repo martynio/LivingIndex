@@ -1,27 +1,27 @@
 # Research — source feasibility
 
-**Status: not started.** The first research deliverable is `LI-RESEARCH-001`: a **PL / NL Data Feasibility Matrix**.
+**Status: LI-002 first-pass research in review, 2026-11-10.** Neither source metadata nor exploratory availability authorizes a production chart.
 
-## Questions to answer
+## Research artifacts
 
-For every proposed indicator and country:
+| Artifact | Purpose |
+| --- | --- |
+| [LI-002-SCOPE-AND-GATE.md](LI-002-SCOPE-AND-GATE.md) | Narrow scope, boundaries and acceptance gates for this research tranche |
+| [SOURCE_REGISTRY.md](SOURCE_REGISTRY.md) | Human-readable source inventory and publisher references |
+| [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.csv) | Model-readable registry; stable source IDs and independent status fields |
+| [FEASIBILITY_MATRIX.md](FEASIBILITY_MATRIX.md) | Historical PL/NL coverage candidates and critical missing links |
+| [LEGAL_RESEARCH.md](LEGAL_RESEARCH.md) | Source reuse, privacy/cookie and hosting/legal readiness research |
 
-- What is the **primary source** and exact dataset or table ID?
-- Which **years** actually exist, at what frequency and geographical granularity?
-- What population, unit, statistical measure, and revisions does it represent?
-- Is it nominal/real, gross/net, worker/household, mean/median, observed/derived?
-- Which transformations are required to compare it with other indicators?
-- Can data be downloaded, processed, cached, and redistributed under its terms?
-- Are there historical discontinuities or contextual warnings?
+## Integrity rules
 
-## Matrix fields (proposed, not populated)
+1. Dataset listing or historical coverage is **not** a verified series of usable numeric observations.
+2. Each source has independent **reuse** and **comparability** states.
+3. A monthly **money-left** calculation requires matching household definitions and compatible income/expense inputs.
+4. A net working-hour calculation requires a verified net-earnings and paid-hours denominator, not average gross wages.
+5. No inferred data, source content without terms, fake completeness claims or restricted microdata are committed.
 
-`country | indicator | source_id | source_url | coverage_start | coverage_end | frequency | unit | population | measure | quality_status | comparability | license_status | checked_on | notes`
+## Stage exit
 
-**Do not fill the matrix with inferred coverage.** Historical CPI availability alone does not establish comparable housing budgets, net hourly wages, or life-satisfaction series.
+The full LI-002 research gate remains open until source-specific numerical values and compatible definitions support at least one reproducible scenario for each of Poland and the Netherlands, with documented licensing and limitations. A separate operator gate determines whether the proposed MVP must be narrowed.
 
-## Gate out of research
-
-At least one genuinely source-supported, internally consistent baseline scenario for **each** of Poland and the Netherlands, with explicit limits and coverage gaps. The operator then decides the implementable MVP.
-
-See [methodology](../methodology/README.md) and [proposal](../project/LI-PP-001-PROJECT-PROPOSAL-v1.0.md).
+See [methodology](../methodology/README.md), [proposal](../project/LI-PP-001-PROJECT-PROPOSAL-v1.0.md) and [roadmap](../project/ROADMAP.md).

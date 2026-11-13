@@ -65,3 +65,28 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Checkpoint and gate:** LI-001 **ACCEPTED / CLOSED**; immutable `main` merge checkpoint `2192e95f331aaafab8ee2a10adb217cc7ae2f85b`. Documentation closeout is recorded in a follow-up reviewable commit.
 - **Next step:** LI-002 can be scoped and researched only on separately agreed requirements; no website, legal page, source ingestion or chart implementation is authorized by this gate.
 
+## LI-LOG-0005 — LI-002 official-source discovery, reuse and website requirements
+
+- **Date:** 2026-11-10.
+- **Contributor:** ChatGPT (OpenAI GPT-6 assistant; official public web research and connected GitHub tools), following operator request to continue Living Index.
+- **Work item / phase:** LI-002 / first-pass RESEARCH; **not** complete-data sign-off.
+- **Baseline:** Accepted and closed LI-001; `main` at `af9362d71f11c65f16532ca568372e003fb0c0ee` on 2026-11-10 with no open PRs before the research branch was created.
+- **Objective:** Build a provenance-oriented registry for PL/NL source candidates, evaluate historical-data limitations and research preliminary legal/data-rights requirements for future web publication.
+- **Changed paths:** `docs/research/` index and new source registry (Markdown/CSV), feasibility matrix, legal research and tranche scope; `docs/project/ROADMAP.md`, `docs/project/PROJECT_STATUS.md`, `docs/logs/WORK_LOG.md` and `docs/logs/HANDOFF.md`.
+- **Sources:** Official CBS StatLine data portal (`71905ned`), CBS `81432ENG`, GUS CPI/wage/budget publications, Eurostat HBS/`ilc_pw01`, CBS/GUS/Eurostat reuse notices, Dutch government/Autoriteit Persoonsgegevens and EU GDPR transparency guidance. See linked primary pages and verification dates in `SOURCE_REGISTRY.md` and `LEGAL_RESEARCH.md`.
+- **Verification:** Publisher pages reviewed; record distinguishes metadata verification from checked numeric observations. No statistical import or legal-compliance claim. **NOT RUN:** runtime/unit/CI tests (no application); numerical reconciliation, every country-specific HBS cell, hosting scan, and legal counsel review.
+- **Checkpoint / review:** Research branch `research/li-002-source-and-legal-discovery`; commit and PR are traceable in Git history. **Operator acceptance pending**; no automatic merge or LI-003 authorization.
+- **Handoff:** Review evidence and source statuses, then investigate actual PL/NL HBS cells, paired net-income/hour inputs, dataset-specific reuse and real site hosting before closing the LI-002 gate.
+
+## LI-LOG-0006 — Additional Eurostat 2020 dataset identification
+
+- **Date:** 2026-11-10.
+- **Contributor:** ChatGPT (OpenAI GPT-6 assistant, public Eurostat/CBS research and GitHub connector).
+- **Work item:** LI-002 first-pass research continuation on [PR #3](https://github.com/martynio/LivingIndex/pull/3).
+- **Objective:** Resolve previously uncertain 2020 HBS country/wave coverage and locate exact table IDs without claiming numeric equivalence.
+- **Changed paths:** `docs/research/SOURCE_REGISTRY.csv`, `SOURCE_REGISTRY.md`, `FEASIBILITY_MATRIX.md`, `LI-002-SCOPE-AND-GATE.md`; `WORK_LOG.md` and `HANDOFF.md`.
+- **Evidence:** [Eurostat HBS metadata](https://ec.europa.eu/eurostat/cache/metadata/en/hbs_esms.htm) lists NL and PL for 2020; dataset pages [`hbs_exp_t121`](https://ec.europa.eu/eurostat/databrowser/product/view/hbs_exp_t121?lang=en) and [`hbs_str_t224`](https://ec.europa.eu/eurostat/databrowser/view/hbs_str_t224/default/table?category=livcon.hbs.hbs_struc&lang=en) identified; [CBS budget study 2020](https://www.cbs.nl/item?sc_itemid=f6a7ad70-31b4-47bd-a7cf-bca7a7e58978&sc_lang=nl-nl) provides preliminary published context.
+- **Verification:** official metadata and table descriptions inspected; new source IDs `LI-SRC-009` to `LI-SRC-011` recorded. **NOT RUN:** extraction of actual table cells or statistical data validation; no code/CI tests.
+- **Checkpoint / gate:** correction committed to LI-002 branch (exact SHA in Git PR history); **operator review pending**, no stage or website acceptance.
+- **Handoff:** inspect numeric 2020 PL/NL HBS records and flags, make reproducible subset and check coherence; preserve COVID-2020 warning.
+
