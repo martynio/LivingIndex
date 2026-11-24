@@ -1,6 +1,6 @@
 # LI-002 — HBS division matrix and income/time feasibility
 
-**Date:** 2026-11-24 · **Status:** implementation proposed; local matrix tests PASS; hosted matrix retrieval NOT RUN.
+**Date:** 2026-11-24 · **Status:** implementation accepted via [PR #8](https://github.com/martynio/LivingIndex/pull/8); hosted regression 17/17 PASS; live matrix retrieval NOT RUN.
 
 ## Scope contract
 
@@ -13,7 +13,7 @@
 
 ## Execute the research probe
 
-After accepting and merging this iteration, manually run **LI-002 Eurostat HBS division matrix** from [Actions](https://github.com/martynio/LivingIndex/actions), branch main. The offline job runs both synthetic test suites; the network job only runs on workflow_dispatch after tests succeed. The artifact `li-002-hbs-2020-division-matrix` contains the research report, expires after seven days, and is not production data. The original response body is not uploaded; its SHA-256 is recorded by the runner but cannot be independently recomputed from the report alone.
+With PR #8 now merged, manually run **LI-002 Eurostat HBS division matrix** from [Actions](https://github.com/martynio/LivingIndex/actions), branch main. The offline job runs both synthetic test suites; the network job only runs on workflow_dispatch after tests succeed. The artifact `li-002-hbs-2020-division-matrix` contains the research report, expires after seven days, and is not production data. The original response body is not uploaded; its SHA-256 is recorded by the runner but cannot be independently recomputed from the report alone.
 
 - [Matrix script](../../scripts/hbs_matrix_probe.py)
 - [Matrix tests](../../tests/test_hbs_matrix_probe.py)
@@ -42,3 +42,7 @@ Separate the observed HBS average household from an explicitly hypothetical work
 ## Verification
 
 Local Python command: `python -m unittest discover -s tests -p 'test_hbs_matrix_probe.py' -v` — **9/9 PASS**. Syntax compilation of both new Python files passed. GitHub blob SHA-1 matches locally hashed matrix script and test file: `e852ee49913ef19e596fb019ca49cf0970a982e8` and `64796df06553b74d46e934bc68f070c9babd159d`. Pinned checkout v5 and upload-artifact v6 action manifests verified to use Node.js 24; the prior single-cell workflow is unchanged. Hosted PR regression and manual live retrieval must be assessed separately. No new Eurostat values were obtained during local synthetic tests.
+
+## Accepted hosted regression — 2026-11-24
+
+[Run 45439673111](https://github.com/martynio/LivingIndex/actions/runs/45439673111) checked the PR merge test ref against the accepted base and head; offline job succeeded, logs explicitly show 17 tests and OK. Manual-observation-matrix was skipped as designed. Operator accepted PR #8; [merge c812480](https://github.com/martynio/LivingIndex/commit/c8124808c8d57b3973c17362593922b6826e3713) verified on main. No new matrix observations have been retrieved.

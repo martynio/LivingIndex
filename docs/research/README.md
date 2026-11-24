@@ -1,6 +1,6 @@
 # Research — source feasibility
 
-**Status: LI-002 discovery accepted; first hosted HBS evidence accepted, division-matrix research proposed, 2026-11-24.** Neither source metadata nor exploratory availability authorizes a production chart.
+**Status: LI-002 discovery accepted; first hosted HBS evidence accepted, division-matrix implementation accepted; manual retrieval pending, 2026-11-24.** Neither source metadata nor exploratory availability authorizes a production chart.
 
 ## Research artifacts
 
