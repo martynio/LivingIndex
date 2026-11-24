@@ -165,3 +165,24 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Changed scope:** Research evidence, feasibility, registry, proof gate, automation guide, research index, roadmap, status and handoff; no raw/curated data, workflow or frontend edits.
 - **Checkpoint:** run evidence tied to `228e23d4897fd2365037ab19a6009355438f5f15`; documentation review branch `research/li-002-hbs-2020-run-evidence` and PR pending operator acceptance. Full LI-002 remains OPEN.
 - **Next:** official browser reconciliation and bounded research on matched income/expense definitions; separately decide whether to revise website-shell dependency. No automatic merge or stage transition.
+
+## LI-LOG-0013 — Accept and checkpoint first hosted HBS evidence
+
+- **Date:** 2026-11-24.
+- **Contributor:** Repository operator directed continuation; ChatGPT (OpenAI GPT-6.2, GitHub and local artifact inspection) performed independent check and merge.
+- **Work item:** LI-002 / COMMIT-GATE for [PR #7](https://github.com/martynio/LivingIndex/pull/7).
+- **Evidence:** Approved PR head `beea0720ee352ca8ac34cb6833477e5c2b43181a`; 11 documentation-only files and append-only log verified. Original ZIP and JSON hashes recomputed; CP01 PL 4234 and NL 3835 PPS_HH match the report. No new values inferred.
+- **Result:** PASS — GitHub merge succeeded and read-back of PR and main matched `e389573c34c88c3772b0c56701360bedf979a148`. First research evidence accepted. Independent official-browser reconciliation, methodology, data rights and full LI-002 gate remain open.
+- **Next:** bounded 12-division matrix research and income/time metadata discovery; propose parallel shell dependency separately from publication approval.
+
+## LI-LOG-0014 — Extend HBS research to division coverage and define next decision gates
+
+- **Date:** 2026-11-24.
+- **Contributor:** ChatGPT (OpenAI GPT-6.2, local Python and GitHub tools), following operator request to proceed.
+- **Work item:** LI-002 research tranche, [scope and verification](../research/HBS_DIVISION_MATRIX.md); proposed [ADR-0002](../decisions/ADR-0002-PARALLEL-SHELL-RESEARCH.md).
+- **Baseline:** `e389573c34c88c3772b0c56701360bedf979a148` on main; previous evidence PR merged, no production dataset accepted.
+- **Changes:** new matrix probe, nine synthetic tests, pinned read-only GitHub workflow (offline PR tests; live manual only); 3 official income/time source candidates in CSV/Markdown; proposed branch-only website dependency; roadmap/status/handoff/research indexes. Prior CP01 workflow and application/data directories unchanged.
+- **Evidence:** implementation commit `a137f987e711f71428f78de5df9616d86fe13297`; local `python -m unittest discover -s tests -p 'test_hbs_matrix_probe.py' -v` 9/9 PASS; Python compilation PASS. Exact new Python Git blobs matched local hashes. Verified official checkout v5 and upload-artifact v6 action manifests use node24. Source URLs and compatibility constraints documented; no new economic values fabricated or retrieved.
+- **Verification:** local code PASS; hosted regression and live matrix retrieval NOT RUN at initial commit; official browser reconciliation and all production methodology/rights gates OPEN. Decision remains proposed pending operator acceptance.
+- **Checkpoint:** review branch `research/li-002-hbs-division-matrix`; final PR acceptance pending. No website implementation, deployment or LI-002 closure authorized.
+- **Handoff:** review PR and hosted offline check, then merge and manually dispatch matrix; inspect 24 expected cells, flags, checksum and CP01 consistency. After ADR acceptance separately scope LI-003 shell work and inspect actual deployment/publication prerequisites.
