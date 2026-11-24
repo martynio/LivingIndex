@@ -59,3 +59,7 @@ For feasibility and blockers, see [FEASIBILITY_MATRIX.md](FEASIBILITY_MATRIX.md)
 Eurostat's [HBS metadata table](https://ec.europa.eu/eurostat/cache/metadata/en/hbs_esms.htm) lists both **Netherlands and Poland** as 2020 wave participants. The source reports historical wave participation (NL from 1988; PL from 1999), but participation does **not** prove that every category x household-type x unit cell is non-missing. The next task is to inspect actual selected observations and flags in `hbs_exp_t121` and `hbs_str_t224`.
 
 This improves confidence in the 2020 research anchor but **does not** establish a complete comparable household budget or net-hourly economic model.
+
+## Hosted observation proof (2026-11-24)
+
+LI-SRC-009: the selected CP01/PPS_HH 2020 PL/NL pair was retrieved in [run #2](https://github.com/martynio/LivingIndex/actions/runs/45436731068). See [evidence](HBS_2020_RUN_002_EVIDENCE.md). This supersedes earlier values-pending wording for this subset only. Other categories, country-year cells, official browser reconciliation and methodological approval remain open.

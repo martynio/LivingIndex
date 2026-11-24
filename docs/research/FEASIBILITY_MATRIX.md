@@ -1,6 +1,6 @@
 # LI-002 — Initial PL/NL data feasibility matrix
 
-**Checked:** 2026-11-10 · **Stage:** DISCOVERY / evidence audit, **not a validated economic dataset**.
+**Checked:** 2026-11-24 · **Stage:** DISCOVERY / evidence audit, **not a validated economic dataset**.
 
 ## Verified availability vs missing integrations
 
@@ -8,7 +8,7 @@
 | --- | --- | --- | --- |
 | Annual consumer price changes since 1980? | **Candidate YES**: GUS annual CPI table 1950–2025 (LI-SRC-002) | **Candidate YES**: CBS linked CPI table 1900–2025 (LI-SRC-001) | Definitions, breaks, index conversion and whether methodological base can be harmonized |
 | Historical average wages? | **Candidate YES**: GUS monthly mean wages 1950–2025 (LI-SRC-003) | **Partial**: CBS employment gross wages / working hours 2009–2025 (LI-SRC-004) | Matching populations and gross-to-net rules per historical period |
-| Comparable household spending categories? | GUS household-budget 2025 and earlier editions exist (LI-SRC-006) | Eurostat HBS 2020 PL/NL wave participation **verified**; exact tables `hbs_exp_t121` (LI-SRC-009) and `hbs_str_t224` (LI-SRC-010) identified; CBS restricted microdata (LI-SRC-007) | **CRITICAL**: **actual selected numeric cells**, COICOP mapping, owner-occupied imputed rent, sample/method differences and source-specific license |
+| Comparable household spending categories? | GUS household-budget 2025 and earlier editions exist (LI-SRC-006) | Eurostat HBS 2020 PL/NL wave participation **verified**; exact tables `hbs_exp_t121` (LI-SRC-009) and `hbs_str_t224` (LI-SRC-010) identified; CBS restricted microdata (LI-SRC-007) | **CRITICAL**: one CP01/PPS_HH pair retrieved; broader numeric cells, COICOP mapping, owner-occupied imputed rent, sample/method differences and source-specific license |
 | Net earnings per paid hour? | **NO VERIFIED MATCHED SERIES** | **NO VERIFIED MATCHED SERIES** | Income definition, tax/benefit treatment, paid hours, worker vs household basis |
 | Life satisfaction observations? | Eurostat 2022 survey indicator `ilc_pw01` (LI-SRC-008) | Same indicator / year (LI-SRC-008) | Download and check comparable years, age breakdown, survey responses and confidence |
 | Housing ownership, rent, age cohorts, commuting, queues? | Not researched sufficiently | Not researched sufficiently | Separate research tasks; **out of MVP assumptions** |
@@ -17,7 +17,7 @@ The word **candidate** means the primary publisher describes the measure or seri
 
 ## 2020 evaluation hypothesis — not an accepted comparison
 
-2020 is a stronger **research anchor**: Eurostat's [country/year metadata](https://ec.europa.eu/eurostat/cache/metadata/en/hbs_esms.htm) explicitly confirms **both Poland and the Netherlands** in the 2020 HBS wave, and public dataset codes [`hbs_exp_t121`](https://ec.europa.eu/eurostat/databrowser/product/view/hbs_exp_t121?lang=en) and [`hbs_str_t224`](https://ec.europa.eu/eurostat/databrowser/view/hbs_str_t224/default/table?category=livcon.hbs.hbs_struc&lang=en) are identified. But **selected numerical cells**, their flags, compatible net income, and paid hours have **not** been checked.
+2020 is a stronger **research anchor**: Eurostat's [country/year metadata](https://ec.europa.eu/eurostat/cache/metadata/en/hbs_esms.htm) explicitly confirms **both Poland and the Netherlands** in the 2020 HBS wave, and public dataset codes [`hbs_exp_t121`](https://ec.europa.eu/eurostat/databrowser/product/view/hbs_exp_t121?lang=en) and [`hbs_str_t224`](https://ec.europa.eu/eurostat/databrowser/view/hbs_str_t224/default/table?category=livcon.hbs.hbs_struc&lang=en) are identified. A selected CP01/PPS_HH research pair has now been retrieved; wider categories, official browser reconciliation, compatible net income and paid hours remain open.
 
 **Do not publish a PL/NL 'money left' or 'hours needed' comparison yet.**
 
@@ -30,9 +30,9 @@ To close the data-feasibility portion of LI-002:
 5. Design a provisional harmonization mapping with **missing/incomparable** states; do not invent backfill.
 6. Review feasibility independently before accepting **one real scenario per country**.
 
-## Current observation-proof status (2026-11-13)
+## Current observation-proof status (2026-11-24)
 
-The exact country/cell **API retrieval did not succeed in the available execution environment**. See [HBS_2020_PROOF_GATE.md](HBS_2020_PROOF_GATE.md) for a reproducible query, unit semantics (`PPS_HH`) and hard acceptance gates. **No numeric 2020 PL/NL pair has been verified or added.** Do not label 2020 HBS expenditure in PPS as local monthly EUR/PLN cash expense.
+The hosted GitHub Actions probe retrieved a numeric PL/NL pair for CP01/PPS_HH (food and non-alcoholic beverages). See [HBS run evidence](HBS_2020_RUN_002_EVIDENCE.md) and [proof gate](HBS_2020_PROOF_GATE.md). No approved production dataset or complete comparable budget exists. Do not label 2020 HBS expenditure in PPS as local monthly EUR/PLN cash expense.
 
 ## Non-negotiable methodology
 
