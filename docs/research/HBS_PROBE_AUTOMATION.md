@@ -1,6 +1,6 @@
 # LI-002 — Manual Eurostat HBS API probe (GitHub Actions)
 
-**Status (2026-11-13):** **PR #5 ACCEPTED / MERGED** into `main` at [`74ac245`](https://github.com/martynio/LivingIndex/commit/74ac245412c9df800720e34875affd7209bd9f2c). The workflow file is present on the default branch; the **Eurostat network probe has NOT BEEN RUN**.
+**Status (2026-11-24):** PR #5 accepted; [hosted run #2](https://github.com/martynio/LivingIndex/actions/runs/45436731068) succeeded. See [verified run evidence](HBS_2020_RUN_002_EVIDENCE.md).
 **Purpose:** get reproducible first-party JSON-stat 2.0 evidence for a narrow 2020 PL/NL subset without deploying the website.
 
 ## Scope and operation
@@ -55,7 +55,7 @@ The checked local tests cover JSON-stat sparse/dense forms, array/dictionary cat
 - All acceptance decisions remain human-reviewed and recorded as a Git checkpoint.
 - Official information: [Eurostat API Statistics](https://ec.europa.eu/eurostat/en/web/user-guides/data-browser/api-data-access/api-detailed-guidelines/api-statistics), [GitHub manually running workflows](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow).
 
-**Current gate:** This automation is merged and was locally unit-tested in the previous iteration, but has not yet been run or verified on GitHub-hosted runners. Do not close LI-002 or advance to LI-003 until real PL/NL values, flags, rights, housing methods and relevant net-income/paid-hours inputs have been independently verified.
+**Current gate:** The operator manually dispatched the merged automation; the hosted job passed 8/8 tests and retrieved the selected pair. See [run evidence](HBS_2020_RUN_002_EVIDENCE.md). Do not close LI-002 or advance to LI-003 until real PL/NL values, flags, rights, housing methods and relevant net-income/paid-hours inputs have been independently verified.
 
 ## Dispatch verification record (2026-11-13)
 
@@ -65,3 +65,7 @@ The checked local tests cover JSON-stat sparse/dense forms, array/dictionary cat
 - **NOT RUN:** the LI-002 HBS job itself. The repository's recent Actions list contained only [GitHub Pages build/deployment run 43428015863](https://github.com/martynio/LivingIndex/actions/runs/43428015863) (successful after merge) and its prior canceled Pages run. Neither is the HBS probe. A successful Pages deployment is not evidence that a Living Index website is ready or that the Eurostat API was contacted.
 
 **Operator handoff:** open the [Actions tab](https://github.com/martynio/LivingIndex/actions), select **LI-002 Eurostat HBS research probe**, choose **Run workflow** on branch `main`, then share the run URL for inspection. If the workflow does not appear or the button is unavailable, record the actual UI or repository Actions policy issue without inventing a successful run.
+
+## Hosted result (2026-11-24)
+
+The operator completed manual dispatch. The reviewer checked the run, job logs, downloaded report and matching ZIP hash. This supersedes the prior NOT RUN status. See [run evidence](HBS_2020_RUN_002_EVIDENCE.md) for data coordinates, limitations and Node.js deprecation follow-up.

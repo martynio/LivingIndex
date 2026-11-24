@@ -153,3 +153,15 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Verification classification:** **PASS** for requested PR merge, merge ancestry, `main` checkpoint, workflow file/trigger presence. **BLOCKED / NOT RUN** for manual GitHub Actions dispatch (connector limitation), actual Eurostat API probe, response/report values/flags, and methodology/right approval. Earlier synthetic local tests were reported as 8/8 PASS; no fresh hosted test results were observed.
 - **Accepted checkpoint:** `74ac245412c9df800720e34875affd7209bd9f2c` on `main`. Administrative closeout is recorded in a separate focused review/merge commit, as visible in Git history. **Full LI-002 gate remains open.**
 - **Handoff:** Operator should manually select **LI-002 Eurostat HBS research probe** in GitHub Actions, choose branch `main`, start the workflow and return the run URL. Next contributor verifies logs/artifact and adds a new append-only entry; no publication or LI-003 implementation before evidence and operator gate.
+
+## LI-LOG-0012 — Verify first hosted Eurostat HBS observations
+
+- **Date:** 2026-11-24.
+- **Contributor:** Repository operator (manual workflow dispatch); ChatGPT (OpenAI GPT-6.2, GitHub tools and local artifact inspection) independently reviewed run metadata, logs and report.
+- **Work item:** LI-002 / VERIFY — network retrieval and selected observation proof.
+- **Baseline:** `main` at `228e23d4897fd2365037ab19a6009355438f5f15`; no open PRs before review. [Run #2](https://github.com/martynio/LivingIndex/actions/runs/45436731068) completed successfully with that commit.
+- **Evidence:** 8/8 hosted unit tests; retrieval and artifact-upload steps successful; HTTP 200 in downloaded JSON; ZIP SHA-256 independently matched GitHub digest; exact report timestamp, values, flags and API response hash recorded in [HBS_2020_RUN_002_EVIDENCE.md](../research/HBS_2020_RUN_002_EVIDENCE.md).
+- **Result:** PASS for network retrieval and selected report pair; no independent original-response checksum recomputation or official Data Browser cell reconciliation. Production methodology and rights open. Node.js 20 action deprecation warning is maintenance follow-up; no code changed.
+- **Changed scope:** Research evidence, feasibility, registry, proof gate, automation guide, research index, roadmap, status and handoff; no raw/curated data, workflow or frontend edits.
+- **Checkpoint:** run evidence tied to `228e23d4897fd2365037ab19a6009355438f5f15`; documentation review branch `research/li-002-hbs-2020-run-evidence` and PR pending operator acceptance. Full LI-002 remains OPEN.
+- **Next:** official browser reconciliation and bounded research on matched income/expense definitions; separately decide whether to revise website-shell dependency. No automatic merge or stage transition.

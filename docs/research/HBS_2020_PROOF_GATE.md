@@ -1,8 +1,8 @@
 # LI-002 — HBS 2020 observation proof gate (Poland / Netherlands)
 
 **Date:** 2026-11-13
-**Stage:** LI-002 research, numerical proof not yet obtained
-**Verification verdict:** **BLOCKED — no successfully retrieved PL/NL numeric observation pair**
+**Stage:** LI-002 research, first research pair retrieved on 2026-11-24
+**Verification verdict:** NETWORK PASS / PARTIAL OBSERVATION PROOF; see [run evidence](HBS_2020_RUN_002_EVIDENCE.md).
 **Producer:** ChatGPT (GPT-6, official-publication review and GitHub repository tools)
 
 ## Question
@@ -23,9 +23,9 @@ A source identifier and country participation are necessary, **not sufficient**.
 | [Eurostat HBS 2020 methodology](https://ec.europa.eu/eurostat/web/household-budget-surveys/methodology) | Eurostat publishes survey documentation and 2020 quality information | The treatment of imputed rent requires a documented inclusion/exclusion decision |
 | [Eurostat reuse notice](https://ec.europa.eu/eurostat/help/copyright-notice) | Statistical data generally reusable with attribution, modifications disclosure and specific exceptions | Cite exact dataset DOI `10.2908/hbs_exp_t121`, access date and modifications; check applicable exceptions |
 
-## Reproducible API request — **prepared, not successfully executed here**
+## Reproducible API request — successfully executed on hosted runner
 
-The following is a **request recipe**, not a dataset or a claim of received values. Run in an environment able to reach the Eurostat API. Do not add fabricated fixtures.
+The following is a request recipe, not a dataset. The hosted execution is separately documented in [run evidence](HBS_2020_RUN_002_EVIDENCE.md). Run in an environment able to reach the Eurostat API. Do not add fabricated fixtures.
 
 ```bash
 curl --fail-with-body --location --show-error \
@@ -41,7 +41,7 @@ curl --fail-with-body --location --show-error \
 6. Perform separate rights review before publishing the response or a derived subset to the public repository. A link can be recorded even when a snapshot is not redistributable.
 7. Repeat with `hbs_str_t224` **only after inspecting that table's own dimensions, units and category codes**. The source is a structure/share table, not directly additive spending.
 
-**Status of execution in this review environment:** The Eurostat API endpoint could not be retrieved by available web access; a local network probe returned DNS resolution failure. Therefore the response status, observation values, flags, hash and value-comparison checks are all **NOT RUN / UNVERIFIED**.
+**Historical local execution limitation (2026-11-13):** local access failed. On 2026-11-24 the GitHub-hosted runner succeeded; see [run evidence](HBS_2020_RUN_002_EVIDENCE.md). Independent official browser reconciliation remains open.
 
 ## Explicitly separate the outputs
 
@@ -56,9 +56,9 @@ curl --fail-with-body --location --show-error \
 
 | Gate | Evidence required | Current |
 | --- | --- | --- |
-| `HBS-2020-01` | Downloaded, pinned response with hash and retrieval timestamp | **BLOCKED / NOT RUN** |
-| `HBS-2020-02` | Matching `PL` / `NL` cells, values and source flags at identical dimensions | **BLOCKED / NOT RUN** |
-| `HBS-2020-03` | Rechecked official browser values + units, period, category and household definition | **BLOCKED / NOT RUN** |
+| `HBS-2020-01` | Downloaded, pinned response with hash and retrieval timestamp | **PARTIAL PASS** — verified report/ZIP hash; API body not preserved |
+| `HBS-2020-02` | Matching `PL` / `NL` cells, values and source flags at identical dimensions | **PASS for CP01/PPS_HH report pair** |
+| `HBS-2020-03` | Rechecked official browser values + units, period, category and household definition | **OPEN** — metadata checked, independent official values not reconciled |
 | `HBS-2020-04` | Imputed-rent methodology and category comparability decision recorded | **OPEN** |
 | `HBS-2020-05` | Source-specific redistribution and attribution cleared | **OPEN** |
 | `HBS-2020-06` | Compatible net household/worker income and paid-hour model proved | **OPEN / separate indicator research** |
@@ -67,9 +67,9 @@ curl --fail-with-body --location --show-error \
 
 ## Next action
 
-Run the documented official API probe in a network-enabled environment; attach actual response checksum and selected metadata/flags as evidence; decide `PASS` or `ISSUES` on each gate. The **full LI-002 stage must not close until an accepted reproducible scenario per country or an explicit scope change exists**.
+Review the [hosted run evidence](HBS_2020_RUN_002_EVIDENCE.md) and reconcile the exact cells against the official Data Browser. Preserve source and household definition limitations. The **full LI-002 stage must not close until an accepted reproducible scenario per country or an explicit scope change exists**.
 
 
 ## Automation proposed after accepted PR #4
 
-A separate, manual-only [GitHub Actions research probe](HBS_PROBE_AUTOMATION.md) has been drafted to execute this request from a GitHub-hosted runner. Its local synthetic-unit tests passed, but it **cannot** establish a successful Eurostat retrieval until the workflow is reviewed, merged into `main`, and actually run. A web-domain setup is not needed.
+A separate, manual-only [GitHub Actions research probe](HBS_PROBE_AUTOMATION.md) has been drafted to execute this request from a GitHub-hosted runner. The workflow was merged in PR #5 and successfully executed on 2026-11-24; the selected pair is research-only and the full gate remains open. A web-domain setup is not needed.
