@@ -1,6 +1,6 @@
 # LI-003 — Website Foundation: proposed scope and acceptance gates
 
-**Document:** LI-003-SCOPE-001 · **Date:** 2026-11-24 · **Status:** PROPOSED / separate implementation approval required.
+**Document:** LI-003-SCOPE-001 · **Date:** 2026-11-24 · **Status:** LI-003A scope approved by operator on 2026-11-24 for branch-only implementation. LI-003B/C and publication require separate authorization. See [verification](LI-003A-VERIFICATION.md).
 
 ## CURRENT STATE
 
@@ -73,4 +73,4 @@ Stop on unexpected deployment activity caused by a shell change, missing rights 
 - Test final deployed-path behavior in a safe preview; legal and source claims require evidence. Confirm which changes cause auto-deployment before merging public HTML.
 - Operator explicitly approves release; validate published URL/HTTPS, response, routing, network/storage behavior and displayed legal pages; record release SHA and evidence. LI-002 statistical gates continue independently.
 
-**Next decision:** approve LI-003A only, revise proposed visual/route defaults if needed, and implement on an isolated branch. No execution has occurred under this scope document.
+**Next decision:** verify the implemented LI-003A branch and resolve the browser gate; accept only the isolated checkpoint. LI-003B/C require separate approval.

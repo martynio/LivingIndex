@@ -198,3 +198,14 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Verification:** PASS for hosted regression, PR merge and ancestry. Pages activity observed, but Pages settings API unavailable through connector; exact publish source/domain, legal and deployment details unconfirmed. Website implementation and tests NOT RUN. Scope A/B/C and visual/route defaults are proposals awaiting separate approval.
 - **Checkpoint:** accepted PR #8 merge `c8124808c8d57b3973c17362593922b6826e3713`; this closeout commit records approval and proposed scope. No LI-003 execution or publication approval is implied.
 - **Handoff:** operator may manually dispatch the HBS division matrix on main; independently approve LI-003A scope for branch-only implementation. Keep publication and statistical gates separate.
+
+## LI-LOG-0016 — Implement LI-003A static website foundation
+
+- **Date:** 2026-11-24.
+- **Contributor:** ChatGPT (OpenAI GPT-6.2, local Python/Chromium tools and GitHub connector); operator authorized [LI-003A scope](../project/LI-003-WEBSITE-FOUNDATION-SCOPE.md), branch only, no publication.
+- **Baseline:** `16c611794ca32a0a53fafd205aebab29749ecc43` on main, ADR-0002 accepted, no open PR at start. Branch `feat/li-003a-static-website-shell`; code commit `eb65f71d438c38d9a6c79b6737e5e5686582b7f2`.
+- **Changed paths:** web localized HTML, shared CSS, official Bootstrap 5.3.6 CSS and MIT notice, local preview and localization guides; `tests/verify_web_shell.py`, test guide, status/roadmap/scope, verification record, log and handoff. No changes to existing HBS research code, datasets, workflows or deployment settings.
+- **Evidence:** 27 code blob identities match; local static verification 24 pages / 372 references PASS; CSS parser 44 rules, no top-level errors; nine selected contrast pairs minimum 5.54:1; unchanged HBS regression 17/17 PASS. Details and reproduction in [LI-003A verification](../project/LI-003A-VERIFICATION.md).
+- **Verification:** static PASS; browser blocked by `ERR_BLOCKED_BY_ADMINISTRATOR`; responsive/keyboard/AX/network/zoom/screenshot evidence NOT RUN, no full accessibility audit. Do not self-approve A. No feature branch deployment observed at check; Pages config unconfirmed.
+- **Checkpoint:** isolated code commit above and separate verification/documentation commit. Main unchanged; draft PR for review only. Completion, merge and publication not authorized.
+- **Handoff:** reproduce browser tests on a permitted local browser, capture evidence, correct any issues within A and obtain branch-only acceptance. LI-002 continues independently; B/C remain closed to execution.
