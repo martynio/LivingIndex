@@ -1,12 +1,12 @@
 # ADR-0002 — Separate website-shell development from numerical feasibility
 
-**Date:** 2026-11-24 · **Status:** proposed for operator acceptance in this PR. No website implementation or deployment authorized by this record alone.
+**Date:** 2026-11-24 · **Status:** ACCEPTED by the operator on 2026-11-24 via [PR #8](https://github.com/martynio/LivingIndex/pull/8) and [merge c812480](https://github.com/martynio/LivingIndex/commit/c8124808c8d57b3973c17362593922b6826e3713). No website implementation or deployment authorized by this record alone.
 
 ## Context
 
 The first HBS probe now works ([run #2](https://github.com/martynio/LivingIndex/actions/runs/45436731068)), but evidence for a complete comparable budget and a net paid-hour denominator remains open. The original documentation-first sequence unnecessarily tied *all* LI-003 work to completion of those numerical checks. The public repository has GitHub Pages activity; an approved merge must not accidentally publish unfinished legal text or unreviewed data.
 
-## Decision proposed
+## Decision accepted
 
 Keep LI-002 statistical research open. Permit separate scoping and branch-only development of LI-003's non-data website shell after acceptance of this ADR and an explicit LI-003 work scope. The initial shell may contain navigation, responsive layout, EN/PL/NL structure, accessibility and research-status placeholders; it must contain no fabricated statistics, calculated outputs or unverified dataset claims. No analytics or other new third-party data flows by default.
 
@@ -18,4 +18,4 @@ Keeping strict serial execution delays safe interface work unnecessarily. Unrest
 
 ## Evidence and approval
 
-Accepted prior baseline: [PR #7](https://github.com/martynio/LivingIndex/pull/7) merged at `e389573c34c88c3772b0c56701360bedf979a148`. Review this decision and corresponding roadmap changes before treating the new dependency as accepted. A later shell PR needs a separately defined scope and approval; this PR contains no website code.
+Accepted prior baseline: [PR #7](https://github.com/martynio/LivingIndex/pull/7) merged at `e389573c34c88c3772b0c56701360bedf979a148`. Operator explicitly approved PR #8 and this ADR; the hosted regression passed 17/17 and merge ancestry was verified. The accepted amendment permits separate scope approval, not immediate implementation. See [LI-003 scope](../project/LI-003-WEBSITE-FOUNDATION-SCOPE.md). A later shell PR needs a separately defined scope and approval; this PR contains no website code.

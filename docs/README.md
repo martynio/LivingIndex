@@ -12,6 +12,7 @@ The authoritative project definition is [LI-PP-001 — Project Proposal v1.0](pr
 | [Logs](logs/) | Append-only work history and current handoff |
 | [Roadmap](project/ROADMAP.md) | Sequenced LI-001 onward with explicit review gates |
 | [Project status](project/PROJECT_STATUS.md) | Latest accepted state and outstanding gates |
+| [LI-003 scope](project/LI-003-WEBSITE-FOUNDATION-SCOPE.md) | Proposed branch-only website foundation packages and publication prerequisites |
 
 ## Decision gates
 
@@ -23,6 +24,6 @@ The authoritative project definition is [LI-PP-001 — Project Proposal v1.0](pr
 6. **VERIFY:** inspect evidence and regressions, not just reports.
 7. **COMMIT / RELEASE GATE:** checkpoint and explicit approval before release.
 
-Begin at the root [AGENTS.md](../AGENTS.md) for human and AI contributor onboarding. The LI-001 governance changes are subject to operator review; do not treat files on a feature branch as adopted policy.
+Begin at the root [AGENTS.md](../AGENTS.md) for human and AI contributor onboarding. LI-001 governance and ADR-0002 are accepted; do not treat proposed implementation scope or files on a feature branch as adopted policy.
 
 No development milestone, dataset coverage, or launch date is represented as complete by this scaffold.

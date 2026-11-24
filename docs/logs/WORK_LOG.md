@@ -186,3 +186,15 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Verification:** local code PASS; hosted regression and live matrix retrieval NOT RUN at initial commit; official browser reconciliation and all production methodology/rights gates OPEN. Decision remains proposed pending operator acceptance.
 - **Checkpoint:** review branch `research/li-002-hbs-division-matrix`; final PR acceptance pending. No website implementation, deployment or LI-002 closure authorized.
 - **Handoff:** review PR and hosted offline check, then merge and manually dispatch matrix; inspect 24 expected cells, flags, checksum and CP01 consistency. After ADR acceptance separately scope LI-003 shell work and inspect actual deployment/publication prerequisites.
+
+## LI-LOG-0015 — Accept PR #8 and ADR-0002; prepare LI-003 scope
+
+- **Date:** 2026-11-24.
+- **Contributor:** repository operator explicitly approved PR #8 and ADR-0002, requested verified merge, checkpoint and LI-003 scope; ChatGPT (OpenAI GPT-6.2, GitHub connector) executed verification and documentation closeout.
+- **Baseline:** prior main `e389573c34c88c3772b0c56701360bedf979a148`, approved PR head `e444cc772a99bc8108219d841eded2cfe763c5af`; 13 scoped changes and append-only history confirmed.
+- **Test evidence:** [PR workflow run 45439673111](https://github.com/martynio/LivingIndex/actions/runs/45439673111), job 138606967424, checked merge ref `2afd0a97c17bcf111210b05c699d768724930192` for approved head/base; logs explicitly report 17 tests, OK (8 existing + 9 new). Offline-tests success; manual-observation-matrix skipped by design. No live matrix values retrieved.
+- **Merge evidence:** [PR #8](https://github.com/martynio/LivingIndex/pull/8) merged/closed; [`c8124808c8d57b3973c17362593922b6826e3713`](https://github.com/martynio/LivingIndex/commit/c8124808c8d57b3973c17362593922b6826e3713) verified as main immediately after merge, with both expected parents. ADR-0002 accepted; full LI-002 still open.
+- **Changed scope:** acceptance status, roadmap, ADR-0002 and decisions index, matrix guide and research index, documentation navigation, append-only log and handoff; new [LI-003 scope](../project/LI-003-WEBSITE-FOUNDATION-SCOPE.md). Documentation-only closeout; no site or deployment changes.
+- **Verification:** PASS for hosted regression, PR merge and ancestry. Pages activity observed, but Pages settings API unavailable through connector; exact publish source/domain, legal and deployment details unconfirmed. Website implementation and tests NOT RUN. Scope A/B/C and visual/route defaults are proposals awaiting separate approval.
+- **Checkpoint:** accepted PR #8 merge `c8124808c8d57b3973c17362593922b6826e3713`; this closeout commit records approval and proposed scope. No LI-003 execution or publication approval is implied.
+- **Handoff:** operator may manually dispatch the HBS division matrix on main; independently approve LI-003A scope for branch-only implementation. Keep publication and statistical gates separate.
