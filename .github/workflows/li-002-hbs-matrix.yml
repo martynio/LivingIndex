@@ -1,0 +1,44 @@
+name: LI-002 Eurostat HBS division matrix
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/li-002-hbs-matrix.yml'
+      - 'scripts/hbs*_probe.py'
+      - 'tests/test_hbs*.py'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out research code
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5, Node.js 24
+        with:
+          persist-credentials: false
+      - name: Run synthetic HBS regression tests
+        run: python3 -m unittest discover -s tests -p 'test_hbs*.py' -v
+  manual-observation-matrix:
+    if: github.event_name == 'workflow_dispatch'
+    needs: offline-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out research code
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5, Node.js 24
+        with:
+          persist-credentials: false
+      - name: Retrieve fixed PL/NL 2020 CP01-CP12 matrix
+        run: python3 scripts/hbs_matrix_probe.py --output research-output/hbs-2020-matrix.json
+      - name: Preserve research report on success or failure
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6, Node.js 24
+        with:
+          name: li-002-hbs-2020-division-matrix
+          path: research-output/hbs-2020-matrix.json
+          if-no-files-found: error
+          retention-days: 7

@@ -1,19 +1,10 @@
 # Living Index — latest contributor handoff
 
-**Updated:** 2026-11-24 · **Phase:** LI-002 · **State:** hosted HBS retrieval PASS; research evidence in review; full stage OPEN.
+**Updated:** 2026-11-24 · **Phase:** LI-002 · **State:** first evidence accepted; division-matrix implementation and dependency ADR proposed; numerical gate OPEN.
 
-## Baseline and evidence
-
-- Repository `martynio/LivingIndex`, verified main checkpoint `228e23d4897fd2365037ab19a6009355438f5f15`; PRs #5 and #6 accepted.
-- Operator manually dispatched [HBS run #2](https://github.com/martynio/LivingIndex/actions/runs/45436731068) on that checkpoint; 8/8 hosted tests and retrieval succeeded.
-- Downloaded report ZIP hash matched GitHub digest. Exact provenance, CP01/PPS_HH PL/NL observations, source flags and limitations: [run evidence](../research/HBS_2020_RUN_002_EVIDENCE.md).
-- No production dataset or cost-of-living calculation approved. Original API body not retained; independent official browser reconciliation open.
-- Node.js 20 deprecation warning in workflow logs: maintenance follow-up, not a run failure.
-
-## Read first
-
-[AGENTS.md](../../AGENTS.md), [status](../project/PROJECT_STATUS.md), [roadmap](../project/ROADMAP.md), [source registry](../research/SOURCE_REGISTRY.md), [proof gate](../research/HBS_2020_PROOF_GATE.md), [work log](WORK_LOG.md).
-
-## Next permitted action
-
-Review the evidence PR and accept or request corrections. Then reconcile both exact source cells, investigate local-currency household expenditure and compatible net income and paid hours, and evaluate final rights and methodology. Do not interpret PPS as EUR/PLN or a fixed-basket price. The LI-003 dependency has not been changed; any parallel website-shell scope requires explicit operator decision. No code, deployment settings or production data modified.
+- Verified main `e389573c34c88c3772b0c56701360bedf979a148` after [PR #7](https://github.com/martynio/LivingIndex/pull/7); hosted CP01 report evidence accepted.
+- Proposed matrix branch `research/li-002-hbs-division-matrix`; implementation commit `a137f987e711f71428f78de5df9616d86fe13297`; nine new local tests PASS, exact tested blob hashes matched. Hosted regression/live matrix run not yet observed when this note was written.
+- Read [matrix scope](../research/HBS_DIVISION_MATRIX.md), [first run evidence](../research/HBS_2020_RUN_002_EVIDENCE.md), [registry](../research/SOURCE_REGISTRY.md), [status](../project/PROJECT_STATUS.md), [roadmap](../project/ROADMAP.md), [work log](WORK_LOG.md), and [AGENTS.md](../../AGENTS.md).
+- New candidates LI-SRC-012–014 have only metadata verified; no income/hour values obtained. Never equate PPS with local cash spending or use mismatched denominators.
+- [ADR-0002](../decisions/ADR-0002-PARALLEL-SHELL-RESEARCH.md) proposes branch-only LI-003 shell work in parallel, conditional on acceptance and a separate scope. Actual Pages settings, host, operator data, legal review and publication gate still open.
+- Next: check PR offline regression result; review and accept; manually dispatch **LI-002 Eurostat HBS division matrix** on main. Inspect artifact, compare CP01 and source flags, record observed results. No data/chart publication, site changes or scope expansion in this PR.
