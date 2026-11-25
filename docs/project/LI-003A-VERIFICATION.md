@@ -31,3 +31,11 @@ No visual screenshot was fabricated. The static shell is not accepted as respons
 ## Next permitted action
 
 Check out this isolated branch and run the local preview plus full verifier in a browser-enabled environment. Review visual hierarchy, mobile/desktop layout, all focus states, actual 200% browser zoom, an automated accessibility scan, console/network/storage behavior and screenshots. Record actual evidence and address failures within LI-003A. Publication remains blocked until B/C and explicit operator approval. LI-002 research proceeds independently.
+
+## Preview decision — 2026-11-25
+
+The operator authorized use of the existing, non-promoted GitHub Pages address for review previews of LI-003A. This is permission for a development preview, not acceptance of LI-003A, approval of legal drafts, or authorization to merge to main or issue a production release. GitHub Pages on a public repository remains publicly accessible; noindex is not access control.
+
+The [existing Pages run 45443305037](https://github.com/martynio/LivingIndex/actions/runs/45443305037) build log shows source `.` at main commit `16c611794ca32a0a53fafd205aebab29749ecc43`; deployment log records `https://martynio.github.io/LivingIndex/`. Actual Pages settings cannot be read or modified by the available GitHub connector. No settings, site code, main or deployment changed in this decision record.
+
+Preferred preview: operator selects `feat/li-003a-static-website-shell` and `/(root)` in Settings → Pages → Deploy from a branch. After a successful deployment the expected shell URL is `https://martynio.github.io/LivingIndex/web/`. Verify deployed branch and commit before browser acceptance. All existing draft/noindex markers remain in place. Do not treat the public preview as approved legal content or the release gate as closed.

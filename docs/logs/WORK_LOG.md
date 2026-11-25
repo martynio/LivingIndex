@@ -209,3 +209,13 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Verification:** static PASS; browser blocked by `ERR_BLOCKED_BY_ADMINISTRATOR`; responsive/keyboard/AX/network/zoom/screenshot evidence NOT RUN, no full accessibility audit. Do not self-approve A. No feature branch deployment observed at check; Pages config unconfirmed.
 - **Checkpoint:** isolated code commit above and separate verification/documentation commit. Main unchanged; draft PR for review only. Completion, merge and publication not authorized.
 - **Handoff:** reproduce browser tests on a permitted local browser, capture evidence, correct any issues within A and obtain branch-only acceptance. LI-002 continues independently; B/C remain closed to execution.
+
+## LI-LOG-0017 — Operator permits GitHub Pages development preview
+
+- **Date:** 2026-11-25.
+- **Contributor:** repository operator (preview decision); ChatGPT (OpenAI GPT-6.2, GitHub connector) verified existing Pages run and recorded handoff.
+- **Work item:** LI-003A / preview exception; no acceptance or production release.
+- **Evidence:** Pages run 45443305037 build and deployment logs show root source on main and URL https://martynio.github.io/LivingIndex/; PR #10 remains draft. See [verification](../project/LI-003A-VERIFICATION.md).
+- **Outcome:** Operator permits non-promoted public Pages preview. Connector cannot read or change Pages settings; operator branch selection is required. No new deployment, merge, website code or legal-policy approval.
+- **Changed paths:** work log, handoff, LI-003A verification and web preview guide only; based on `de2122484e3aa7772a6db72e87d7c5ffc33fc8f8`.
+- **Next:** switch Pages to the feature branch/root for preview, verify deployment and browser tests, retain separate release gate. Browser evidence still pending.
