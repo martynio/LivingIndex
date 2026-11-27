@@ -1,8 +1,8 @@
 # Living Index — latest contributor handoff
 
-**Updated:** 2026-11-27 · LI-004A preview accepted; LI-005A implemented, review open.
+**Updated:** 2026-11-27 · LI-005A accepted; LI-005B matrix retrieval and normalization PASS, research review open.
 
-- [PR #12](https://github.com/martynio/LivingIndex/pull/12) merged, main verified at `9c30a8f8989d0ca439ce33451c6cfb75821c937c`. Pages run 46023013236: completed/success, head 9c30a8f8989d0ca439ce33451c6cfb75821c937c. Browser review remains open.
-- LI-005A review branch `feat/li-005a-research-data-contract`; code checkpoint `82f4446218c49232c113ca08f6da2466f0e92701`. Read [research contract](../project/LI-005A-RESEARCH-DATA-CONTRACT.md), [registry](../research/SOURCE_REGISTRY.md), [status](../project/PROJECT_STATUS.md), [roadmap](../project/ROADMAP.md), [WORK_LOG](WORK_LOG.md).
-- 13/13 local tests, exact code blob identity, real archived CP01 replay passed. No normalized values committed; approved manifest empty. No production calculation or website changes. Existing HBS rerun and browser tests not run.
-- Next: review/accept LI-005A; manually dispatch [HBS division matrix](https://github.com/martynio/LivingIndex/actions/workflows/li-002-hbs-matrix.yml) on main; preserve report before expiry, validate and assess source rights/compatibility. Do not promote PPS expenditure to local currency budget or combine mismatched income/hours. LI-002, final legal and production gates remain open.
+- Main `b5af5cfbbd438eb6363d724819ccdcccdf072c40` (PR #13 merged); PR #14 remains the LI-005B review branch. No new merge authorized by the workflow dispatch.
+- [National budget evidence](../research/LI-005B-NATIONAL-BUDGET-EVIDENCE.md) and [matrix evidence](../research/HBS_2020_MATRIX_RUN_EVIDENCE.md): 24/24 cells present, independently verified ZIP and JSON hashes, 17/17 hosted HBS tests and 13/13 local adapter tests, real replay PASS, exact CP01 match. Four NL cells corroborated secondarily. Raw API bytes not retained. Artifact expires 2026-12-04; operator should retain ZIP locally.
+- No production inputs approved. No raw/normalized JSON committed. Official cell reconciliation, source-specific methodology and rights, comparable income and hours remain open. Registry/catalogue status still needs coordinated update after review.
+- Read [contract](../project/LI-005A-RESEARCH-DATA-CONTRACT.md), [status](../project/PROJECT_STATUS.md), [roadmap](../project/ROADMAP.md), [work log](WORK_LOG.md). Next: accept PR #14 evidence; define a bounded country-specific budget scenario with verified inputs, separate PPS view and aligned paid-hour denominator. No new HBS dispatch needed for the fixed 2020 scope.

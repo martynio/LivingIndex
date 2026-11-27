@@ -1,6 +1,6 @@
 # LI-002 — HBS division matrix and income/time feasibility
 
-**Date:** 2026-11-24 · **Status:** implementation accepted via [PR #8](https://github.com/martynio/LivingIndex/pull/8); hosted regression 17/17 PASS; live matrix retrieval NOT RUN.
+**Date:** 2026-11-24 · **Status:** implementation accepted via [PR #8](https://github.com/martynio/LivingIndex/pull/8); hosted regression 17/17 PASS; live matrix retrieval and normalization PASS on 2026-11-27; [matrix evidence](HBS_2020_MATRIX_RUN_EVIDENCE.md).
 
 ## Scope contract
 
@@ -13,7 +13,7 @@
 
 ## Execute the research probe
 
-With PR #8 now merged, manually run **LI-002 Eurostat HBS division matrix** from [Actions](https://github.com/martynio/LivingIndex/actions), branch main. The offline job runs both synthetic test suites; the network job only runs on workflow_dispatch after tests succeed. The artifact `li-002-hbs-2020-division-matrix` contains the research report, expires after seven days, and is not production data. The original response body is not uploaded; its SHA-256 is recorded by the runner but cannot be independently recomputed from the report alone.
+For repeat retrieval, manually run **LI-002 Eurostat HBS division matrix** from [Actions](https://github.com/martynio/LivingIndex/actions), branch main. The offline job runs both synthetic test suites; the network job only runs on workflow_dispatch after tests succeed. The artifact `li-002-hbs-2020-division-matrix` contains the research report, expires after seven days, and is not production data. The original response body is not uploaded; its SHA-256 is recorded by the runner but cannot be independently recomputed from the report alone.
 
 - [Matrix script](../../scripts/hbs_matrix_probe.py)
 - [Matrix tests](../../tests/test_hbs_matrix_probe.py)
@@ -46,3 +46,7 @@ Local Python command: `python -m unittest discover -s tests -p 'test_hbs_matrix_
 ## Accepted hosted regression — 2026-11-24
 
 [Run 45439673111](https://github.com/martynio/LivingIndex/actions/runs/45439673111) checked the PR merge test ref against the accepted base and head; offline job succeeded, logs explicitly show 17 tests and OK. Manual-observation-matrix was skipped as designed. Operator accepted PR #8; [merge c812480](https://github.com/martynio/LivingIndex/commit/c8124808c8d57b3973c17362593922b6826e3713) verified on main. No new matrix observations have been retrieved.
+
+## 2026-11-27 — actual hosted matrix
+
+[matrix evidence](HBS_2020_MATRIX_RUN_EVIDENCE.md) records all 24 observations and hashes from the successful manual run, 17/17 hosted tests, 13/13 local adapter tests and real report normalization. The prior NOT RUN statements describe the original PR verification only. Production gates remain open.

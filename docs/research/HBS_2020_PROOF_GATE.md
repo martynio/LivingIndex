@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-13
 **Stage:** LI-002 research, first research pair retrieved on 2026-11-24
-**Verification verdict:** NETWORK PASS / PARTIAL OBSERVATION PROOF; see [run evidence](HBS_2020_RUN_002_EVIDENCE.md).
+**Verification verdict:** NETWORK AND COMPLETE RESEARCH MATRIX PASS / PRODUCTION GATES OPEN; see [matrix evidence](HBS_2020_MATRIX_RUN_EVIDENCE.md).
 **Producer:** ChatGPT (GPT-6, official-publication review and GitHub repository tools)
 
 ## Question
@@ -57,8 +57,8 @@ curl --fail-with-body --location --show-error \
 | Gate | Evidence required | Current |
 | --- | --- | --- |
 | `HBS-2020-01` | Downloaded, pinned response with hash and retrieval timestamp | **PARTIAL PASS** — verified report/ZIP hash; API body not preserved |
-| `HBS-2020-02` | Matching `PL` / `NL` cells, values and source flags at identical dimensions | **PASS for CP01/PPS_HH report pair** |
-| `HBS-2020-03` | Rechecked official browser values + units, period, category and household definition | **OPEN** — metadata checked, independent official values not reconciled |
+| `HBS-2020-02` | Matching `PL` / `NL` cells, values and source flags at identical dimensions | **PASS for all 24 CP01–CP12/PPS_HH report cells** |
+| `HBS-2020-03` | Rechecked official browser values + units, period, category and household definition | **OPEN** — metadata checked; four NL cells corroborated in a secondary compilation, official values not independently reconciled |
 | `HBS-2020-04` | Imputed-rent methodology and category comparability decision recorded | **OPEN** |
 | `HBS-2020-05` | Source-specific redistribution and attribution cleared | **OPEN** |
 | `HBS-2020-06` | Compatible net household/worker income and paid-hour model proved | **OPEN / separate indicator research** |
@@ -73,3 +73,5 @@ Review the [hosted run evidence](HBS_2020_RUN_002_EVIDENCE.md) and reconcile the
 ## Automation proposed after accepted PR #4
 
 A separate, manual-only [GitHub Actions research probe](HBS_PROBE_AUTOMATION.md) has been drafted to execute this request from a GitHub-hosted runner. The workflow was merged in PR #5 and successfully executed on 2026-11-24; the selected pair is research-only and the full gate remains open. A web-domain setup is not needed.
+
+Latest evidence: [matrix evidence](HBS_2020_MATRIX_RUN_EVIDENCE.md) supersedes earlier retrieval-only limitations, not the unresolved production gates.
