@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "version_id": "cbs-86272ned-nl-2020-v1",
+  "kind": "descriptive_preview",
+  "source_id": "LI-SRC-015",
+  "publisher": "CBS (Statistics Netherlands)",
+  "dataset": "86272NED",
+  "title": "Welvaart van particuliere huishoudens; kerncijfers",
+  "source_url": "https://www.cbs.nl/nl-nl/cijfers/detail/86272NED",
+  "source_updated_as_displayed": "2026-11-25 06:30",
+  "accessed_date": "2026-11-27",
+  "country": "NL",
+  "year": 2020,
+  "period": "year",
+  "basis": "household",
+  "population": "Private households with income, as of 1 January of reporting year",
+  "statistic": "mean",
+  "unit": "thousand_EUR_per_household_per_year",
+  "source_status": "final",
+  "observations": [
+    {
+      "measure": "disposable_income",
+      "source_label": "Gemiddeld besteedbaar inkomen",
+      "value": "46.4"
+    },
+    {
+      "measure": "consumption_expenditure",
+      "source_label": "Gemiddeld besteed bedrag",
+      "value": "35.2"
+    }
+  ],
+  "corroboration": [
+    {
+      "dataset": "83739NED",
+      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/83739NED",
+      "measures": [
+        "disposable_income",
+        "consumption_expenditure"
+      ]
+    },
+    {
+      "dataset": "85419NED",
+      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85419NED",
+      "row": "000000 Alle bestedingen; Particuliere huishoudens; 2020",
+      "measures": [
+        "consumption_expenditure"
+      ]
+    }
+  ],
+  "rights": {
+    "license": "CC BY 4.0",
+    "notice_url": "https://www.cbs.nl/en-gb/over-ons/website/copyright",
+    "review": "General CBS license checked on 2026-11-27; no exception visible on selected table; attribution and non-endorsement required"
+  },
+  "provenance": {
+    "method": "Manual transcription of two cells from official publisher HTML; checked against two other official CBS tables",
+    "raw_bytes_retained": false,
+    "transformations": "No value conversion; localized labels and decimal separator only"
+  },
+  "review": {
+    "source_cells": "verified",
+    "scope": "descriptive_display_only",
+    "operator": "accepted_2026-11-27_PR17",
+    "calculation_eligible": false,
+    "production_eligible": false,
+    "accepted_scope": "descriptive_display_only"
+  },
+  "limitations": [
+    "Not observed cash income or total cash expenditure; do not subtract or calculate savings or expenditure shares.",
+    "No PL/NL comparability or paid-hour denominator.",
+    "2020 pandemic context; means are not typical individual household budgets."
+  ]
+}

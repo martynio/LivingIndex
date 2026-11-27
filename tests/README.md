@@ -38,3 +38,7 @@ Run `python -m unittest discover -s tests -p 'test_economic*.py' -v` for engine 
 ## LI-006A
 
 Run `node tests/test_dashboard.cjs` for arithmetic and mock-DOM checks; run `python tests/verify_dashboard_parity.py` for 500 synthetic cross-language arithmetic cases (Node and Python required, no external dependencies). The existing shell verifier now covers 27 locale pages and dashboard browser interactions. See [observed verification](../docs/project/LI-006A-DASHBOARD-PREVIEW.md). Mock-DOM and static results do not substitute for real browser checks.
+
+## LI-006B
+
+The shell verifier now checks the CBS descriptive candidate manifest, snapshot and static localized values, with source/rights anchor allowlist. Run the existing static-only and browser commands before claiming full verification. Observed committed-source read-back evidence and limits: [LI-006B review](../docs/project/LI-006B-CBS-DESCRIPTIVE-PREVIEW.md).

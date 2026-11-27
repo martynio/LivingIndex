@@ -2,6 +2,18 @@
   "schema_version": "1.0.0",
   "kind": "approved_dataset_inventory",
   "approved_versions": [],
-  "status": "NO_APPROVED_DATASETS",
-  "note": "Research reports are not curated datasets. No dashboard input is authorized."
+  "status": "NO_APPROVED_CALCULATION_DATASETS",
+  "note": "Descriptive preview versions are not production calculation inputs. approved_versions remains reserved for separately approved calculation datasets.",
+  "descriptive_preview_candidates": [],
+  "descriptive_preview_versions": [
+    {
+      "version_id": "cbs-86272ned-nl-2020-v1",
+      "path": "cbs-86272ned-nl-2020-v1.json",
+      "source_id": "LI-SRC-015",
+      "status": "ACCEPTED_DESCRIPTIVE_PREVIEW",
+      "allowed_use": "descriptive_preview_only",
+      "calculation_eligible": false,
+      "operator_decision": "2026-11-27 PR #17"
+    }
+  ]
 }

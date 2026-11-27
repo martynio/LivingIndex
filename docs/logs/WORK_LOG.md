@@ -334,3 +334,26 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Evidence:** 22 arithmetic + 39 mock-DOM assertions, 500 synthetic Python/JS parity cases PASS, exact locally executed JS/test blobs matched remote. Static read-back 27 pages, 453 local references, 51 external anchor references checked, no structural errors after correcting English Sources nav. Initial connector batch limit exceeded; smaller batches succeeded. Browser probe blocked by administrator; full Python shell verifier, actual browser/accessibility/network tests and HBS rerun NOT RUN. 29/29 economic and 12/12 actual PPS regression rerun before previous merge.
 - **Result:** scoped static/arithmetic/interaction-model checks PASS; browser acceptance open; no official figures or publication on this branch. No full LI-005/006 closure.
 - **Checkpoint:** review PR pending operator acceptance; next verify actual browser rendering/controls, accept development-preview merge separately, continue verified source approval and production version contract.
+
+## LI-LOG-0031 — Accept LI-006A development dashboard
+
+- **Date:** 2026-11-27.
+- **Contributor:** operator explicitly approved PR #16 and authorized first real data review; ChatGPT (GPT-6.2, GitHub connector) verified and merged.
+- **Evidence:** 40 scoped paths; exact previously tested dashboard JS/test/parity blobs, empty approved inventory and append-only log checked; [PR #16](https://github.com/martynio/LivingIndex/pull/16) merged at `2c23e25fbba129513f7ebd7419b75b142cdf7673`; both expected parents verified. Pages run 46044174341 completed success. Previous tests not rerun; actual browser evidence remains open.
+- **Result:** preview accepted, no statistical calculation or legal approval.
+
+## LI-LOG-0032 — Stage first real descriptive CBS dataset
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (GPT-6.2, official publisher web review and GitHub connector), operator authorized data verification/admission work.
+- **Baseline:** `2c23e25fbba129513f7ebd7419b75b142cdf7673`; branch `feat/li-006b-cbs-descriptive-preview`; implementation checkpoint `7facce5e394a8f9882d3ca3aa9f72d0304207b8f`.
+- **Scope:** [LI-006B contract](../project/LI-006B-CBS-DESCRIPTIVE-PREVIEW.md); two final 2020 CBS national descriptive means, exact versioned snapshot and candidate manifest, LI-SRC-015 registry/catalogue addition, LI-SRC-009 current research coverage, three dashboard sections and verification. No production calculation input, JS engine change or deployment configuration change.
+- **Evidence:** CBS 86272NED and predecessor 83739NED agree for both 2020 cells; CBS 85419NED confirms consumption total. CC BY 4.0 general notice reviewed, no visible selected-table exception. Static read-back 6/6 values and 42/42 cards/links/country scopes match; approved_versions empty. Official Eurostat API and CBS OData metadata inaccessible through review tool; CBS HTML is the source. No raw bytes retained. Full Python verifier, browser tests and arithmetic/HBS reruns NOT RUN.
+- **Result:** descriptive candidate ready for explicit review; not production approval. Fixed NL/2020 display, no PL comparison or cash balance. Next operator approves exact descriptive version, records decision and merges; continue PPS and GUS evidence independently.
+
+## LI-LOG-0033 — Operator accepts CBS descriptive preview
+
+- **Date:** 2026-11-27.
+- **Decision:** operator explicitly approved PR #17 and version cbs-86272ned-nl-2020-v1 for descriptive display only. Accepted candidate head `a399f0bf856cf06291580d3cc9b77c6d9d12b9a1`.
+- **Change:** record decision in snapshot and manifest, source registry and all three localized dashboard/catalogue statuses. Both original values and source definitions unchanged; approved_versions remains empty; calculation_eligible and production_eligible false. No final release approval.
+- **Next:** merge reviewed PR #17 and verify main; LI-006C GUS review authorized.
