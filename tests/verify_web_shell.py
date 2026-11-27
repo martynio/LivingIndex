@@ -49,6 +49,9 @@ def static():
             if route=='sources' and h in {r['source_url'] for r in SOURCE_ROWS.values()}:
                 assert a.name=='a' and a.find_parent(attrs={'data-source-id':True}) and 'noreferrer' in a.get('rel',[]),rel
                 continue
+            if route=='dashboard' and h in ("https://www.cbs.nl/nl-nl/cijfers/detail/86272NED","https://www.cbs.nl/en-gb/over-ons/website/copyright"):
+                assert a.name=='a' and a.find_parent(id='cbs-descriptive-preview') and 'noreferrer' in a.get('rel',[]),rel
+                continue
             if route=='dashboard' and h=="https://github.com/martynio/LivingIndex/blob/7271543950ef610e9c663cbd67758bd19c90173e/docs/research/HBS_2020_MATRIX_RUN_EVIDENCE.md":
                 assert a.name=='a' and 'noreferrer' in a.get('rel',[]),rel
                 continue

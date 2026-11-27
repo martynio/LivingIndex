@@ -3,5 +3,15 @@
   "kind": "approved_dataset_inventory",
   "approved_versions": [],
   "status": "NO_APPROVED_DATASETS",
-  "note": "Research reports are not curated datasets. No dashboard input is authorized."
+  "note": "No production calculation inputs are authorized. Descriptive preview candidates require explicit operator acceptance before publication on main.",
+  "descriptive_preview_candidates": [
+    {
+      "version_id": "cbs-86272ned-nl-2020-v1",
+      "path": "cbs-86272ned-nl-2020-v1.json",
+      "source_id": "LI-SRC-015",
+      "status": "REVIEW_READY_OPERATOR_APPROVAL_REQUIRED",
+      "allowed_use": "descriptive_preview_only",
+      "calculation_eligible": false
+    }
+  ]
 }
