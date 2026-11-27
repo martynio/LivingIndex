@@ -1,8 +1,8 @@
 # LI-002 — Source registry (research candidates)
 
-**Checked:** 2026-11-24 · **Status:** research candidates and one retrieved HBS pair, **not** production approval.
+**Checked:** 2026-11-27 · **Status:** 15 registered sources; complete HBS research matrix and one descriptive CBS candidate, not production calculation approval.
 
-The canonical machine-readable index is [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.csv). IDs are stable references, not ranking scores. Every registered claim is backed by the linked **primary publisher** webpage. One research-only HBS pair has been retrieved and documented; no production dataset is approved.
+The canonical machine-readable index is [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.csv). IDs are stable references, not ranking scores. Every registered claim is backed by the linked **primary publisher** webpage. The complete 24-cell HBS research matrix is documented; one verified descriptive CBS candidate awaits operator acceptance. No production calculation dataset is approved.
 
 ## Source inventory
 
@@ -16,12 +16,14 @@ The canonical machine-readable index is [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.cs
 | LI-SRC-006 | GUS (PL) | Household income and spending | 2025 household-budget publication and publicly linked historical archive | Single publication checked; historical harmonization **unverified** |
 | LI-SRC-007 | CBS (NL) | Household expenditure microdata | CBS microdata listing 1978–2004, 2012, 2013, 2015, 2020 | **Not approved for redistribution**; avoid using as public data |
 | LI-SRC-008 | Eurostat | Life satisfaction survey | EU-SILC indicator `ilc_pw01`, 2022 wave, score 0–10 | Candidate, not % respondents satisfied |
-| LI-SRC-009 | Eurostat | HBS household mean expenditure | Exact table `hbs_exp_t121`, 1988–2020 table coverage; PL/NL 2020 country wave confirmed in official metadata | **CP01 2020 PL/NL pair retrieved; remaining divisions and production approval pending** |
+| LI-SRC-009 | Eurostat | HBS household mean expenditure | Exact table `hbs_exp_t121`, 1988–2020 table coverage; PL/NL 2020 country wave confirmed in official metadata | **24/24 CP01–CP12 2020 PL/NL/PPS_HH cells retrieved; independent official reconciliation and production approval pending** |
 | LI-SRC-010 | Eurostat | HBS expenditure structure by household type | Exact table `hbs_str_t224`, 1988–2020; per-mille proportions | **Not equivalent to absolute expenditure** |
 | LI-SRC-011 | CBS (NL) | 2020 household income / expenditure public summary | CBS article cites annual disposable income, expenditure and savings for 2015/2020 | 2020 publication flags preliminary figures; COVID spending anomaly |
 | LI-SRC-012 | Eurostat | Model annual net earnings | [earn_nt_net](https://ec.europa.eu/eurostat/databrowser/view/earn_nt_net/default/table?lang=en), family/earnings cases | Candidate, not HBS observed income |
 | LI-SRC-013 | Eurostat | Actual weekly work hours | [lfsa_ewhais](https://ec.europa.eu/eurostat/web/products-datasets/-/lfsa_ewhais), main job | Candidate, not annual paid hours |
 | LI-SRC-014 | Eurostat | Equivalised income | [ilc_di03](https://ec.europa.eu/eurostat/databrowser/product/view/ILC_DI03?category=livcon.ilc.ilc_ip.ilc_di&lang=en), age and sex | Candidate, not household total |
+
+| LI-SRC-015 | CBS (NL) | Household disposable income and consumption | [86272NED](https://www.cbs.nl/nl-nl/cijfers/detail/86272NED), two final 2020 means corroborated in official CBS tables | Descriptive preview candidate only; no cash or cross-country calculations |
 
 ## Publisher sources
 
@@ -68,3 +70,7 @@ This improves confidence in the 2020 research anchor but **does not** establish 
 LI-SRC-009: the selected CP01/PPS_HH 2020 PL/NL pair was retrieved in [run #2](https://github.com/martynio/LivingIndex/actions/runs/45436731068). See [evidence](HBS_2020_RUN_002_EVIDENCE.md). This supersedes earlier values-pending wording for this subset only. Other categories, country-year cells, official browser reconciliation and methodological approval remain open.
 
 Income/time candidate definitions and extraction gates: [HBS division matrix and feasibility](HBS_DIVISION_MATRIX.md). No numerical values from LI-SRC-012–014 have been retrieved.
+
+## 2026-11-27 descriptive candidate and matrix update
+
+See [complete HBS matrix](HBS_2020_MATRIX_RUN_EVIDENCE.md) and [LI-006B CBS review](../project/LI-006B-CBS-DESCRIPTIVE-PREVIEW.md). LI-SRC-015 is distinct from the preliminary article LI-SRC-011; 2011–2025 denotes table metadata, only two final 2020 cells reviewed. CBS general CC BY 4.0 notice reviewed for this table. Descriptive approval is separate from production calculations.

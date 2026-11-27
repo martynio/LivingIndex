@@ -37,6 +37,19 @@ def static():
             assert scripts[0].has_attr('defer') and not scripts[0].get_text(strip=True),rel
             assert {x['id'] for x in s.select('#panel-budget,#panel-pps,#panel-time')}=={'panel-budget','panel-pps','panel-time'},rel
             assert len(s.select('#pps-category option'))==12,rel
+            data_dir=ROOT.parent/'data/curated'
+            inventory=json.loads((data_dir/'manifest.json').read_text(encoding='utf-8'))
+            snapshot=json.loads((data_dir/'cbs-86272ned-nl-2020-v1.json').read_text(encoding='utf-8'))
+            assert not inventory['approved_versions'],rel
+            assert snapshot['review']['calculation_eligible'] is False and snapshot['review']['production_eligible'] is False,rel
+            section=s.select_one('#cbs-descriptive-preview')
+            assert section and section['data-version']==snapshot['version_id'] and section['data-country']=='NL' and section['data-year']=='2020',rel
+            displayed=section.select('[data-observation]')
+            assert len(displayed)==2 and {x['data-observation']:x['data-value'] for x in displayed}=={o['measure']:o['value'] for o in snapshot['observations']},rel
+            for x in displayed:
+                assert x.get_text(strip=True)==(x['data-value'] if lang=='en' else x['data-value'].replace('.',',')),rel
+            assert {x['href'] for x in section.select('a[href]')}=={snapshot['source_url'],snapshot['rights']['notice_url']},rel
+            assert 'CC BY 4.0' in section.get_text() and not section.find_all(['input','script','form']),rel
             assert all(not x.get('value') for x in s.find_all('input')),rel
             assert all(x.get('id') and s.find('label',attrs={'for':x['id']}) for x in s.find_all(['input','select'])),rel
         else:

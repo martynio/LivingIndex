@@ -38,3 +38,7 @@ No production figures, chart of national statistics, additional research years, 
 ## NEXT GATE
 
 Review LI-006A and accept for main development preview only; verify actual rendered behavior. Real national input/source compatibility, approved version records, PPS methodological and rights review, aligned net-paid-hours denominator and legal/production gates remain open. No full LI-005 or LI-006 closure. Expected preview after approved merge: web/dashboard.html, web/pl/dashboard.html, web/nl/dashboard.html under the existing GitHub Pages base path.
+
+## Operator acceptance — 2026-11-27
+
+PR #16 accepted as development preview; verified main `2c23e25fbba129513f7ebd7419b75b142cdf7673` and both parents, Pages run 46044174341 successful. Exact previously tested blobs matched; tests not rerun in this tranche. See [first descriptive data candidate](LI-006B-CBS-DESCRIPTIVE-PREVIEW.md). Browser and production gates remain open.
