@@ -239,3 +239,21 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Evidence:** official GitHub Pages, GitHub privacy, GDPR and Dutch cookie guidance reviewed. Source inspection of 25 HTML pages and both CSS files; changed-page read-back audit: 12 pages, 180 relative references, 9 external anchors, no issues found. No active elements, imports or remote resource URLs introduced. Earlier HBS 17/17 results historical; Python verifier and full browser tests NOT RUN; HTTP probe DNS failure. No final policy or release approval.
 - **Checkpoint:** isolated review PR; operator acceptance required. Final controller/rights contact, legal bases, retention, transfer and observed network/storage behavior remain open. Main preview unchanged until review merge.
 - **Next:** accept factual preview information, resolve operator/legal inputs and browser evidence, continue separately scoped sources work without claiming official release.
+
+## LI-LOG-0020 — Accept LI-003B preview information
+
+- **Date:** 2026-11-27.
+- **Contributor:** operator explicitly approved PR #11 as development-preview information; ChatGPT (OpenAI GPT-6.2, GitHub connector) verified and merged it.
+- **Evidence:** 20 scoped paths; append-only log and evidence record checked; approved head 4238d7888ed1f6923072623c2e00be41d460d580, base 38f4caa2000462173f992890982c09d2e4089f71; [PR #11](https://github.com/martynio/LivingIndex/pull/11) merged and main confirmed at `2ee65ee727c0c5f54ffaec8ec97c60212d9b6607` with both parents.
+- **Result:** PASS for merge/checkpoint; no final legal or browser approval. Deployment run 46021176815 was in progress at first inspection.
+- **Handoff:** operator authorized LI-004 source explorer; separate scope and review branch.
+
+## LI-LOG-0021 — Implement LI-004A multilingual Sources Explorer
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (OpenAI GPT-6.2, GitHub connector and JavaScript authoring runtime), operator requested LI-004 commencement.
+- **Baseline:** main `2ee65ee727c0c5f54ffaec8ec97c60212d9b6607`; branch `feat/li-004-sources-explorer`; code checkpoint `948497d0049dd15c64de1d8be9edf9ee7c6109f4`.
+- **Scope:** [LI-004A contract and verification](../project/LI-004A-SOURCES-EXPLORER.md); 13 eligible metadata cards in each locale, local filters, responsive card CSS, updated verifier and audit documentation. LI-SRC-007 excluded by registry restriction; no data values or registry changes.
+- **Evidence:** 39 committed cards and 39 publisher URL matches; seven synthetic predicate checks; 18 filter combinations per locale, identical counts; code inspection no external fetch/storage; all sources explicitly not approved for calculations. Existing HBS code unchanged.
+- **Verification:** static audit PASS; Python verifier, HBS rerun, full browser interaction and accessibility NOT RUN. No fresh publisher cell retrieval, production legal approval or publication.
+- **Checkpoint:** isolated review PR, operator acceptance pending. Next verify actual browser behavior and merge as approved development preview; LI-002 and release gates remain independent.

@@ -22,3 +22,7 @@ See [LI-003A verification](../docs/project/LI-003A-VERIFICATION.md) for observed
 ## LI-003B external navigation
 
 The verifier permits exactly two GitHub documentation URLs as user-activated anchors on privacy and cookies routes, with noreferrer. Other external references remain disallowed. This is not permission for embedded external assets. Full verifier execution remains required; see [LI-003B evidence](../docs/project/LI-003B-PREVIEW-TRANSPARENCY.md).
+
+## LI-004A source catalogue checks
+
+The existing verifier checks eligible registry IDs, publisher anchor URLs, country scope, local deferred filter script and browser filter/reset behavior. Source metadata is not a production dataset. See [LI-004A review](../docs/project/LI-004A-SOURCES-EXPLORER.md) for actual checks and remaining browser evidence.
