@@ -1,6 +1,6 @@
 # LI-005B — National budget evidence and compatibility review
 
-**Date:** 2026-11-27 · **Verdict:** PARTIAL EVIDENCE / matrix retrieval remains open. No approved production inputs.
+**Date:** 2026-11-27 · **Verdict:** MATRIX RETRIEVAL AND NORMALIZATION PASS / national-budget comparability remains open. No approved production inputs.
 
 ## Scope and accepted baseline
 
@@ -12,9 +12,9 @@ This tranche reviews official source evidence for 2020 national-currency househo
 
 ## 1. HBS retrieval and method
 
-The GitHub run list contains the successful PR regression for the matrix but no manual workflow_dispatch execution of the live matrix job. Direct API access failed through the browser tool, including a PL/NL annual query and alternate webgate endpoint; local curl returned DNS resolution failure. The official Data Browser product could not be read at cell level. These are access limitations, not evidence of missing source values. The Eurostat copyright page also advertised maintenance on 27 November 16:00–19:00; this notice does not establish the cause of our access failure.
+At the initial review, the GitHub run list contained only the successful PR regression for the matrix. The operator subsequently dispatched the live workflow; see the 27 November update below. Direct API access failed through the browser tool, including a PL/NL annual query and alternate webgate endpoint; local curl returned DNS resolution failure. The official Data Browser product could not be read at cell level. These are access limitations, not evidence of missing source values. The Eurostat copyright page also advertised maintenance on 27 November 16:00–19:00; this notice does not establish the cause of our access failure.
 
-The earlier [CP01 evidence](HBS_2020_RUN_002_EVIDENCE.md) remains the sole retrieved Eurostat PL/NL pair. A [secondary compilation](https://fgeerolf.com/data/eurostat/hbs_exp_t121.html) independently displays the same NL CP01 2020 value of 3835, but not the PL cell in its displayed subset. This is secondary corroboration, not second official extraction. The [DBnomics dataset metadata](https://db.nomics.world/Eurostat/hbs_exp_t121) lists one unit, consistent with the [Eurostat product](https://ec.europa.eu/eurostat/databrowser/product/view/hbs_exp_t121?lang=en) reporting PPS_HH. Do not assume NAC_HH or EUR_HH are available in this specific table merely because the HBS collection supports national currency, euros and PPS across its tables.
+At the initial review, the earlier [CP01 evidence](HBS_2020_RUN_002_EVIDENCE.md) was the sole retrieved Eurostat PL/NL pair. A [secondary compilation](https://fgeerolf.com/data/eurostat/hbs_exp_t121.html) independently displays the same NL CP01 2020 value of 3835, but not the PL cell in its displayed subset. This is secondary corroboration, not second official extraction. The [DBnomics dataset metadata](https://db.nomics.world/Eurostat/hbs_exp_t121) lists one unit, consistent with the [Eurostat product](https://ec.europa.eu/eurostat/databrowser/product/view/hbs_exp_t121?lang=en) reporting PPS_HH. Do not assume NAC_HH or EUR_HH are available in this specific table merely because the HBS collection supports national currency, euros and PPS across its tables.
 
 Official [HBS metadata](https://ec.europa.eu/eurostat/cache/metadata/en/hbs_esms.htm), sections 4, 5, 12.3, 15 and 18.6, confirms the annual survey reference period, 12 ECOICOP-2013 divisions, incomplete harmonisation and use of household final-consumption PPP. Published aggregates can differ from the sum of component categories. Neither a 12-division sum nor PPS converted with a market exchange rate is a cash budget. [HBS comparability guidance](https://ec.europa.eu/eurostat/en/web/household-budget-surveys/information-data) identifies imputed owner-occupier rent as an important comparability issue. In the 2020 wave, metadata identifies Czechia and Malta as countries without such imputation; this does not establish the exact national housing treatment or cash component of the PL/NL cells.
 
@@ -47,7 +47,7 @@ Both national sources describe COVID-related changes in consumption. Neither rep
 | View | Evidence | Decision / required work |
 | --- | --- | --- |
 | National budget | GUS 2020 per person/month and CBS 2020 per household/year | Feasible starting points for separately labelled national panels after exact definitions, complete categories, revision and rights review. Do not directly compare amounts or mechanically multiply by average household size. Need matching income and expense population/basis, explicit cash vs imputed items and harmonised categories. |
-| Harmonised expenditure | HBS CP01 research pair; matrix pending | PPS household consumption, not prices or money remaining. Independent cell check, flags and methodology remain necessary. |
+| Harmonised expenditure | Complete 24-cell HBS research matrix; see [matrix evidence](HBS_2020_MATRIX_RUN_EVIDENCE.md) | PPS household consumption, not prices or money remaining. Independent cell check, flags and methodology remain necessary. |
 | Modelled earnings | [Eurostat earn_net metadata](https://ec.europa.eu/eurostat/cache/metadata/en/earn_net_esms.htm) / LI-SRC-012 | Select explicit family/earnings scenario. Includes taxes, social contributions and applicable allowances; not observed mean HBS household income. |
 | Working time | LI-SRC-013 LFS actual reference-week hours; [SES metadata](https://ec.europa.eu/eurostat/cache/metadata/en/earn_ses_main_esms.htm) offers gross earnings and paid hours, four-year survey | Actual hours and paid hours differ. SES gross-based time cannot be labeled net. No matching net paid-hours denominator for 2020 established. Do not annualize LFS by a fixed multiplier and claim observed paid hours. |
 | Equivalised income | LI-SRC-014 / [EU-SILC methodology](https://ec.europa.eu/eurostat/web/income-and-living-conditions/methodology) | Distinct welfare measure, not household total. Align survey and income reference periods. |
@@ -57,6 +57,10 @@ Recommendation: develop country-specific budget evidence first, and reserve cros
 ## 5. Gate and immediate next action
 
 - LI-005A accepted, code tests 13/13 re-executed and actual CP01 replay verified; no production versions.
-- LI-005B national source discovery: partial PASS. Matrix retrieval/validation NOT RUN, official direct CP01 reconciliation OPEN, production rights/methodology OPEN, matched income/hours OPEN.
-- Run existing [HBS division matrix workflow](https://github.com/martynio/LivingIndex/actions/workflows/li-002-hbs-matrix.yml) manually on main. Connector cannot initiate workflow_dispatch. Public repo artifacts are not private; the report contains selected aggregate observations, not raw source bytes. Eurostat general aggregate reuse notice reviewed above; artifact is research-only and expires after seven days. Preserve actual report and independently verify its digest; pass the verified report to the accepted adapter without committing output.
+- LI-005B national source discovery: partial PASS. Matrix retrieval/normalization PASS, official direct CP01 reconciliation OPEN, production rights/methodology OPEN, matched income/hours OPEN.
+- Operator executed the existing matrix workflow; see [matrix evidence](HBS_2020_MATRIX_RUN_EVIDENCE.md). Archive and report independently hashed, normalized locally; no production eligibility.
 - Review this evidence, then separately scope exact GUS/CBS extraction and scenario eligibility; synchronize candidate registry and catalogue only after source review. No new calculation engine, chart, dataset approval or closure of LI-002/LI-005 in this tranche.
+
+## 27 November — matrix retrieval update
+
+[matrix evidence](HBS_2020_MATRIX_RUN_EVIDENCE.md) documents the successful hosted run, all 24 observations, matching CP01 values and flags, and verified adapter replay. No further manual dispatch required for this scope. Remaining gates: direct primary-source reconciliation, methodological alignment, production rights and matched net paid hours.

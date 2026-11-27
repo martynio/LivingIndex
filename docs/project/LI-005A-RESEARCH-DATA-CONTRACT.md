@@ -56,3 +56,7 @@ Accept only this research adapter after code identity, regression tests for its 
 ## Accepted checkpoint — 2026-11-27
 
 Operator approved PR #13; independently repeated 13/13 adapter tests and archived real CP01 report replay against exact tested Git blobs, both passed. Merge verified on main at `b5af5cfbbd438eb6363d724819ccdcccdf072c40` with expected parents. Pages run 46027307728 succeeded. No production input approved. See [LI-005B national budget evidence](../research/LI-005B-NATIONAL-BUDGET-EVIDENCE.md).
+
+## Actual matrix replay — 2026-11-27
+
+The accepted adapter normalized the independently hashed real 24-cell report; 13/13 local tests and 17/17 hosted HBS regression passed. See [matrix evidence](../research/HBS_2020_MATRIX_RUN_EVIDENCE.md). Production eligibility remains false; earlier NOT RUN statements are historical.
