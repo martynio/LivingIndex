@@ -255,3 +255,14 @@ a:focus-visible {
 .source-facts dt { color: var(--li-ink); }
 .source-facts dd { color: var(--li-muted); margin-bottom: .75rem; }
 #source-grid > [hidden], #source-filters[hidden], #source-empty[hidden] { display: none !important; }
+
+/* LI-006A: separate preview panels. */
+.dashboard-panel, .dashboard-intro { background: #fff; border: 1px solid var(--li-line); border-radius: .85rem; padding: clamp(1rem, 3vw, 2rem); }
+.dashboard-status { color: #60400c; background: #fff6df; border: 1px solid #c3943c; border-radius: .5rem; padding: .75rem; font-weight: 650; }
+.dashboard-panel label { font-weight: 650; }
+.dashboard-panel input, .dashboard-panel select, .dashboard-panel button { min-height: 44px; }
+.dashboard-panel :is(input, select, button):focus-visible { outline: 3px solid #ad4e00; outline-offset: 3px; }
+.dashboard-metric { background: var(--li-surface); border: 1px solid var(--li-line); border-radius: .5rem; padding: 1rem; height: 100%; overflow-wrap: anywhere; }
+.dashboard-metric p { margin-bottom: .25rem; color: var(--li-muted); }
+.dashboard-metric strong { font-size: clamp(1.15rem, 2vw, 1.65rem); }
+#dashboard-controls[hidden], .dashboard-panel[hidden], .dashboard-panel [hidden] { display: none !important; }

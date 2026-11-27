@@ -6,7 +6,7 @@ from urllib.parse import urlsplit
 import csv, json, threading, sys, os
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parent.parent/'web'
-ROUTES=['index','sources','methodology','about','privacy','cookies','terms','data-policy']
+ROUTES=['index','sources','methodology','about','privacy','cookies','terms','data-policy','dashboard']
 LOCALES=['en','pl','nl']
 APPROVED_EXTERNAL_LINKS={"https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection","https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"}
 with (ROOT.parent/'docs/research/SOURCE_REGISTRY.csv').open(encoding='utf-8', newline='') as f:
@@ -32,15 +32,25 @@ def static():
                 assert card.select_one('a[href]')['href']==row['source_url'],rel
                 assert card['data-countries']==('PL NL' if row['country']=='EU_PL_NL' else row['country']),rel
                 assert card['data-category'] in ('prices','income','household','hours','wellbeing'),rel
+        elif route=='dashboard':
+            assert len(scripts)==1 and scripts[0].get('src')==('' if lang=='en' else '../')+'assets/js/dashboard.js',rel
+            assert scripts[0].has_attr('defer') and not scripts[0].get_text(strip=True),rel
+            assert {x['id'] for x in s.select('#panel-budget,#panel-pps,#panel-time')}=={'panel-budget','panel-pps','panel-time'},rel
+            assert len(s.select('#pps-category option'))==12,rel
+            assert all(not x.get('value') for x in s.find_all('input')),rel
+            assert all(x.get('id') and s.find('label',attrs={'for':x['id']}) for x in s.find_all(['input','select'])),rel
         else:
             assert not scripts,rel
-        if route in ROUTES[4:]: assert s.select_one('.draft-panel'),rel
-        for a in s.find_all(['a','link']):
-            h=a.get('href','')
+        if route in ('privacy','cookies','terms','data-policy'): assert s.select_one('.draft-panel'),rel
+        for a in s.find_all(['a','link','script']):
+            h=a.get('href',a.get('src',''))
             if h=='data:,': continue
             if h.startswith('#'): assert s.find(id=h[1:]); continue
             if route=='sources' and h in {r['source_url'] for r in SOURCE_ROWS.values()}:
                 assert a.name=='a' and a.find_parent(attrs={'data-source-id':True}) and 'noreferrer' in a.get('rel',[]),rel
+                continue
+            if route=='dashboard' and h=="https://github.com/martynio/LivingIndex/blob/7271543950ef610e9c663cbd67758bd19c90173e/docs/research/HBS_2020_MATRIX_RUN_EVIDENCE.md":
+                assert a.name=='a' and 'noreferrer' in a.get('rel',[]),rel
                 continue
             if h in APPROVED_EXTERNAL_LINKS:
                 assert a.name=='a' and route in ('privacy','cookies') and 'noreferrer' in a.get('rel',[]),(rel,h)
@@ -86,6 +96,24 @@ def browser_checks(out):
                             assert page.locator('[data-source-id]:visible').count()==1
                             page.locator('#source-reset').click()
                             assert page.locator('[data-source-id]:visible').count()==len(SOURCE_ROWS)
+                        if route=='dashboard':
+                            assert page.locator('#panel-budget').is_visible() and not page.locator('#panel-time').is_visible()
+                            page.locator('#budget-income').fill('2000')
+                            page.locator('#budget-expense').fill('1500')
+                            assert page.locator('#budget-balance').inner_text()=='500 PLN'
+                            page.locator('#budget-country').select_option('NL')
+                            assert not page.locator('#budget-results').is_visible() and page.locator('#budget-income').input_value()==''
+                            page.locator('#dashboard-mode').select_option('pps')
+                            assert page.locator('#panel-pps').is_visible() and not page.locator('#panel-budget').is_visible()
+                            page.locator('#pps-category').select_option('CP12')
+                            assert page.locator('#pps-selected').inner_text()=='CP12'
+                            page.locator('#dashboard-mode').select_option('time')
+                            page.locator('#time-net').fill('2000')
+                            page.locator('#time-hours').fill('160')
+                            page.locator('#time-cost').fill('100')
+                            assert page.locator('#time-equivalent').inner_text() in ('8.00 h','8,00 h')
+                            page.locator('#time-hours').fill('0')
+                            assert not page.locator('#time-results').is_visible()
                         checks+=1
                         if width==768 and prefix=='':
                             roles=[n.get('role',{}).get('value') for n in cdp.send('Accessibility.getFullAXTree')['nodes'] if not n.get('ignored')]
