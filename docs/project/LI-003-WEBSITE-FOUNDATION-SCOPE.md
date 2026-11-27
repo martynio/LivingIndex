@@ -1,6 +1,6 @@
 # LI-003 — Website Foundation: proposed scope and acceptance gates
 
-**Document:** LI-003-SCOPE-001 · **Date:** 2026-11-24 · **Status:** PROPOSED / separate implementation approval required.
+**Document:** LI-003-SCOPE-001 · **Date:** 2026-11-24 · **Status:** LI-003A scope approved by operator on 2026-11-24 for branch-only implementation. LI-003B/C and publication require separate authorization. See [verification](LI-003A-VERIFICATION.md).
 
 ## CURRENT STATE
 
@@ -73,4 +73,12 @@ Stop on unexpected deployment activity caused by a shell change, missing rights 
 - Test final deployed-path behavior in a safe preview; legal and source claims require evidence. Confirm which changes cause auto-deployment before merging public HTML.
 - Operator explicitly approves release; validate published URL/HTTPS, response, routing, network/storage behavior and displayed legal pages; record release SHA and evidence. LI-002 statistical gates continue independently.
 
-**Next decision:** approve LI-003A only, revise proposed visual/route defaults if needed, and implement on an isolated branch. No execution has occurred under this scope document.
+**Next decision:** verify the implemented LI-003A branch and resolve the browser gate; accept only the isolated checkpoint. LI-003B/C require separate approval.
+
+## Operator amendment — 2026-11-27: main-based development preview
+
+The operator explicitly requested that the development shell be merged into main and visible through GitHub Pages so work can continue. This supersedes the previous branch-only preview restriction for the non-data LI-003A shell. It does not accept unresolved browser tests, approve draft policies, authorize statistical results, or close the production-release gate. Main may host a visibly marked development preview; review branches and logged checkpoints remain the normal workflow. Noindex is not access control.
+
+Observed Pages run [45654489328](https://github.com/martynio/LivingIndex/actions/runs/45654489328) succeeded for the feature branch on 2026-11-25; [46018763155](https://github.com/martynio/LivingIndex/actions/runs/46018763155) was running for the old main checkpoint at the start of this change. The repository root lacked index.html. Add a root entry redirect with a visible fallback link to web/index.html; preserve the 24 original shell pages and local assets unchanged. Expected public preview: https://martynio.github.io/LivingIndex/ (direct route: https://martynio.github.io/LivingIndex/web/). Verify new main deployment and HTTP/rendered behavior separately; the connector cannot modify Pages settings.
+
+The previously observed static checks are retained; browser verification and final LI-003A acceptance remain open. Legal readiness and final release remain separate. No further dependency on a feature-branch Pages configuration.

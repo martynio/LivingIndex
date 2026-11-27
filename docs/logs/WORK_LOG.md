@@ -198,3 +198,34 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Verification:** PASS for hosted regression, PR merge and ancestry. Pages activity observed, but Pages settings API unavailable through connector; exact publish source/domain, legal and deployment details unconfirmed. Website implementation and tests NOT RUN. Scope A/B/C and visual/route defaults are proposals awaiting separate approval.
 - **Checkpoint:** accepted PR #8 merge `c8124808c8d57b3973c17362593922b6826e3713`; this closeout commit records approval and proposed scope. No LI-003 execution or publication approval is implied.
 - **Handoff:** operator may manually dispatch the HBS division matrix on main; independently approve LI-003A scope for branch-only implementation. Keep publication and statistical gates separate.
+
+## LI-LOG-0016 — Implement LI-003A static website foundation
+
+- **Date:** 2026-11-24.
+- **Contributor:** ChatGPT (OpenAI GPT-6.2, local Python/Chromium tools and GitHub connector); operator authorized [LI-003A scope](../project/LI-003-WEBSITE-FOUNDATION-SCOPE.md), branch only, no publication.
+- **Baseline:** `16c611794ca32a0a53fafd205aebab29749ecc43` on main, ADR-0002 accepted, no open PR at start. Branch `feat/li-003a-static-website-shell`; code commit `eb65f71d438c38d9a6c79b6737e5e5686582b7f2`.
+- **Changed paths:** web localized HTML, shared CSS, official Bootstrap 5.3.6 CSS and MIT notice, local preview and localization guides; `tests/verify_web_shell.py`, test guide, status/roadmap/scope, verification record, log and handoff. No changes to existing HBS research code, datasets, workflows or deployment settings.
+- **Evidence:** 27 code blob identities match; local static verification 24 pages / 372 references PASS; CSS parser 44 rules, no top-level errors; nine selected contrast pairs minimum 5.54:1; unchanged HBS regression 17/17 PASS. Details and reproduction in [LI-003A verification](../project/LI-003A-VERIFICATION.md).
+- **Verification:** static PASS; browser blocked by `ERR_BLOCKED_BY_ADMINISTRATOR`; responsive/keyboard/AX/network/zoom/screenshot evidence NOT RUN, no full accessibility audit. Do not self-approve A. No feature branch deployment observed at check; Pages config unconfirmed.
+- **Checkpoint:** isolated code commit above and separate verification/documentation commit. Main unchanged; draft PR for review only. Completion, merge and publication not authorized.
+- **Handoff:** reproduce browser tests on a permitted local browser, capture evidence, correct any issues within A and obtain branch-only acceptance. LI-002 continues independently; B/C remain closed to execution.
+
+## LI-LOG-0017 — Operator permits GitHub Pages development preview
+
+- **Date:** 2026-11-25.
+- **Contributor:** repository operator (preview decision); ChatGPT (OpenAI GPT-6.2, GitHub connector) verified existing Pages run and recorded handoff.
+- **Work item:** LI-003A / preview exception; no acceptance or production release.
+- **Evidence:** Pages run 45443305037 build and deployment logs show root source on main and URL https://martynio.github.io/LivingIndex/; PR #10 remains draft. See [verification](../project/LI-003A-VERIFICATION.md).
+- **Outcome:** Operator permits non-promoted public Pages preview. Connector cannot read or change Pages settings; operator branch selection is required. No new deployment, merge, website code or legal-policy approval.
+- **Changed paths:** work log, handoff, LI-003A verification and web preview guide only; based on `de2122484e3aa7772a6db72e87d7c5ffc33fc8f8`.
+- **Next:** switch Pages to the feature branch/root for preview, verify deployment and browser tests, retain separate release gate. Browser evidence still pending.
+
+## LI-LOG-0018 — Authorize main development preview and repair root entry
+
+- **Date:** 2026-11-27.
+- **Contributor:** repository operator explicitly requested continued work and main-based Pages preview; ChatGPT (GPT-6.2, GitHub connector) performed repository and deployment inspection.
+- **Baseline:** main `16c611794ca32a0a53fafd205aebab29749ecc43`; PR #10 feature head `96ffb1a7916486c233d017f63303579e3e857cce`. Pages branch deployment 45654489328 succeeded; current run 46018763155 building previous main at inspection. Main lacks root index.html and shell; root-based Pages source confirmed in prior build logs.
+- **Scope:** add root entry to web/index.html with visible fallback, record superseding preview authorization in governance/scope/status/roadmap/handoff; preserve all original HTML/CSS, draft markers, research code and data. No Pages configuration change, production release or legal approval.
+- **Verification:** existing static checks and regression evidence retained. Root target and relative fallback verified against Git tree before merge; actual new deployment and rendered browser evidence separate. Prior browser block remains open.
+- **Checkpoint:** review/merge through PR #10; exact commit and merge available in Git history. No full LI-003A acceptance implied.
+- **Next:** verify main deployment, preview HTTP and browser behavior; continue independently scoped work without blocking development preview on production release readiness.

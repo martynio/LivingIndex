@@ -1,0 +1,244 @@
+:root {
+  --li-navy:#14283d;
+  --li-ink:#172d40;
+  --li-muted:#465b6c;
+  --li-teal:#086f70;
+  --li-line:#d8e1e8;
+  --li-surface:#f3f7fa;
+  --li-white:#fff
+}
+
+body {
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--li-ink);
+  background:var(--li-surface);
+  line-height:1.65;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  margin:0;
+  overflow-wrap:break-word
+}
+main {
+  flex:1
+}
+a {
+  color:var(--li-teal);
+  text-underline-offset:.2em
+}
+a:hover {
+  color:var(--li-navy)
+}
+a:focus-visible {
+  outline:3px solid #ad4e00;
+  outline-offset:4px;
+  border-radius:3px
+}
+.skip-link {
+  position:absolute;
+  left:1rem;
+  top:-6rem;
+  background:white;
+  padding:.7rem 1rem;
+  z-index:10
+}
+.skip-link:focus {
+  top:1rem
+}
+.site-header {
+  background:#fff;
+  border-bottom:1px solid var(--li-line)
+}
+.wordmark {
+  font-weight:800;
+  letter-spacing:.1em;
+  text-decoration:none;
+  color:var(--li-navy);
+  font-size:1.15rem
+}
+.wordmark::before {
+  content:"";
+  display:inline-block;
+  width:.7rem;
+  height:.7rem;
+  background:var(--li-teal);
+  margin-right:.55rem;
+  border-radius:2px
+}
+.site-nav,.locale-nav,.legal-nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.25rem .65rem;
+  align-items:center
+}
+.site-nav a,.locale-nav a,.legal-nav a {
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+  padding:.35rem .45rem;
+  font-weight:600;
+  text-decoration:none
+}
+.site-nav a[aria-current=page],.locale-nav a[aria-current=page] {
+  color:var(--li-navy);
+  text-decoration:underline;
+  text-decoration-thickness:2px
+}
+.locale-nav a {
+  font-size:.86rem
+}
+.hero {
+  background:var(--li-navy);
+  color:white;
+  padding:clamp(2rem,6vw,5rem) 0
+}
+.hero h1 {
+  font-size:clamp(2.1rem,5vw,4rem);
+  line-height:1.1;
+  letter-spacing:-.035em;
+  font-weight:750;
+  max-width:16ch
+}
+.hero .lead {
+  color:#e0eaf2;
+  max-width:42rem;
+  font-size:1.12rem
+}
+.eyebrow {
+  font-size:.77rem;
+  letter-spacing:.13em;
+  font-weight:750;
+  color:var(--li-teal);
+  text-transform:uppercase
+}
+.hero .eyebrow {
+  color:#9ce1d8
+}
+.status-panel {
+  background:#203b51;
+  border:1px solid #597282;
+  border-radius:1rem;
+  padding:clamp(1.25rem,3vw,2rem);
+  height:100%
+}
+.status-panel h2 {
+  font-size:1.35rem;
+  color:#fff
+}
+.status-panel p {
+  color:#e0eaf2;
+  margin-bottom:0
+}
+.status-line {
+  display:block;
+  width:3rem;
+  height:4px;
+  background:#9ce1d8;
+  border-radius:3px;
+  margin-bottom:1rem
+}
+.li-button {
+  background:#c4f0e9;
+  color:#143b3e;
+  border:1px solid #c4f0e9;
+  font-weight:700;
+  min-height:44px;
+  white-space:normal
+}
+.li-button:hover,.li-button:focus {
+  background:#fff;
+  color:#143b3e;
+  border-color:#fff
+}
+.li-secondary {
+  border:1px solid #adbfca;
+  color:white;
+  font-weight:650;
+  min-height:44px;
+  white-space:normal
+}
+.li-secondary:hover,.li-secondary:focus {
+  background:#fff;
+  color:var(--li-navy)
+}
+.hero a:focus-visible,.site-footer a:focus-visible {
+  outline:3px solid #ffd28a;
+  outline-offset:4px
+}
+.section-pad {
+  padding:clamp(2rem,5vw,3.5rem) 0
+}
+.feature-card {
+  background:white;
+  border:1px solid var(--li-line);
+  border-radius:.85rem;
+  padding:1.35rem;
+  height:100%;
+  display:flex;
+  flex-direction:column
+}
+.feature-card h3 {
+  font-size:1.25rem;
+  font-weight:700
+}
+.feature-card p {
+  color:var(--li-muted);
+  flex:1
+}
+.feature-card a {
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  min-height:44px
+}
+.article {
+  max-width:800px;
+  background:white;
+  border:1px solid var(--li-line);
+  border-radius:1rem;
+  padding:clamp(1.25rem,4vw,2.75rem)
+}
+.article h1 {
+  font-size:clamp(1.9rem,4vw,3rem);
+  font-weight:750;
+  line-height:1.15;
+  letter-spacing:-.025em
+}
+.article p {
+  color:var(--li-muted)
+}
+.draft-panel {
+  background:#fff6df;
+  border:1px solid #c3943c;
+  color:#60400c;
+  padding:1rem;
+  border-radius:.5rem;
+  margin:1.5rem 0
+}
+.draft-panel p {
+  color:#60400c;
+  margin-bottom:0
+}
+.site-footer {
+  background:var(--li-navy);
+  color:#e0eaf2;
+  padding:1.4rem 0
+}
+.site-footer a {
+  color:#e0eaf2
+}
+.site-footer a[aria-current=page] {
+  text-decoration:underline
+}
+.site-footer p {
+  margin:0;
+  font-size:.88rem
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+  scroll-behavior:auto!important;
+  animation:none!important;
+  transition:none!important
+}
+
+}
