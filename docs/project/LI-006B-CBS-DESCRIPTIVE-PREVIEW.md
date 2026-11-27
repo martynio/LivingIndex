@@ -44,3 +44,7 @@ Approve this exact descriptive version and dashboard display only, record the op
 ## Operator decision — 2026-11-27
 
 Operator explicitly accepted PR #17 and cbs-86272ned-nl-2020-v1 for descriptive display only. Snapshot and manifest updated without changing values; all locale labels and source registry now reflect accepted scope. Production and calculation flags remain false. The earlier snapshot digest describes the candidate before this acceptance metadata change.
+
+## Verified main checkpoint
+
+PR #17 merged at `09e3f4e2a23f57d8ea349cd87eff7f285dd915f6`; both parents and successful Pages run 46045974842 confirmed. Accepted descriptive version only. See [LI-006C GUS review](LI-006C-GUS-DESCRIPTIVE-PREVIEW.md).

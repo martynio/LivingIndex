@@ -42,3 +42,7 @@ Run `node tests/test_dashboard.cjs` for arithmetic and mock-DOM checks; run `pyt
 ## LI-006B
 
 The shell verifier now checks the CBS descriptive candidate manifest, snapshot and static localized values, with source/rights anchor allowlist. Run the existing static-only and browser commands before claiming full verification. Observed committed-source read-back evidence and limits: [LI-006B review](../docs/project/LI-006B-CBS-DESCRIPTIVE-PREVIEW.md).
+
+## LI-006C
+
+Shell verifier extended to check GUS snapshot values, manifest membership, fixed PL/2020 context and three source/reuse anchors. Full execution remains required; [evidence](../docs/project/LI-006C-GUS-DESCRIPTIVE-PREVIEW.md).
