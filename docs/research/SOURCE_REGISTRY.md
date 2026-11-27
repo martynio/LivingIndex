@@ -22,7 +22,6 @@ The canonical machine-readable index is [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.cs
 | LI-SRC-012 | Eurostat | Model annual net earnings | [earn_nt_net](https://ec.europa.eu/eurostat/databrowser/view/earn_nt_net/default/table?lang=en), family/earnings cases | Candidate, not HBS observed income |
 | LI-SRC-013 | Eurostat | Actual weekly work hours | [lfsa_ewhais](https://ec.europa.eu/eurostat/web/products-datasets/-/lfsa_ewhais), main job | Candidate, not annual paid hours |
 | LI-SRC-014 | Eurostat | Equivalised income | [ilc_di03](https://ec.europa.eu/eurostat/databrowser/product/view/ILC_DI03?category=livcon.ilc.ilc_ip.ilc_di&lang=en), age and sex | Candidate, not household total |
-
 | LI-SRC-015 | CBS (NL) | Household disposable income and consumption | [86272NED](https://www.cbs.nl/nl-nl/cijfers/detail/86272NED), two final 2020 means corroborated in official CBS tables | Descriptive preview candidate only; no cash or cross-country calculations |
 
 ## Publisher sources
