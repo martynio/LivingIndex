@@ -3,12 +3,14 @@
 from pathlib import Path
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from urllib.parse import urlsplit
-import json, threading, sys, os
+import csv, json, threading, sys, os
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parent.parent/'web'
 ROUTES=['index','sources','methodology','about','privacy','cookies','terms','data-policy']
 LOCALES=['en','pl','nl']
 APPROVED_EXTERNAL_LINKS={"https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection","https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"}
+with (ROOT.parent/'docs/research/SOURCE_REGISTRY.csv').open(encoding='utf-8', newline='') as f:
+    SOURCE_ROWS={r['source_id']:r for r in csv.DictReader(f) if r['comparison_readiness']!='RESEARCH_LEAD_NOT_FOR_PUBLICATION'}
 PAGES=[(l,r,('' if l=='en' else l+'/')+r+'.html') for l in LOCALES for r in ROUTES]
 def static():
     checks=0
@@ -18,12 +20,28 @@ def static():
         assert all(len(s.find_all(t))==1 for t in ('main','header','footer')),rel
         assert s.find('meta',attrs={'name':'robots'})['content']=='noindex, nofollow'
         assert s.select_one('a.skip-link')['href']=='#main-content'
-        assert not s.find_all(['script','form','iframe','img']),rel
+        assert not s.find_all(['form','iframe','img']),rel
+        scripts=s.find_all('script')
+        if route=='sources':
+            assert len(scripts)==1 and scripts[0].get('src')==('' if lang=='en' else '../')+'assets/js/sources-explorer.js',rel
+            assert scripts[0].has_attr('defer') and not scripts[0].get_text(strip=True),rel
+            cards=s.select('[data-source-id]')
+            assert len(cards)==len(SOURCE_ROWS) and {c['data-source-id'] for c in cards}==set(SOURCE_ROWS),rel
+            for card in cards:
+                row=SOURCE_ROWS[card['data-source-id']]
+                assert card.select_one('a[href]')['href']==row['source_url'],rel
+                assert card['data-countries']==('PL NL' if row['country']=='EU_PL_NL' else row['country']),rel
+                assert card['data-category'] in ('prices','income','household','hours','wellbeing'),rel
+        else:
+            assert not scripts,rel
         if route in ROUTES[4:]: assert s.select_one('.draft-panel'),rel
         for a in s.find_all(['a','link']):
             h=a.get('href','')
             if h=='data:,': continue
             if h.startswith('#'): assert s.find(id=h[1:]); continue
+            if route=='sources' and h in {r['source_url'] for r in SOURCE_ROWS.values()}:
+                assert a.name=='a' and a.find_parent(attrs={'data-source-id':True}) and 'noreferrer' in a.get('rel',[]),rel
+                continue
             if h in APPROVED_EXTERNAL_LINKS:
                 assert a.name=='a' and route in ('privacy','cookies') and 'noreferrer' in a.get('rel',[]),(rel,h)
                 continue
@@ -59,6 +77,15 @@ def browser_checks(out):
                         assert page.locator('h1').count()==1
                         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'),(rel,width,'overflow')
                         assert page.evaluate('document.cookie === "" && localStorage.length === 0 && sessionStorage.length === 0'),rel
+                        if route=='sources':
+                            page.locator('#source-country').select_option('PL')
+                            assert page.locator('[data-source-id]:visible').count()==sum(r['country'] in ('PL','EU_PL_NL') for r in SOURCE_ROWS.values())
+                            page.locator('#source-category').select_option('prices')
+                            assert page.locator('[data-source-id]:visible').count()==1
+                            page.locator('#source-country').select_option('NL')
+                            assert page.locator('[data-source-id]:visible').count()==1
+                            page.locator('#source-reset').click()
+                            assert page.locator('[data-source-id]:visible').count()==len(SOURCE_ROWS)
                         checks+=1
                         if width==768 and prefix=='':
                             roles=[n.get('role',{}).get('value') for n in cdp.send('Accessibility.getFullAXTree')['nodes'] if not n.get('ignored')]

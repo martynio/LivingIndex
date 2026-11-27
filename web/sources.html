@@ -22,19 +22,242 @@
 </div>
 </header>
   <main id="main-content" tabindex="-1">
-<section class="section-pad">
-<div class="container">
-<article class="article">
-<p class="eyebrow">THE FOUNDATION</p>
-<h1>Where the data comes from</h1>
-<p>We are reviewing official statistical sources, their definitions, coverage and reuse conditions.</p>
-<p>Source cards will be added only after the relevant metadata and attribution have been checked.</p>
-<p>Data availability and comparability are separate questions.</p>
-<p class="mb-0"><a href="index.html">Home</a>
-</p>
+<section class="section-pad"><div class="container">
+<div class="article mb-4"><h1>Sources explorer</h1><p>Explore the official sources identified in our research. These are metadata records, not approved economic results.</p><p class="mb-0">The catalogue contains 13 public research candidates from the 14-record registry. The restricted microdata lead is excluded. The country filter indicates research scope, not verified national coverage. Years refer to checked source metadata, not continuous validated observations.</p></div>
+<section id="source-filters" class="source-filters mb-4" hidden aria-label="Filter sources">
+<h2 class="h5">Filter sources</h2>
+<div class="row g-3 align-items-end">
+<div class="col-12 col-md"><label for="source-country" class="form-label">Country in research scope</label><select class="form-select" id="source-country"><option value="all">All</option><option value="PL">Poland</option><option value="NL">Netherlands</option></select></div>
+<div class="col-12 col-md"><label for="source-category" class="form-label">Category</label><select class="form-select" id="source-category"><option value="all">All</option><option value="prices">Prices</option><option value="income">Income and earnings</option><option value="household">Household budgets</option><option value="hours">Working hours</option><option value="wellbeing">Quality of life</option></select></div>
+<div class="col-12 col-md-auto"><button type="button" class="btn btn-outline-secondary" id="source-reset">Reset filters</button></div></div>
+<p id="source-count" class="mt-3 mb-0" role="status" aria-live="polite" data-label="Sources shown">Sources shown: 13 / 13</p>
+</section>
+<noscript><p>All cards are available below. Filters require JavaScript.</p></noscript>
+<p id="source-empty" hidden>No sources match these filters.</p>
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3" id="source-grid">
+<div class="col" data-source-id="LI-SRC-001" data-countries="NL" data-category="prices">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">CBS · LI-SRC-001</p>
+<h2 class="h5">Historical consumer price index</h2>
+<p class="small mb-2">Netherlands · Prices</p>
+<p class="small mb-3 source-reference">71905ned</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>National CPI; 1900 = 100</dd>
+<dt>Source period</dt><dd>1900–2025</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>Dataset CC BY 4.0 verified; attribution required</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Historically linked estimates; not household or item costs.</p>
+<a class="mt-auto" href="https://dataportal.cbs.nl/detail/CBS/71905ned" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
 </article>
 </div>
-</section>
+<div class="col" data-source-id="LI-SRC-002" data-countries="PL" data-category="prices">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">GUS · LI-SRC-002</p>
+<h2 class="h5">Annual consumer price index</h2>
+<p class="small mb-2">Poland · Prices</p>
+<p class="small mb-3 source-reference">annual consumer price indices since 1950</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>National CPI; previous year = 100</dd>
+<dt>Source period</dt><dd>1950–2025</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>GUS reuse conditions apply</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Different base from CBS; no identical basket prices.</p>
+<a class="mt-auto" href="https://stat.gov.pl/obszary-tematyczne/ceny-handel/wskazniki-cen/wskazniki-cen-towarow-i-uslug-konsumpcyjnych-pot-inflacja-/roczne-wskazniki-cen-towarow-i-uslug-konsumpcyjnych/" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-003" data-countries="PL" data-category="income">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">GUS · LI-SRC-003</p>
+<h2 class="h5">Average monthly wages</h2>
+<p class="small mb-2">Poland · Income and earnings</p>
+<p class="small mb-3 source-reference">average monthly national-economy wages 1950–2025</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>National-economy mean; PLN/month as published</dd>
+<dt>Source period</dt><dd>1950–2025</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>GUS reuse conditions apply</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Not net pay; historical currency and definitions need checking.</p>
+<a class="mt-auto" href="https://stat.gov.pl/obszary-tematyczne/rynek-pracy/pracujacy-zatrudnieni-wynagrodzenia-koszty-pracy/przecietne-miesieczne-wynagrodzenie-w-gospodarce-narodowej-w-latach-1950-2025%2C2%2C1.html" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-004" data-countries="NL" data-category="income">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">CBS · LI-SRC-004</p>
+<h2 class="h5">Employment, gross wages and hours</h2>
+<p class="small mb-2">Netherlands · Income and earnings</p>
+<p class="small mb-3 source-reference">81432ENG</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>Employee jobs; gross wage and hour measures</dd>
+<dt>Source period</dt><dd>2009–2025</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>CBS general CC BY 4.0; check this content</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Does not establish compatible net hourly income.</p>
+<a class="mt-auto" href="https://www.cbs.nl/en-gb/figures/detail/81432ENG" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-005" data-countries="PL NL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-005</p>
+<h2 class="h5">Household Budget Surveys</h2>
+<p class="small mb-2">PL / NL research scope · Household budgets</p>
+<p class="small mb-3 source-reference">Household Budget Surveys HBS</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>Household survey; units vary by table</dd>
+<dt>Source period</dt><dd>2015 and 2020 waves identified</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>Eurostat general reuse; check exceptions</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Country cells and survey comparability remain open.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/en/web/household-budget-surveys/information-data" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-006" data-countries="PL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">GUS · LI-SRC-006</p>
+<h2 class="h5">Household income and expenditure</h2>
+<p class="small mb-2">Poland · Household budgets</p>
+<p class="small mb-3 source-reference">Budżety gospodarstw domowych w 2025 r.</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>Selected reports: PLN per person per month</dd>
+<dt>Source period</dt><dd>2025</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>GUS reuse conditions apply</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> 2025 report identified; historical harmonization not audited.</p>
+<a class="mt-auto" href="https://stat.gov.pl/obszary-tematyczne/warunki-zycia/dochody-wydatki-i-warunki-zycia-ludnosci/budzety-gospodarstw-domowych-w-2025-r-%2C9%2C24.html" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-008" data-countries="PL NL" data-category="wellbeing">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-008</p>
+<h2 class="h5">Reported life satisfaction</h2>
+<p class="small mb-2">PL / NL research scope · Quality of life</p>
+<p class="small mb-3 source-reference">ilc_pw01</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>EU-SILC mean score, 0–10</dd>
+<dt>Source period</dt><dd>2022 wave metadata</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>Eurostat general reuse; check exceptions</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> A mean score is not a percentage of satisfied people.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20240115-1" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-009" data-countries="PL NL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-009</p>
+<h2 class="h5">Mean household consumption expenditure</h2>
+<p class="small mb-2">PL / NL research scope · Household budgets</p>
+<p class="small mb-3 source-reference">hbs_exp_t121</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>HBS expenditure by COICOP; PPS per household</dd>
+<dt>Source period</dt><dd>1988–2020</dd>
+<dt>Evidence</dt><dd>Selected research observations retrieved; review required</dd>
+<dt>Reuse</dt><dd>Eurostat general reuse; check exceptions</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> PL/NL 2020 CP01 pair retrieved; other cells and direct browser check pending. PPS is not EUR or PLN.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/databrowser/product/view/hbs_exp_t121?lang=en" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-010" data-countries="PL NL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-010</p>
+<h2 class="h5">Household expenditure structure</h2>
+<p class="small mb-2">PL / NL research scope · Household budgets</p>
+<p class="small mb-3 source-reference">hbs_str_t224</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>HBS shares by household type; per mille</dd>
+<dt>Source period</dt><dd>1988–2020</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>Eurostat general reuse; check exceptions</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Shares are not absolute expenditure amounts.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/databrowser/view/hbs_str_t224/default/table?category=livcon.hbs.hbs_struc&amp;lang=en" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-011" data-countries="NL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">CBS · LI-SRC-011</p>
+<h2 class="h5">Household income and spending summary</h2>
+<p class="small mb-2">Netherlands · Household budgets</p>
+<p class="small mb-3 source-reference">CBS 2020 household budget public summary</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>EUR per household per year; income, spending, savings</dd>
+<dt>Source period</dt><dd>Selected waves: 2015, 2020</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>CBS general CC BY 4.0; check this content</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> 2020 figures initially provisional; COVID affected spending.</p>
+<a class="mt-auto" href="https://www.cbs.nl/item?sc_itemid=f6a7ad70-31b4-47bd-a7cf-bca7a7e58978&amp;sc_lang=nl-nl" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-012" data-countries="PL NL" data-category="income">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-012</p>
+<h2 class="h5">Modelled annual net earnings</h2>
+<p class="small mb-2">PL / NL research scope · Income and earnings</p>
+<p class="small mb-3 source-reference">earn_nt_net</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>Family and earnings cases; currency/PPS selection pending</dd>
+<dt>Source period</dt><dd>Not verified</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>Eurostat general reuse; check exceptions</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Model cases, not observed HBS household income; PL/NL 2020 cells pending.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/databrowser/view/earn_nt_net/default/table?lang=en" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-013" data-countries="PL NL" data-category="hours">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-013</p>
+<h2 class="h5">Actual weekly working hours</h2>
+<p class="small mb-2">PL / NL research scope · Working hours</p>
+<p class="small mb-3 source-reference">lfsa_ewhais</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>LFS reference-week hours in main job</dd>
+<dt>Source period</dt><dd>Not verified</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>Eurostat general reuse; check exceptions</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Not annual paid hours; population and work-time definitions need alignment.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/web/products-datasets/-/lfsa_ewhais" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-014" data-countries="PL NL" data-category="income">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-014</p>
+<h2 class="h5">Equivalised disposable income</h2>
+<p class="small mb-2">PL / NL research scope · Income and earnings</p>
+<p class="small mb-3 source-reference">ilc_di03</p>
+<dl class="source-facts">
+<dt>Measure</dt><dd>Mean/median by age and sex; unit selection pending</dd>
+<dt>Source period</dt><dd>Country-level years not verified</dd>
+<dt>Evidence</dt><dd>Metadata reviewed</dd>
+<dt>Reuse</dt><dd>Eurostat general reuse; check exceptions</dd>
+<dt>Comparison</dt><dd>Not approved for calculations</dd>
+</dl>
+<p class="source-limit"><strong>Limitation:</strong> Person-level equivalised measure, not total household income; reference year needs checking.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/databrowser/product/view/ILC_DI03?category=livcon.ilc.ilc_ip.ilc_di&amp;lang=en" rel="noreferrer">Open official source <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+</div>
+</div></section>
 </main>
   <footer class="site-footer">
 <div class="container">
@@ -43,5 +266,6 @@
 <p>Independent research project · Development preview</p>
 </div>
 </footer>
+<script src="assets/js/sources-explorer.js" defer></script>
 </body>
 </html>
