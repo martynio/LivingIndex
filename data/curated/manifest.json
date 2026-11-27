@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "approved_dataset_inventory",
+  "approved_versions": [],
+  "status": "NO_APPROVED_DATASETS",
+  "note": "Research reports are not curated datasets. No dashboard input is authorized."
+}
