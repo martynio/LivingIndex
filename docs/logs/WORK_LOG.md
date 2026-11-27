@@ -257,3 +257,21 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Evidence:** 39 committed cards and 39 publisher URL matches; seven synthetic predicate checks; 18 filter combinations per locale, identical counts; code inspection no external fetch/storage; all sources explicitly not approved for calculations. Existing HBS code unchanged.
 - **Verification:** static audit PASS; Python verifier, HBS rerun, full browser interaction and accessibility NOT RUN. No fresh publisher cell retrieval, production legal approval or publication.
 - **Checkpoint:** isolated review PR, operator acceptance pending. Next verify actual browser behavior and merge as approved development preview; LI-002 and release gates remain independent.
+
+## LI-LOG-0022 — Accept LI-004A development-preview catalogue
+
+- **Date:** 2026-11-27.
+- **Contributor:** repository operator authorized PR #12 merge and LI-005; ChatGPT (OpenAI GPT-6.2, GitHub connector) verified and merged.
+- **Evidence:** approved head 7044b5602c898911118c471843249707f4368bf4, previous main 2ee65ee727c0c5f54ffaec8ec97c60212d9b6607; 14 scoped paths, append-only log and prior evidence checked. [PR #12](https://github.com/martynio/LivingIndex/pull/12) merged; main `9c30a8f8989d0ca439ce33451c6cfb75821c937c` and both parents confirmed. Pages run 46023013236: completed/success, head 9c30a8f8989d0ca439ce33451c6cfb75821c937c.
+- **Result:** merge/checkpoint PASS; browser acceptance and production gates remain open.
+- **Handoff:** LI-005A bounded research contract, no production data import.
+
+## LI-LOG-0023 — Implement research-only economic data contract
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (OpenAI GPT-6.2, local Python and GitHub connector); operator authorized LI-005 commencement.
+- **Baseline:** `9c30a8f8989d0ca439ce33451c6cfb75821c937c`; branch `feat/li-005a-research-data-contract`, code checkpoint `82f4446218c49232c113ca08f6da2466f0e92701`.
+- **Scope:** [contract](../project/LI-005A-RESEARCH-DATA-CONTRACT.md); fixed HBS report normalization, provenance, no automatic promotion, missingness and empty approved manifest; tests, docs and handoff. No new data values, research retrieval, calculation or website changes.
+- **Evidence:** 13/13 local unit tests, both exact tested Git blob identities checked; archived real CP01 ZIP/JSON digests matched prior evidence and two-record replay PASS. No numeric output committed. Legacy coordinates not independently checked; API body not retained.
+- **Result:** scoped local validation PASS; actual matrix replay, existing HBS rerun, browser checks and production approval NOT RUN/open. No full LI-005 gate closure.
+- **Checkpoint:** review PR pending operator acceptance. Next: manual matrix dispatch, official source reconciliation, compatible income/expense/hour definitions, source-specific reuse and review before production schema/calculations.

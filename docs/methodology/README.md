@@ -36,3 +36,7 @@ A survey average on a 0–10 scale must not be reported as the percentage of res
 Every published value needs source, dataset ID, population, period, measure, unit, processing method, version and quality status. Labels, written warnings and accessible details accompany visual markers.
 
 Detailed data contracts, approved formulas, and quality tests are **future research/decision outputs** — not invented in this bootstrap.
+
+## LI-005A research contract
+
+[Research data contract](../project/LI-005A-RESEARCH-DATA-CONTRACT.md) separates HBS report normalization from release eligibility. PPS_HH is not monthly local-currency spending or a paid-hour denominator. The future calculation contract remains pending; no calculation method is newly approved here.
