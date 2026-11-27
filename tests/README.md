@@ -26,3 +26,7 @@ The verifier permits exactly two GitHub documentation URLs as user-activated anc
 ## LI-004A source catalogue checks
 
 The existing verifier checks eligible registry IDs, publisher anchor URLs, country scope, local deferred filter script and browser filter/reset behavior. Source metadata is not a production dataset. See [LI-004A review](../docs/project/LI-004A-SOURCES-EXPLORER.md) for actual checks and remaining browser evidence.
+
+## LI-005A
+
+Run `python -m unittest discover -s tests -p 'test_economic_research.py' -v`. The adapter uses only Python standard-library modules; the tests use synthetic fixtures. To validate an actual archived report (outside the repository), run `python scripts/economic_research.py /path/to/report.json --sha256 REPORT_SHA256` using the independently recorded report hash. Optional --output must be a new file outside the repository. See [contract and observed verification](../docs/project/LI-005A-RESEARCH-DATA-CONTRACT.md). No production promotion.

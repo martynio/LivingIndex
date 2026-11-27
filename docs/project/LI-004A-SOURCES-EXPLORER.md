@@ -43,3 +43,7 @@ The existing Python verifier now checks exact eligible IDs and links, allows onl
 ## Next
 
 Review the catalogue as a development-preview feature, obtain operator acceptance and checkpoint; inspect deployed visuals and controls before full LI-004 completion. Preserve independent data rights, numerical feasibility, legal and production release gates.
+
+## Operator acceptance — 2026-11-27
+
+The operator explicitly accepted [PR #12](https://github.com/martynio/LivingIndex/pull/12) for development preview. Merge verified at `9c30a8f8989d0ca439ce33451c6cfb75821c937c` on main with both expected parents. Pages run 46023013236: completed/success, head 9c30a8f8989d0ca439ce33451c6cfb75821c937c. Browser verification remains open. Operator authorized LI-005 commencement; no statistical or legal release approval.
