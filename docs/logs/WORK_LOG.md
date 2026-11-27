@@ -300,3 +300,20 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Evidence:** [matrix evidence](../research/HBS_2020_MATRIX_RUN_EVIDENCE.md); ZIP digest matches GitHub metadata and log; report JSON digest independently computed; 24/24 cells present with explicit axes and null source flags. 17/17 hosted tests, 13/13 local adapter tests, matching code blobs and real normalization PASS. Both CP01 values and flags match earlier artifact; four NL cells corroborated by secondary compilation.
 - **Result:** retrieval and research normalization PASS. Direct independent primary-source reconciliation, raw API body verification, methodology, production rights and aligned income/hours remain open. No production approval; no raw or normalized JSON, code, registry or UI changes. Existing PR #14 updated; merge awaits explicit approval.
 - **Next:** retain artifact locally before expiry; review PR #14 and scope country-specific scenario inputs and separate PPS view. Do not rerun fixed matrix simply to repeat evidence.
+
+## LI-LOG-0027 — Accept LI-005B research evidence
+
+- **Date:** 2026-11-27.
+- **Contributor:** operator explicitly approved PR #14 and separate budget/PPS/time engine; ChatGPT (GPT-6.2, GitHub connector and local Python) verified and merged.
+- **Evidence:** 10 documentation-only paths; append-only log; 13/13 adapter tests rerun, exact accepted blobs, independently matched archived ZIP and report digests, actual 24-cell normalization PASS. [PR #14](https://github.com/martynio/LivingIndex/pull/14) merged; main `3465b1eed6233e7a5979bac8118f710ee5e67090` and both expected parents verified. Pages run 46033414894 completed success.
+- **Result:** accepted research evidence, zero approved datasets; no production approval. LI-005C explicitly authorized, bounded to separate models.
+
+## LI-LOG-0028 — Implement LI-005C separated economic engine
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (GPT-6.2, local Python, GitHub connector); operator authorized LI-005C.
+- **Baseline:** `3465b1eed6233e7a5979bac8118f710ee5e67090`; branch `feat/li-005c-economic-engine`; code checkpoint `0bc290902cc7f51493a30f34a25167a13d4168a2`.
+- **Scope:** [contract](../project/LI-005C-ECONOMIC-ENGINE.md); separate hypothetical cash and work-time arithmetic, research PPS pair selection with report validation. Two new Python files plus methodology, status, roadmap, test guide, evidence acceptance record, log and handoff. No registry, UI, workflow, existing adapter or manifest change.
+- **Evidence:** 29/29 economic tests (16 new, 13 prior), new files compiled and exact Git blob identities matched. Initial test-helper error corrected before final run. Actual archived report replay 12/12 PPS pairs PASS, no output files written. Earlier 17/17 hosted HBS not rerun in this tranche; browser NOT RUN.
+- **Result:** scoped engine tests PASS; national/time hypothetical only, PPS research only; no production calculation approval. Real national definitions, rights, independent official source checks and aligned paid hours remain open.
+- **Checkpoint:** review branch, PR pending acceptance. Next: approved scenario/version contract and separately scoped dashboard with explicit unavailable/research/simulation states. No full LI-005 closure.

@@ -30,3 +30,7 @@ The existing verifier checks eligible registry IDs, publisher anchor URLs, count
 ## LI-005A
 
 Run `python -m unittest discover -s tests -p 'test_economic_research.py' -v`. The adapter uses only Python standard-library modules; the tests use synthetic fixtures. To validate an actual archived report (outside the repository), run `python scripts/economic_research.py /path/to/report.json --sha256 REPORT_SHA256` using the independently recorded report hash. Optional --output must be a new file outside the repository. See [contract and observed verification](../docs/project/LI-005A-RESEARCH-DATA-CONTRACT.md). No production promotion.
+
+## LI-005C
+
+Run `python -m unittest discover -s tests -p 'test_economic*.py' -v` for engine and adapter regression. For actual PPS replay, call `pps_comparison` from `scripts/economic_engine.py` with the original report bytes and independently recorded digest for each CP01–CP12. Do not commit outputs. See [contract and verification](../docs/project/LI-005C-ECONOMIC-ENGINE.md). Monetary/time inputs are hypothetical only.
