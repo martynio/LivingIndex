@@ -2,7 +2,7 @@
 
 **Status: LI-003A development shell — main preview authorized; no production release.**
 
-Static, semantic HTML and locally served CSS, compatible with a conventional Pinegrow/Bootstrap workflow. No build step, JavaScript, third-party service, or dataset is required. The neutral navy/teal palette and text wordmark are provisional.
+Static, semantic HTML and locally served CSS, compatible with a conventional Pinegrow/Bootstrap workflow. No build step, third-party service or dataset is required. Local JavaScript enables source filtering and dashboard scenario calculations. The neutral navy/teal palette and text wordmark are provisional.
 
 ## Local preview
 
@@ -16,7 +16,7 @@ Open `http://127.0.0.1:8000/` in your browser. For Polish and Dutch, use `/pl/` 
 
 ## Structure
 
-English pages are at the web root; identical route names exist under `pl/` and `nl/`. Each locale includes index, sources, methodology, about, privacy, cookies, terms and data-policy HTML files. Locale links point to the same page in the target language. Shared assets are in `assets/css/`. Edit the static HTML directly in Pinegrow; preserve navigation, landmarks, locale links and draft legal notices across all variants. No new build system.
+English pages are at the web root; identical route names exist under `pl/` and `nl/`. Each locale includes index, dashboard, sources, methodology, about, privacy, cookies, terms and data-policy HTML files. Locale links point to the same page in the target language. Shared assets are in `assets/css/`. Edit the static HTML directly in Pinegrow; preserve navigation, landmarks, locale links and draft legal notices across all variants. No new build system.
 
 ## Dependency
 
@@ -43,3 +43,7 @@ The previously observed static checks are retained; browser verification and fin
 ## Sources Explorer — LI-004A
 
 The Sources route has static localized cards and progressive enhancement via local `assets/js/sources-explorer.js`. No runtime API, tracking or storage. Keep IDs, research scope, units, periods, rights, limitations and publisher links synchronized with the [canonical registry](../docs/research/SOURCE_REGISTRY.csv). See [scope and verification](../docs/project/LI-004A-SOURCES-EXPLORER.md). Do not treat metadata as approved calculation inputs.
+
+## LI-006A dashboard
+
+Open dashboard.html in each locale. Three separate modes: hypothetical national cash budget, PPS research availability, hypothetical worker-hour equivalent. Blank local inputs, no production statistical values, no data transfer or persistence from project code. See [dashboard contract](../docs/project/LI-006A-DASHBOARD-PREVIEW.md). JavaScript and Python parity checks are documented in [tests](../tests/README.md). Browser gate remains open.
