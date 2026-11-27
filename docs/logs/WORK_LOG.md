@@ -350,3 +350,10 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Scope:** [LI-006B contract](../project/LI-006B-CBS-DESCRIPTIVE-PREVIEW.md); two final 2020 CBS national descriptive means, exact versioned snapshot and candidate manifest, LI-SRC-015 registry/catalogue addition, LI-SRC-009 current research coverage, three dashboard sections and verification. No production calculation input, JS engine change or deployment configuration change.
 - **Evidence:** CBS 86272NED and predecessor 83739NED agree for both 2020 cells; CBS 85419NED confirms consumption total. CC BY 4.0 general notice reviewed, no visible selected-table exception. Static read-back 6/6 values and 42/42 cards/links/country scopes match; approved_versions empty. Official Eurostat API and CBS OData metadata inaccessible through review tool; CBS HTML is the source. No raw bytes retained. Full Python verifier, browser tests and arithmetic/HBS reruns NOT RUN.
 - **Result:** descriptive candidate ready for explicit review; not production approval. Fixed NL/2020 display, no PL comparison or cash balance. Next operator approves exact descriptive version, records decision and merges; continue PPS and GUS evidence independently.
+
+## LI-LOG-0033 — Operator accepts CBS descriptive preview
+
+- **Date:** 2026-11-27.
+- **Decision:** operator explicitly approved PR #17 and version cbs-86272ned-nl-2020-v1 for descriptive display only. Accepted candidate head `a399f0bf856cf06291580d3cc9b77c6d9d12b9a1`.
+- **Change:** record decision in snapshot and manifest, source registry and all three localized dashboard/catalogue statuses. Both original values and source definitions unchanged; approved_versions remains empty; calculation_eligible and production_eligible false. No final release approval.
+- **Next:** merge reviewed PR #17 and verify main; LI-006C GUS review authorized.

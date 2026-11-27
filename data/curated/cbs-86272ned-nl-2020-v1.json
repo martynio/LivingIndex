@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version_id": "cbs-86272ned-nl-2020-v1",
-  "kind": "descriptive_preview_candidate",
+  "kind": "descriptive_preview",
   "source_id": "LI-SRC-015",
   "publisher": "CBS (Statistics Netherlands)",
   "dataset": "86272NED",
@@ -60,9 +60,10 @@
   "review": {
     "source_cells": "verified",
     "scope": "descriptive_display_only",
-    "operator": "pending_PR_acceptance",
+    "operator": "accepted_2026-11-27_PR17",
     "calculation_eligible": false,
-    "production_eligible": false
+    "production_eligible": false,
+    "accepted_scope": "descriptive_display_only"
   },
   "limitations": [
     "Not observed cash income or total cash expenditure; do not subtract or calculate savings or expenditure shares.",

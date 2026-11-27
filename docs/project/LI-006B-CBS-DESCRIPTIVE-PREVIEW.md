@@ -40,3 +40,7 @@ No cash savings, subtraction, expenditure share, PL/NL comparison, PPS conversio
 ## NEXT GATE
 
 Approve this exact descriptive version and dashboard display only, record the operator decision and merge to main. Then check rendered Pages preview. Continue GUS exact source definitions/rights and PPS official-cell reconciliation; national cash and paid-hours calculation gates remain closed. No full LI-005/006 closure.
+
+## Operator decision — 2026-11-27
+
+Operator explicitly accepted PR #17 and cbs-86272ned-nl-2020-v1 for descriptive display only. Snapshot and manifest updated without changing values; all locale labels and source registry now reflect accepted scope. Production and calculation flags remain false. The earlier snapshot digest describes the candidate before this acceptance metadata change.
