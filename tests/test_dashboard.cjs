@@ -18,3 +18,37 @@ function verify(api) {
  return n;
 }
 console.log("Dashboard arithmetic assertions PASS: "+verify(api));
+
+// Minimal DOM model: event wiring, independent panel state and no stale results.
+function verifyControls(api) {
+  let n=0;
+  function check(ok){if(!ok)throw Error("Dashboard control assertion failed: "+n);n++;}
+  for(const lang of ["en","pl","nl"]){
+    const nodes=new Map();
+    const get=id=>{
+      if(!nodes.has(id))nodes.set(id,{value:"",textContent:"",hidden:true,dataset:{blank:"blank",invalid:"invalid",undefined:"undefined",sim:"simulation"},events:{},addEventListener(k,f){this.events[k]=f;}});
+      return nodes.get(id);
+    };
+    const change=(id,v,event="change")=>{get(id).value=v;get(id).events[event]();};
+    get("dashboard-mode").value="budget";
+    get("budget-country").value=get("time-country").value="PL";
+    api.mount({getElementById:get,documentElement:{lang}});
+    check(!get("panel-budget").hidden&&get("panel-pps").hidden&&get("panel-time").hidden);
+    check(get("budget-results").hidden);
+    change("budget-income","2000","input");change("budget-expense","1500","input");
+    check(get("budget-balance").textContent==="500 PLN"&&!get("budget-results").hidden);
+    change("budget-country","NL");check(get("budget-income").value===""&&get("budget-results").hidden&&get("budget-currency").textContent==="EUR");
+    change("budget-income","0","input");change("budget-expense","10","input");check(get("budget-share").textContent==="undefined");
+    change("dashboard-mode","pps");check(!get("panel-pps").hidden&&get("panel-budget").hidden);
+    change("pps-category","CP12");check(get("pps-selected").textContent==="CP12");
+    change("dashboard-mode","time");check(!get("panel-time").hidden&&get("panel-pps").hidden);
+    change("time-net","2000","input");change("time-hours","160","input");change("time-cost","100","input");
+    check(get("time-equivalent").textContent===(lang==="en"?"8.00 h":"8,00 h"));
+    change("time-hours","0","input");check(get("time-results").hidden&&get("time-message").textContent==="invalid"&&get("time-equivalent").textContent==="—");
+    change("time-hours","160","input");change("time-period","year");check(get("time-net").value===""&&get("time-results").hidden);
+    change("dashboard-mode","budget");check(get("budget-income").value==="0"&&get("budget-expense").value==="10");
+    get("budget-clear").events.click();check(get("budget-results").hidden&&get("budget-expense").value==="");
+  }
+  return n;
+}
+console.log("Dashboard mock-DOM assertions PASS: "+verifyControls(api));
