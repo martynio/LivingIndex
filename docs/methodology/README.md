@@ -40,3 +40,7 @@ Detailed data contracts, approved formulas, and quality tests are **future resea
 ## LI-005A research contract
 
 [Research data contract](../project/LI-005A-RESEARCH-DATA-CONTRACT.md) separates HBS report normalization from release eligibility. PPS_HH is not monthly local-currency spending or a paid-hour denominator. The future calculation contract remains pending; no calculation method is newly approved here.
+
+## LI-005C separated calculation contracts
+
+[Economic Engine contract](../project/LI-005C-ECONOMIC-ENGINE.md) defines the initial hypothetical cash budget and paid-hour formulas and research-only PPS pairs. Matching declared scenario metadata is not proof of statistical alignment. All outputs remain ineligible for production; no real national or time input version has been approved.

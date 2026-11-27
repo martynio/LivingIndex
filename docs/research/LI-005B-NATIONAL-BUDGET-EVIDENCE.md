@@ -64,3 +64,7 @@ Recommendation: develop country-specific budget evidence first, and reserve cros
 ## 27 November — matrix retrieval update
 
 [matrix evidence](HBS_2020_MATRIX_RUN_EVIDENCE.md) documents the successful hosted run, all 24 observations, matching CP01 values and flags, and verified adapter replay. No further manual dispatch required for this scope. Remaining gates: direct primary-source reconciliation, methodological alignment, production rights and matched net paid hours.
+
+## Accepted research checkpoint — 2026-11-27
+
+Operator approved PR #14; merge verified at `3465b1eed6233e7a5979bac8118f710ee5e67090` with both parents. Actual matrix replay and 13/13 adapter tests repeated successfully. Acceptance does not approve production inputs. Separate [LI-005C economic engine](../project/LI-005C-ECONOMIC-ENGINE.md) implements research/simulation primitives, not automatic national input promotion.
