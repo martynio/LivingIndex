@@ -39,3 +39,7 @@ The operator explicitly requested that the development shell be merged into main
 Observed Pages run [45654489328](https://github.com/martynio/LivingIndex/actions/runs/45654489328) succeeded for the feature branch on 2026-11-25; [46018763155](https://github.com/martynio/LivingIndex/actions/runs/46018763155) was running for the old main checkpoint at the start of this change. The repository root lacked index.html. Add a root entry redirect with a visible fallback link to web/index.html; preserve the 24 original shell pages and local assets unchanged. Expected public preview: https://martynio.github.io/LivingIndex/ (direct route: https://martynio.github.io/LivingIndex/web/). Verify new main deployment and HTTP/rendered behavior separately; the connector cannot modify Pages settings.
 
 The previously observed static checks are retained; browser verification and final LI-003A acceptance remain open. Legal readiness and final release remain separate. No further dependency on a feature-branch Pages configuration.
+
+## Sources Explorer — LI-004A
+
+The Sources route has static localized cards and progressive enhancement via local `assets/js/sources-explorer.js`. No runtime API, tracking or storage. Keep IDs, research scope, units, periods, rights, limitations and publisher links synchronized with the [canonical registry](../docs/research/SOURCE_REGISTRY.csv). See [scope and verification](../docs/project/LI-004A-SOURCES-EXPLORER.md). Do not treat metadata as approved calculation inputs.

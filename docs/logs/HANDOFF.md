@@ -1,8 +1,9 @@
 # Living Index — latest contributor handoff
 
-**Updated:** 2026-11-27 · LI-003B preview transparency review; final legal and browser gates open.
+**Updated:** 2026-11-27 · LI-003B preview accepted; LI-004A implemented / review open.
 
-- Main baseline `38f4caa2000462173f992890982c09d2e4089f71` (PR #10); Pages run 46019041001 succeeded. Operator reported the preview satisfactory and requested continued work.
-- Branch `feat/li-003b-preview-transparency`, implementation `e82e68279d3c656294ab7805e5de28018f4a29ae`: twelve localized legal-information pages and narrowly updated external anchor allowlist. Read [LI-003B hosting and transparency review](../project/LI-003B-PREVIEW-TRANSPARENCY.md), [scope](../project/LI-003-WEBSITE-FOUNDATION-SCOPE.md), [roadmap](../project/ROADMAP.md), and [work log](WORK_LOG.md).
-- Static read-back 12 pages / 180 relative links / 9 approved external anchors: PASS. Actual live HTTP retrieval blocked by DNS; browser checks and Python verifier NOT RUN. No full legal readiness or accessibility claim.
-- Next: review/merge this preview tranche on approval, obtain actual controller/contact details privately, confirm applicable processing arrangements and collect browser evidence. Keep main preview separate from production release; LI-002 matrix retrieval still pending. No production data or legal-policy approval.
+- [PR #11](https://github.com/martynio/LivingIndex/pull/11) merged at verified main `2ee65ee727c0c5f54ffaec8ec97c60212d9b6607`; final legal/browser gates open.
+- LI-004A branch `feat/li-004-sources-explorer`, code checkpoint `948497d0049dd15c64de1d8be9edf9ee7c6109f4`. [Scope and verification](../project/LI-004A-SOURCES-EXPLORER.md): 13 public metadata cards per locale, local country/category filter, no numeric results, no external data loading or storage.
+- Static read-back: 39 cards and publisher links, seven predicate checks, 18 filter combinations per locale. Python verifier and full browser tests NOT RUN; research tests unchanged, no fresh result claimed.
+- Read [registry](../research/SOURCE_REGISTRY.md), [status](../project/PROJECT_STATUS.md), [roadmap](../project/ROADMAP.md), [WORK_LOG](WORK_LOG.md). LI-SRC-007 excluded from public catalogue; no production data approvals. Confirm current Git before edits.
+- Next: review LI-004A PR, collect browser evidence, accept/merge as development preview when authorized. LI-002 matrix live retrieval, compatible income/hours, actual legal/hosting details and production release remain open.

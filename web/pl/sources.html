@@ -22,19 +22,242 @@
 </div>
 </header>
   <main id="main-content" tabindex="-1">
-<section class="section-pad">
-<div class="container">
-<article class="article">
-<p class="eyebrow">FUNDAMENT PROJEKTU</p>
-<h1>Skąd pochodzą dane</h1>
-<p>Sprawdzamy oficjalne źródła statystyczne, ich definicje, zakres i warunki ponownego wykorzystania.</p>
-<p>Karty źródeł dodamy dopiero po weryfikacji odpowiednich metadanych i zasad atrybucji.</p>
-<p>Dostępność danych i ich porównywalność to odrębne kwestie.</p>
-<p class="mb-0"><a href="index.html">Start</a>
-</p>
+<section class="section-pad"><div class="container">
+<div class="article mb-4"><h1>Katalog źródeł</h1><p>Poznaj oficjalne źródła zidentyfikowane w badaniach. To rekordy metadanych, nie zatwierdzone wyniki ekonomiczne.</p><p class="mb-0">Katalog zawiera 13 publicznych kandydatów z 14 rekordów rejestru. Pominięto źródło mikrodanych o ograniczonym dostępie. Filtr kraju oznacza zakres badań, nie potwierdzoną dostępność danych krajowych. Lata dotyczą sprawdzonych metadanych, nie ciągłych zwalidowanych obserwacji.</p></div>
+<section id="source-filters" class="source-filters mb-4" hidden aria-label="Filtruj źródła">
+<h2 class="h5">Filtruj źródła</h2>
+<div class="row g-3 align-items-end">
+<div class="col-12 col-md"><label for="source-country" class="form-label">Kraj w zakresie badań</label><select class="form-select" id="source-country"><option value="all">Wszystkie</option><option value="PL">Polska</option><option value="NL">Holandia</option></select></div>
+<div class="col-12 col-md"><label for="source-category" class="form-label">Kategoria</label><select class="form-select" id="source-category"><option value="all">Wszystkie</option><option value="prices">Ceny</option><option value="income">Dochody i wynagrodzenia</option><option value="household">Budżety gospodarstw</option><option value="hours">Czas pracy</option><option value="wellbeing">Jakość życia</option></select></div>
+<div class="col-12 col-md-auto"><button type="button" class="btn btn-outline-secondary" id="source-reset">Wyczyść filtry</button></div></div>
+<p id="source-count" class="mt-3 mb-0" role="status" aria-live="polite" data-label="Wyświetlone źródła">Wyświetlone źródła: 13 / 13</p>
+</section>
+<noscript><p>Wszystkie karty są dostępne poniżej. Filtry wymagają JavaScriptu.</p></noscript>
+<p id="source-empty" hidden>Brak źródeł zgodnych z filtrami.</p>
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3" id="source-grid">
+<div class="col" data-source-id="LI-SRC-001" data-countries="NL" data-category="prices">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">CBS · LI-SRC-001</p>
+<h2 class="h5">Historyczny indeks cen konsumpcyjnych</h2>
+<p class="small mb-2">Holandia · Ceny</p>
+<p class="small mb-3 source-reference">71905ned</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Krajowy CPI; 1900 = 100</dd>
+<dt>Okres źródła</dt><dd>1900–2025</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Potwierdzono CC BY 4.0 zbioru; wymagana atrybucja</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Historycznie łączone szacunki; nie koszty gospodarstwa ani produktu.</p>
+<a class="mt-auto" href="https://dataportal.cbs.nl/detail/CBS/71905ned" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
 </article>
 </div>
-</section>
+<div class="col" data-source-id="LI-SRC-002" data-countries="PL" data-category="prices">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">GUS · LI-SRC-002</p>
+<h2 class="h5">Roczny wskaźnik cen konsumpcyjnych</h2>
+<p class="small mb-2">Polska · Ceny</p>
+<p class="small mb-3 source-reference">annual consumer price indices since 1950</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Krajowy CPI; poprzedni rok = 100</dd>
+<dt>Okres źródła</dt><dd>1950–2025</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Obowiązują warunki ponownego wykorzystania GUS</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Inna baza niż CBS; brak cen identycznego koszyka.</p>
+<a class="mt-auto" href="https://stat.gov.pl/obszary-tematyczne/ceny-handel/wskazniki-cen/wskazniki-cen-towarow-i-uslug-konsumpcyjnych-pot-inflacja-/roczne-wskazniki-cen-towarow-i-uslug-konsumpcyjnych/" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-003" data-countries="PL" data-category="income">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">GUS · LI-SRC-003</p>
+<h2 class="h5">Przeciętne miesięczne wynagrodzenie</h2>
+<p class="small mb-2">Polska · Dochody i wynagrodzenia</p>
+<p class="small mb-3 source-reference">average monthly national-economy wages 1950–2025</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Średnia gospodarki narodowej; PLN/miesiąc według publikacji</dd>
+<dt>Okres źródła</dt><dd>1950–2025</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Obowiązują warunki ponownego wykorzystania GUS</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Nie płaca netto; historyczne waluty i definicje do sprawdzenia.</p>
+<a class="mt-auto" href="https://stat.gov.pl/obszary-tematyczne/rynek-pracy/pracujacy-zatrudnieni-wynagrodzenia-koszty-pracy/przecietne-miesieczne-wynagrodzenie-w-gospodarce-narodowej-w-latach-1950-2025%2C2%2C1.html" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-004" data-countries="NL" data-category="income">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">CBS · LI-SRC-004</p>
+<h2 class="h5">Zatrudnienie, płace brutto i godziny</h2>
+<p class="small mb-2">Holandia · Dochody i wynagrodzenia</p>
+<p class="small mb-3 source-reference">81432ENG</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Stanowiska pracowników; miary płac brutto i godzin</dd>
+<dt>Okres źródła</dt><dd>2009–2025</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne CC BY 4.0 CBS; sprawdź treść</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Nie ustala porównywalnego dochodu netto na godzinę.</p>
+<a class="mt-auto" href="https://www.cbs.nl/en-gb/figures/detail/81432ENG" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-005" data-countries="PL NL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-005</p>
+<h2 class="h5">Badania budżetów gospodarstw domowych</h2>
+<p class="small mb-2">Zakres badań PL / NL · Budżety gospodarstw</p>
+<p class="small mb-3 source-reference">Household Budget Surveys HBS</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Badanie gospodarstw; jednostki zależne od tabeli</dd>
+<dt>Okres źródła</dt><dd>Potwierdzone fale 2015 i 2020</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne zasady Eurostatu; sprawdź wyjątki</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Komórki krajowe i porównywalność badań pozostają otwarte.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/en/web/household-budget-surveys/information-data" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-006" data-countries="PL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">GUS · LI-SRC-006</p>
+<h2 class="h5">Dochody i wydatki gospodarstw domowych</h2>
+<p class="small mb-2">Polska · Budżety gospodarstw</p>
+<p class="small mb-3 source-reference">Budżety gospodarstw domowych w 2025 r.</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Wybrane raporty: PLN na osobę miesięcznie</dd>
+<dt>Okres źródła</dt><dd>2025</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Obowiązują warunki ponownego wykorzystania GUS</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Potwierdzona publikacja 2025; harmonizacja historyczna niesprawdzona.</p>
+<a class="mt-auto" href="https://stat.gov.pl/obszary-tematyczne/warunki-zycia/dochody-wydatki-i-warunki-zycia-ludnosci/budzety-gospodarstw-domowych-w-2025-r-%2C9%2C24.html" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-008" data-countries="PL NL" data-category="wellbeing">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-008</p>
+<h2 class="h5">Deklarowane zadowolenie z życia</h2>
+<p class="small mb-2">Zakres badań PL / NL · Jakość życia</p>
+<p class="small mb-3 source-reference">ilc_pw01</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>EU-SILC, średnia ocena 0–10</dd>
+<dt>Okres źródła</dt><dd>Metadane fali 2022</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne zasady Eurostatu; sprawdź wyjątki</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Średnia ocena nie jest procentem osób zadowolonych.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20240115-1" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-009" data-countries="PL NL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-009</p>
+<h2 class="h5">Średnie wydatki konsumpcyjne gospodarstw</h2>
+<p class="small mb-2">Zakres badań PL / NL · Budżety gospodarstw</p>
+<p class="small mb-3 source-reference">hbs_exp_t121</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>HBS według COICOP; PPS na gospodarstwo</dd>
+<dt>Okres źródła</dt><dd>1988–2020</dd>
+<dt>Dowody</dt><dd>Pobrano wybrane obserwacje badawcze; wymagana ocena</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne zasady Eurostatu; sprawdź wyjątki</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Pobrano parę PL/NL 2020 CP01; inne komórki i kontrola w przeglądarce danych otwarte. PPS to nie EUR ani PLN.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/databrowser/product/view/hbs_exp_t121?lang=en" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-010" data-countries="PL NL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-010</p>
+<h2 class="h5">Struktura wydatków gospodarstw</h2>
+<p class="small mb-2">Zakres badań PL / NL · Budżety gospodarstw</p>
+<p class="small mb-3 source-reference">hbs_str_t224</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Udziały HBS według typu gospodarstwa; promile</dd>
+<dt>Okres źródła</dt><dd>1988–2020</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne zasady Eurostatu; sprawdź wyjątki</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Udziały nie są kwotami wydatków.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/databrowser/view/hbs_str_t224/default/table?category=livcon.hbs.hbs_struc&amp;lang=en" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-011" data-countries="NL" data-category="household">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">CBS · LI-SRC-011</p>
+<h2 class="h5">Podsumowanie dochodów i wydatków gospodarstw</h2>
+<p class="small mb-2">Holandia · Budżety gospodarstw</p>
+<p class="small mb-3 source-reference">CBS 2020 household budget public summary</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>EUR na gospodarstwo rocznie; dochód, wydatki, oszczędności</dd>
+<dt>Okres źródła</dt><dd>Wybrane fale: 2015, 2020</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne CC BY 4.0 CBS; sprawdź treść</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Dane 2020 pierwotnie wstępne; COVID wpłynął na wydatki.</p>
+<a class="mt-auto" href="https://www.cbs.nl/item?sc_itemid=f6a7ad70-31b4-47bd-a7cf-bca7a7e58978&amp;sc_lang=nl-nl" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-012" data-countries="PL NL" data-category="income">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-012</p>
+<h2 class="h5">Modelowane roczne zarobki netto</h2>
+<p class="small mb-2">Zakres badań PL / NL · Dochody i wynagrodzenia</p>
+<p class="small mb-3 source-reference">earn_nt_net</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Scenariusze rodzinne i zarobkowe; wybór waluty/PPS otwarty</dd>
+<dt>Okres źródła</dt><dd>Niezweryfikowany</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne zasady Eurostatu; sprawdź wyjątki</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Scenariusze modelowe, nie obserwowany dochód HBS; komórki PL/NL 2020 otwarte.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/databrowser/view/earn_nt_net/default/table?lang=en" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-013" data-countries="PL NL" data-category="hours">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-013</p>
+<h2 class="h5">Faktyczne tygodniowe godziny pracy</h2>
+<p class="small mb-2">Zakres badań PL / NL · Czas pracy</p>
+<p class="small mb-3 source-reference">lfsa_ewhais</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>LFS: godziny w tygodniu referencyjnym w głównej pracy</dd>
+<dt>Okres źródła</dt><dd>Niezweryfikowany</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne zasady Eurostatu; sprawdź wyjątki</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Nie roczne godziny płatne; populacja i definicje czasu wymagają dopasowania.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/web/products-datasets/-/lfsa_ewhais" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col" data-source-id="LI-SRC-014" data-countries="PL NL" data-category="income">
+<article class="feature-card source-card">
+<p class="eyebrow mb-2">Eurostat · LI-SRC-014</p>
+<h2 class="h5">Ekwiwalentny dochód do dyspozycji</h2>
+<p class="small mb-2">Zakres badań PL / NL · Dochody i wynagrodzenia</p>
+<p class="small mb-3 source-reference">ilc_di03</p>
+<dl class="source-facts">
+<dt>Miara</dt><dd>Średnia/mediana według wieku i płci; jednostka do wyboru</dd>
+<dt>Okres źródła</dt><dd>Lata na poziomie krajów niezweryfikowane</dd>
+<dt>Dowody</dt><dd>Sprawdzone metadane</dd>
+<dt>Ponowne wykorzystanie</dt><dd>Ogólne zasady Eurostatu; sprawdź wyjątki</dd>
+<dt>Porównania</dt><dd>Nie zatwierdzono do obliczeń</dd>
+</dl>
+<p class="source-limit"><strong>Ograniczenie:</strong> Miara ekwiwalentna na osobę, nie całkowity dochód gospodarstwa; rok referencyjny do sprawdzenia.</p>
+<a class="mt-auto" href="https://ec.europa.eu/eurostat/databrowser/product/view/ILC_DI03?category=livcon.ilc.ilc_ip.ilc_di&amp;lang=en" rel="noreferrer">Otwórz oficjalne źródło <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+</div>
+</div></section>
 </main>
   <footer class="site-footer">
 <div class="container">
@@ -43,5 +266,6 @@
 <p>Niezależny projekt badawczy · Wersja rozwojowa</p>
 </div>
 </footer>
+<script src="../assets/js/sources-explorer.js" defer></script>
 </body>
 </html>

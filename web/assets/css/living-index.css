@@ -242,3 +242,16 @@ a:focus-visible {
 }
 
 }
+
+/* LI-004: metadata cards and progressive enhancement. */
+.source-filters { background: #fff; border: 1px solid var(--li-line); border-radius: .85rem; padding: 1.25rem; }
+.source-filters label { font-weight: 650; }
+.source-filters select, .source-filters button { min-height: 44px; }
+.source-filters select:focus-visible, .source-filters button:focus-visible { outline: 3px solid #ad4e00; outline-offset: 3px; }
+.source-card { overflow-wrap: anywhere; }
+.source-card p { flex: none; }
+.source-card .source-limit { flex: 1; }
+.source-facts { font-size: .9rem; }
+.source-facts dt { color: var(--li-ink); }
+.source-facts dd { color: var(--li-muted); margin-bottom: .75rem; }
+#source-grid > [hidden], #source-filters[hidden], #source-empty[hidden] { display: none !important; }

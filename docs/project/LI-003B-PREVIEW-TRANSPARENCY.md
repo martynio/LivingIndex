@@ -35,3 +35,7 @@ PASS: deployment metadata for the previous checkpoint; static read-back audit of
 ## Next gate
 
 Review this PR as development-preview content only. Confirm operator/controller and private contact, hosting arrangements and observed browser behavior before final LI-003B acceptance. Keep LI-003C and official release separate; LI-002 remains open. Do not invent legal identity or convert provisional information into a final policy.
+
+## Operator acceptance — 2026-11-27
+
+The operator explicitly accepted this tranche as development-preview information and authorized [PR #11](https://github.com/martynio/LivingIndex/pull/11) merge. Verified main checkpoint `2ee65ee727c0c5f54ffaec8ec97c60212d9b6607` with both expected parents. Final legal readiness and browser behavior remain open. LI-004 development authorized separately; no production release.
