@@ -229,3 +229,13 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Verification:** existing static checks and regression evidence retained. Root target and relative fallback verified against Git tree before merge; actual new deployment and rendered browser evidence separate. Prior browser block remains open.
 - **Checkpoint:** review/merge through PR #10; exact commit and merge available in Git history. No full LI-003A acceptance implied.
 - **Next:** verify main deployment, preview HTTP and browser behavior; continue independently scoped work without blocking development preview on production release readiness.
+
+## LI-LOG-0019 — LI-003B preview transparency and hosting review
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (OpenAI GPT-6.2; GitHub connector, official web sources, local HTTP probe). Operator reported main preview satisfactory and requested continued work.
+- **Baseline:** main `38f4caa2000462173f992890982c09d2e4089f71`, PR #10 merged. Pages run 46019041001 successful; operator visual observation is not full browser verification.
+- **Scope:** 12 EN/PL/NL preview legal-information pages, allowlist adjustment in existing static verifier, [hosting evidence](../project/LI-003B-PREVIEW-TRANSPARENCY.md), status/roadmap, verification and handoff. Code checkpoint `e82e68279d3c656294ab7805e5de28018f4a29ae` on `feat/li-003b-preview-transparency`. No data, workflow, tracking or provider configuration change.
+- **Evidence:** official GitHub Pages, GitHub privacy, GDPR and Dutch cookie guidance reviewed. Source inspection of 25 HTML pages and both CSS files; changed-page read-back audit: 12 pages, 180 relative references, 9 external anchors, no issues found. No active elements, imports or remote resource URLs introduced. Earlier HBS 17/17 results historical; Python verifier and full browser tests NOT RUN; HTTP probe DNS failure. No final policy or release approval.
+- **Checkpoint:** isolated review PR; operator acceptance required. Final controller/rights contact, legal bases, retention, transfer and observed network/storage behavior remain open. Main preview unchanged until review merge.
+- **Next:** accept factual preview information, resolve operator/legal inputs and browser evidence, continue separately scoped sources work without claiming official release.

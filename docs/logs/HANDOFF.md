@@ -1,8 +1,8 @@
 # Living Index — latest contributor handoff
 
-**Updated:** 2026-11-27 · LI-003A implementation / main preview authorized / browser review open.
+**Updated:** 2026-11-27 · LI-003B preview transparency review; final legal and browser gates open.
 
-- Operator directed merge of [PR #10](https://github.com/martynio/LivingIndex/pull/10) into main and continued development via existing GitHub Pages preview. The 2026-11-27 amendment supersedes branch-only preview restrictions; do not confuse preview with production release.
-- Original shell: 24 EN/PL/NL pages; 372 references and 17/17 research regression passed previously. Root entry now leads to web/index.html. Verify live deployment SHA and actual browser behavior; browser checks were previously blocked.
-- [Preview](https://martynio.github.io/LivingIndex/) / [direct shell](https://martynio.github.io/LivingIndex/web/). No approved policies, production data, or completed accessibility audit. Retain draft and noindex markers.
-- Read [scope](../project/LI-003-WEBSITE-FOUNDATION-SCOPE.md), [verification](../project/LI-003A-VERIFICATION.md), [roadmap](../project/ROADMAP.md), [work log](WORK_LOG.md). Next: verify main deployment and browser evidence, then scope legal/hosting readiness. LI-002 remains independent; manual matrix run pending.
+- Main baseline `38f4caa2000462173f992890982c09d2e4089f71` (PR #10); Pages run 46019041001 succeeded. Operator reported the preview satisfactory and requested continued work.
+- Branch `feat/li-003b-preview-transparency`, implementation `e82e68279d3c656294ab7805e5de28018f4a29ae`: twelve localized legal-information pages and narrowly updated external anchor allowlist. Read [LI-003B hosting and transparency review](../project/LI-003B-PREVIEW-TRANSPARENCY.md), [scope](../project/LI-003-WEBSITE-FOUNDATION-SCOPE.md), [roadmap](../project/ROADMAP.md), and [work log](WORK_LOG.md).
+- Static read-back 12 pages / 180 relative links / 9 approved external anchors: PASS. Actual live HTTP retrieval blocked by DNS; browser checks and Python verifier NOT RUN. No full legal readiness or accessibility claim.
+- Next: review/merge this preview tranche on approval, obtain actual controller/contact details privately, confirm applicable processing arrangements and collect browser evidence. Keep main preview separate from production release; LI-002 matrix retrieval still pending. No production data or legal-policy approval.

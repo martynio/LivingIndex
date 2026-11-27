@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parent.parent/'web'
 ROUTES=['index','sources','methodology','about','privacy','cookies','terms','data-policy']
 LOCALES=['en','pl','nl']
+APPROVED_EXTERNAL_LINKS={"https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection","https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"}
 PAGES=[(l,r,('' if l=='en' else l+'/')+r+'.html') for l in LOCALES for r in ROUTES]
 def static():
     checks=0
@@ -23,6 +24,9 @@ def static():
             h=a.get('href','')
             if h=='data:,': continue
             if h.startswith('#'): assert s.find(id=h[1:]); continue
+            if h in APPROVED_EXTERNAL_LINKS:
+                assert a.name=='a' and route in ('privacy','cookies') and 'noreferrer' in a.get('rel',[]),(rel,h)
+                continue
             u=urlsplit(h); assert not u.scheme and not h.startswith('/'),(rel,h)
             d=(p.parent/u.path).resolve(); assert d.is_relative_to(ROOT) and d.is_file(),(rel,h)
             checks+=1

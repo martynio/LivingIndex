@@ -4,7 +4,7 @@
 
 ## Current snapshot
 
-- **Product stage:** LI-003A static shell authorized for main-based development preview on 2026-11-27; 24 pages plus root entry; browser acceptance and production release pending.
+- **Product stage:** LI-003A static shell authorized for main-based development preview on 2026-11-27; 24 pages plus root entry; operator reported preview satisfactory; full browser acceptance and production release pending. LI-003B preview transparency implemented on review branch.
 - **LI-001 — Governance & Roadmap:** **ACCEPTED / GATE CLOSED** by explicit operator decision on 2026-11-09.
 - **Verified accepted merge checkpoint:** [`2192e95f331aaafab8ee2a10adb217cc7ae2f85b`](https://github.com/martynio/LivingIndex/commit/2192e95f331aaafab8ee2a10adb217cc7ae2f85b) on `main`, via [merged PR #1](https://github.com/martynio/LivingIndex/pull/1).
 - **Closure audit:** this status, the roadmap, `WORK_LOG`, `HANDOFF` and ADR-0001 were updated in a separate, reviewable documentation-only closeout change. Consult `main` HEAD and PR history for the subsequent closeout commit; the accepted LI-001 implementation baseline is the merge SHA above.
@@ -31,7 +31,7 @@
 | LI-003 non-data shell | **IMPLEMENTED / MAIN PREVIEW AUTHORIZED; BROWSER REVIEW OPEN** | [LI-003A verification](LI-003A-VERIFICATION.md); operator acceptance, browser evidence and publication remain separate gates |
 | LI-002 numerical feasibility | **PARTIAL EVIDENCE / OPEN** | One CP01 research pair retrieved; [evidence](../research/HBS_2020_RUN_002_EVIDENCE.md); official browser reconciliation, household definitions, production rights and compatible income/hours remain open |
 | GitHub Actions activity | **HBS SUCCESS** | [Run #2](https://github.com/martynio/LivingIndex/actions/runs/45436731068); Node.js 20 action deprecation warning recorded for future maintenance; unrelated Pages runs do not establish statistical validation |
-| Publication/legal readiness | **NOT ESTABLISHED** | Verify hosting, data processing, telemetry, source rights and attribution before any public policy claims |
+| Publication/legal readiness | **PARTIAL / REVIEW OPEN** | [LI-003B preview transparency](LI-003B-PREVIEW-TRANSPARENCY.md); provider and code inspected, controller/contact and observed browser processing still open |
 
 ## Handoff
 

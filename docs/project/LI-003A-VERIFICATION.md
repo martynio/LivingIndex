@@ -47,3 +47,7 @@ The operator explicitly requested that the development shell be merged into main
 Observed Pages run [45654489328](https://github.com/martynio/LivingIndex/actions/runs/45654489328) succeeded for the feature branch on 2026-11-25; [46018763155](https://github.com/martynio/LivingIndex/actions/runs/46018763155) was running for the old main checkpoint at the start of this change. The repository root lacked index.html. Add a root entry redirect with a visible fallback link to web/index.html; preserve the 24 original shell pages and local assets unchanged. Expected public preview: https://martynio.github.io/LivingIndex/ (direct route: https://martynio.github.io/LivingIndex/web/). Verify new main deployment and HTTP/rendered behavior separately; the connector cannot modify Pages settings.
 
 The previously observed static checks are retained; browser verification and final LI-003A acceptance remain open. Legal readiness and final release remain separate. No further dependency on a feature-branch Pages configuration.
+
+## Main preview observation — 2026-11-27
+
+[Pages run 46019041001](https://github.com/martynio/LivingIndex/actions/runs/46019041001) completed successfully at `38f4caa2000462173f992890982c09d2e4089f71`. The operator reported that the preview was satisfactory and requested continued work. This is sufficient to proceed with the bounded LI-003B information tranche, not evidence of the full browser acceptance suite. See [LI-003B review](LI-003B-PREVIEW-TRANSPARENCY.md).
