@@ -34,3 +34,7 @@ Run `python -m unittest discover -s tests -p 'test_economic_research.py' -v`. Th
 ## LI-005C
 
 Run `python -m unittest discover -s tests -p 'test_economic*.py' -v` for engine and adapter regression. For actual PPS replay, call `pps_comparison` from `scripts/economic_engine.py` with the original report bytes and independently recorded digest for each CP01–CP12. Do not commit outputs. See [contract and verification](../docs/project/LI-005C-ECONOMIC-ENGINE.md). Monetary/time inputs are hypothetical only.
+
+## LI-006A
+
+Run `node tests/test_dashboard.cjs` for arithmetic and mock-DOM checks; run `python tests/verify_dashboard_parity.py` for 500 synthetic cross-language arithmetic cases (Node and Python required, no external dependencies). The existing shell verifier now covers 27 locale pages and dashboard browser interactions. See [observed verification](../docs/project/LI-006A-DASHBOARD-PREVIEW.md). Mock-DOM and static results do not substitute for real browser checks.

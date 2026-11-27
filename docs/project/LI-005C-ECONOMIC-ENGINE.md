@@ -56,3 +56,7 @@ No website changes, new data retrieval, real national/time calculation inputs, a
 ## NEXT GATE
 
 Accept this code as the bounded engine foundation only. Then select and verify exact national scenario input definitions, approve source-specific versions and rights, and establish a genuinely aligned net-paid-hours denominator or explicitly label a simulation. A separately scoped LI-006 development dashboard may present the three distinct modes and unavailable states, but must not present unapproved numerical results as official. No full LI-005 closure.
+
+## Accepted checkpoint — 2026-11-27
+
+Operator approved PR #15; merge verified at `7271543950ef610e9c663cbd67758bd19c90173e` with both parents. 29/29 economic tests and 12/12 actual PPS replays rerun successfully. LI-006A separately authorized; see [dashboard preview](LI-006A-DASHBOARD-PREVIEW.md). No production input approval.

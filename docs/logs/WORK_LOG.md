@@ -317,3 +317,20 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Evidence:** 29/29 economic tests (16 new, 13 prior), new files compiled and exact Git blob identities matched. Initial test-helper error corrected before final run. Actual archived report replay 12/12 PPS pairs PASS, no output files written. Earlier 17/17 hosted HBS not rerun in this tranche; browser NOT RUN.
 - **Result:** scoped engine tests PASS; national/time hypothetical only, PPS research only; no production calculation approval. Real national definitions, rights, independent official source checks and aligned paid hours remain open.
 - **Checkpoint:** review branch, PR pending acceptance. Next: approved scenario/version contract and separately scoped dashboard with explicit unavailable/research/simulation states. No full LI-005 closure.
+
+## LI-LOG-0029 — Accept LI-005C economic engine
+
+- **Date:** 2026-11-27.
+- **Contributor:** operator explicitly approved PR #15 and authorized LI-006A; ChatGPT (GPT-6.2, GitHub connector, local Python) verified and merged.
+- **Evidence:** approved head ad915bd6add46303a27173726e8cba20b3073412, prior main 3465b1eed6233e7a5979bac8118f710ee5e67090; 10 scoped files, append-only history, exact four Python blobs; 29/29 tests and 12/12 actual PPS replays passed; original ZIP and report digests verified. [PR #15](https://github.com/martynio/LivingIndex/pull/15) merged at `7271543950ef610e9c663cbd67758bd19c90173e` with both parents verified. [Pages run 46034792231](https://github.com/martynio/LivingIndex/actions/runs/46034792231): completed/success, head `7271543950ef610e9c663cbd67758bd19c90173e`.
+- **Result:** accepted research/simulation engine only; empty approved manifest. LI-006A authorized with three independent modes.
+
+## LI-LOG-0030 — Implement LI-006A dashboard development preview
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (GPT-6.2, GitHub connector, local Node/Python/Chromium); operator authorized dashboard preview.
+- **Baseline:** `7271543950ef610e9c663cbd67758bd19c90173e`; branch `feat/li-006a-dashboard-preview`; final code checkpoint `ab40a70bb4847c03d6ce7a9ee99cd1191a225c0a`.
+- **Scope:** [dashboard contract](../project/LI-006A-DASHBOARD-PREVIEW.md); three localized routes, navigation across 27 pages, local BigInt cash/time calculators, 12-category PPS research availability and exact evidence link, narrow privacy/cookie transparency update, shared CSS, tests and docs. No production inputs, registry, Python engine or deployment changes.
+- **Evidence:** 22 arithmetic + 39 mock-DOM assertions, 500 synthetic Python/JS parity cases PASS, exact locally executed JS/test blobs matched remote. Static read-back 27 pages, 453 local references, 51 external anchor references checked, no structural errors after correcting English Sources nav. Initial connector batch limit exceeded; smaller batches succeeded. Browser probe blocked by administrator; full Python shell verifier, actual browser/accessibility/network tests and HBS rerun NOT RUN. 29/29 economic and 12/12 actual PPS regression rerun before previous merge.
+- **Result:** scoped static/arithmetic/interaction-model checks PASS; browser acceptance open; no official figures or publication on this branch. No full LI-005/006 closure.
+- **Checkpoint:** review PR pending operator acceptance; next verify actual browser rendering/controls, accept development-preview merge separately, continue verified source approval and production version contract.
