@@ -74,3 +74,11 @@ Stop on unexpected deployment activity caused by a shell change, missing rights 
 - Operator explicitly approves release; validate published URL/HTTPS, response, routing, network/storage behavior and displayed legal pages; record release SHA and evidence. LI-002 statistical gates continue independently.
 
 **Next decision:** verify the implemented LI-003A branch and resolve the browser gate; accept only the isolated checkpoint. LI-003B/C require separate approval.
+
+## Operator amendment — 2026-11-27: main-based development preview
+
+The operator explicitly requested that the development shell be merged into main and visible through GitHub Pages so work can continue. This supersedes the previous branch-only preview restriction for the non-data LI-003A shell. It does not accept unresolved browser tests, approve draft policies, authorize statistical results, or close the production-release gate. Main may host a visibly marked development preview; review branches and logged checkpoints remain the normal workflow. Noindex is not access control.
+
+Observed Pages run [45654489328](https://github.com/martynio/LivingIndex/actions/runs/45654489328) succeeded for the feature branch on 2026-11-25; [46018763155](https://github.com/martynio/LivingIndex/actions/runs/46018763155) was running for the old main checkpoint at the start of this change. The repository root lacked index.html. Add a root entry redirect with a visible fallback link to web/index.html; preserve the 24 original shell pages and local assets unchanged. Expected public preview: https://martynio.github.io/LivingIndex/ (direct route: https://martynio.github.io/LivingIndex/web/). Verify new main deployment and HTTP/rendered behavior separately; the connector cannot modify Pages settings.
+
+The previously observed static checks are retained; browser verification and final LI-003A acceptance remain open. Legal readiness and final release remain separate. No further dependency on a feature-branch Pages configuration.

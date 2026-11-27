@@ -67,3 +67,7 @@ Source leads, methodological corrections, and documented data-quality concerns a
 ---
 
 *Living Index is in planning and research. Its descriptions are goals, not claims of launched functionality.*
+
+## Development preview
+
+[Open Living Index](https://martynio.github.io/LivingIndex/) — public development preview, not a production release. No approved economic dashboard or legal policy yet.

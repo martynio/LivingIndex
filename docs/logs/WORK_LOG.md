@@ -219,3 +219,13 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Outcome:** Operator permits non-promoted public Pages preview. Connector cannot read or change Pages settings; operator branch selection is required. No new deployment, merge, website code or legal-policy approval.
 - **Changed paths:** work log, handoff, LI-003A verification and web preview guide only; based on `de2122484e3aa7772a6db72e87d7c5ffc33fc8f8`.
 - **Next:** switch Pages to the feature branch/root for preview, verify deployment and browser tests, retain separate release gate. Browser evidence still pending.
+
+## LI-LOG-0018 — Authorize main development preview and repair root entry
+
+- **Date:** 2026-11-27.
+- **Contributor:** repository operator explicitly requested continued work and main-based Pages preview; ChatGPT (GPT-6.2, GitHub connector) performed repository and deployment inspection.
+- **Baseline:** main `16c611794ca32a0a53fafd205aebab29749ecc43`; PR #10 feature head `96ffb1a7916486c233d017f63303579e3e857cce`. Pages branch deployment 45654489328 succeeded; current run 46018763155 building previous main at inspection. Main lacks root index.html and shell; root-based Pages source confirmed in prior build logs.
+- **Scope:** add root entry to web/index.html with visible fallback, record superseding preview authorization in governance/scope/status/roadmap/handoff; preserve all original HTML/CSS, draft markers, research code and data. No Pages configuration change, production release or legal approval.
+- **Verification:** existing static checks and regression evidence retained. Root target and relative fallback verified against Git tree before merge; actual new deployment and rendered browser evidence separate. Prior browser block remains open.
+- **Checkpoint:** review/merge through PR #10; exact commit and merge available in Git history. No full LI-003A acceptance implied.
+- **Next:** verify main deployment, preview HTTP and browser behavior; continue independently scoped work without blocking development preview on production release readiness.
