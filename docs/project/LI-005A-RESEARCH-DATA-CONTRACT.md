@@ -52,3 +52,7 @@ Accept only this research adapter after code identity, regression tests for its 
 1. LI-005B: obtain actual matrix artifact by manual workflow, validate report, reconcile source cells/rights and assess local currency and matching household/worker data. Do not sum incomplete or incompatible divisions.
 2. LI-005C: choose one clearly defined country/year/population scenario per country with compatible income and expenses; independently review actual net employment income and paid hours. Define transformation lineage and approved version records; implement arithmetic and rejection tests only after those contracts are accepted.
 3. LI-006: consume approved version records, not research artifacts. No budget remainder or paid-hour equivalent until appropriate definitions and source rights clear. This adapter does not close LI-002 or LI-005.
+
+## Accepted checkpoint — 2026-11-27
+
+Operator approved PR #13; independently repeated 13/13 adapter tests and archived real CP01 report replay against exact tested Git blobs, both passed. Merge verified on main at `b5af5cfbbd438eb6363d724819ccdcccdf072c40` with expected parents. Pages run 46027307728 succeeded. No production input approved. See [LI-005B national budget evidence](../research/LI-005B-NATIONAL-BUDGET-EVIDENCE.md).

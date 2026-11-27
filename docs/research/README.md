@@ -1,6 +1,6 @@
 # Research — source feasibility
 
-**Status: LI-002 discovery accepted; first hosted HBS evidence accepted, division-matrix implementation accepted; manual retrieval pending, 2026-11-24.** Neither source metadata nor exploratory availability authorizes a production chart.
+**Status: LI-002 discovery accepted; first hosted HBS evidence accepted, division-matrix implementation accepted; manual retrieval pending; national budget evidence in review, 2026-11-27.** Neither source metadata nor exploratory availability authorizes a production chart.
 
 ## Research artifacts
 
@@ -14,6 +14,7 @@
 | [HBS_PROBE_AUTOMATION.md](HBS_PROBE_AUTOMATION.md) | Manual GitHub Actions probe, artifact interpretation, local tests and research handoff |
 | [HBS_2020_RUN_002_EVIDENCE.md](HBS_2020_RUN_002_EVIDENCE.md) | First successful hosted run, selected research values, checksum and outstanding gates |
 | [HBS_DIVISION_MATRIX.md](HBS_DIVISION_MATRIX.md) | Expanded 12-division research probe, income/time source leads and compatibility gates |
+| [LI-005B-NATIONAL-BUDGET-EVIDENCE.md](LI-005B-NATIONAL-BUDGET-EVIDENCE.md) | Official national budget evidence, revisions, rights and compatibility limits |
 | [LEGAL_RESEARCH.md](LEGAL_RESEARCH.md) | Source reuse, privacy/cookie and hosting/legal readiness research |
 
 ## Integrity rules

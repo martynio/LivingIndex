@@ -275,3 +275,19 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Evidence:** 13/13 local unit tests, both exact tested Git blob identities checked; archived real CP01 ZIP/JSON digests matched prior evidence and two-record replay PASS. No numeric output committed. Legacy coordinates not independently checked; API body not retained.
 - **Result:** scoped local validation PASS; actual matrix replay, existing HBS rerun, browser checks and production approval NOT RUN/open. No full LI-005 gate closure.
 - **Checkpoint:** review PR pending operator acceptance. Next: manual matrix dispatch, official source reconciliation, compatible income/expense/hour definitions, source-specific reuse and review before production schema/calculations.
+
+## LI-LOG-0024 — Accept LI-005A research adapter
+
+- **Date:** 2026-11-27.
+- **Contributor:** operator explicitly approved PR #13 and continuation to LI-005B; ChatGPT (GPT-6.2, local Python, GitHub connector) verified and merged.
+- **Evidence:** 13/13 adapter tests rerun locally; exact script/test Git blobs a8f13e701a8a6ea62d033d1528c6c20207e01594 / da2bc4c8bdd39fd85421e6a6e0a0893d0e8d9176 matched approved PR. Archived ZIP and JSON digest verified via actual replay, two research records, production_eligible=false. Manifest empty, 13 scoped paths and append-only log verified.
+- **Result:** [PR #13](https://github.com/martynio/LivingIndex/pull/13) merged; main `b5af5cfbbd438eb6363d724819ccdcccdf072c40`, both expected parents verified. Pages run 46027307728 completed success. No data release approval.
+
+## LI-LOG-0025 — LI-005B national budget evidence and compatibility
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (GPT-6.2, official web sources, local network probe and GitHub connector), operator authorized LI-005B.
+- **Baseline:** `b5af5cfbbd438eb6363d724819ccdcccdf072c40`; no manual HBS division matrix run found in the inspected Actions list. Local curl DNS failure and web API/official cell access unavailable; no assertion of source outage or absent observations.
+- **Scope/evidence:** [national budget evidence](../research/LI-005B-NATIONAL-BUDGET-EVIDENCE.md) records GUS 2020 published per-person monthly income, total and consumption expenditure; CBS 86272NED final 2020 household income and expenditure, predecessor and category table corroboration; 2022 preliminary/2023 final expenditure distinction. Reviewed Eurostat HBS methodology, reuse notices and earnings/time definitions. National panels proposed separately from PPS and modelled worker scenarios; no numerical aggregation or direct cross-country comparison.
+- **Result:** PARTIAL research evidence. No actual matrix artifact, complete national definitions, production rights or matched paid-hour denominator established. GUS full reuse conditions page not consistently accessible. No new code, source registry/catalogue changes, raw/curated observations or tests required for documentation-only diff. Previous regression rerun limited to LI-005A tests.
+- **Checkpoint:** review branch `research/li-005b-national-budget-feasibility`; operator review pending. Next: manual HBS matrix dispatch and validate report; separately review national candidates and scenario eligibility before calculations. No production approval or stage closure.
