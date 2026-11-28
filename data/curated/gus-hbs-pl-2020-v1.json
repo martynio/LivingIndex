@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version_id": "gus-hbs-pl-2020-v1",
-  "kind": "descriptive_preview_candidate",
+  "kind": "descriptive_preview",
   "source_id": "LI-SRC-016",
   "publisher": "GUS (Statistics Poland)",
   "dataset": "Household budget survey in 2020",
@@ -61,9 +61,10 @@
   "review": {
     "source_cells": "verified_publisher_text",
     "scope": "descriptive_display_only",
-    "operator": "pending_PR_acceptance",
+    "operator": "accepted_2026-11-28_PR18",
     "calculation_eligible": false,
-    "production_eligible": false
+    "production_eligible": false,
+    "accepted_scope": "descriptive_display_only"
   },
   "limitations": [
     "Income includes noncash components. Total expenditure includes consumption expenditure; do not add the two.",
