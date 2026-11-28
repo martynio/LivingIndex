@@ -378,3 +378,10 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Baseline:** main `09e3f4e2a23f57d8ea349cd87eff7f285dd915f6`; existing [PR #18](https://github.com/martynio/LivingIndex/pull/18) head `37d689ae7b26cb31b756e459cb644c3936917ee6`, 19 scoped paths, two commits ahead and zero behind. No duplicate branch or PR.
 - **Evidence:** [LI-006C independent continuation review](../project/LI-006C-GUS-DESCRIPTIVE-PREVIEW.md); three precise table-text values round to the existing published headline values. 3/3 rounded matches, 15/15 localized values, 45/45 cards, accepted CBS snapshot and two engine blobs unchanged; empty calculation inventory, false eligibility flags, append-only previous log. Screenshot requests timed out; local git connectivity failed DNS. No XLSX/raw-byte verification, full shell/browser or arithmetic/HBS rerun.
 - **Decision:** retain the existing rounded v1 candidate and record the more precise table values as additional research evidence only. No data/UI/engine changes, no merge. Await explicit operator acceptance of PR #18 for descriptive display only; LI-006D remains next.
+
+## LI-LOG-0037 — Operator accepts GUS descriptive preview
+
+- **Date:** 2026-11-28.
+- **Contributor:** operator explicit decision; ChatGPT (GPT-6.2, GitHub connector).
+- **Baseline:** reviewed PR #18 head `a1e9fb5e6fa00c0854694a205890f6fd14e276d1`; main `09e3f4e2a23f57d8ea349cd87eff7f285dd915f6`.
+- **Decision:** accept gus-hbs-pl-2020-v1 for descriptive display only, preserve observations, source definitions and limitations; update manifest, snapshot, registry, localized labels and status/roadmap/handoff. No production calculation approval. Merge authorized; LI-006D review next.
