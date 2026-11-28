@@ -1,6 +1,6 @@
 # LI-002 — Source registry (research candidates)
 
-**Checked:** 2026-11-27 · **Status:** 16 registered sources; complete HBS research matrix, one accepted CBS version and one GUS descriptive candidate, not production calculation approval.
+**Checked:** 2026-11-27 · **Status:** 16 registered sources; complete HBS research matrix, two accepted descriptive versions (CBS and GUS), not production calculation approval.
 
 The canonical machine-readable index is [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.csv). IDs are stable references, not ranking scores. Every registered claim is backed by the linked **primary publisher** webpage. The complete 24-cell HBS research matrix is documented; one verified descriptive CBS version accepted by operator. No production calculation dataset is approved.
 
@@ -23,7 +23,7 @@ The canonical machine-readable index is [SOURCE_REGISTRY.csv](SOURCE_REGISTRY.cs
 | LI-SRC-013 | Eurostat | Actual weekly work hours | [lfsa_ewhais](https://ec.europa.eu/eurostat/web/products-datasets/-/lfsa_ewhais), main job | Candidate, not annual paid hours |
 | LI-SRC-014 | Eurostat | Equivalised income | [ilc_di03](https://ec.europa.eu/eurostat/databrowser/product/view/ILC_DI03?category=livcon.ilc.ilc_ip.ilc_di&lang=en), age and sex | Candidate, not household total |
 | LI-SRC-015 | CBS (NL) | Household disposable income and consumption | [86272NED](https://www.cbs.nl/nl-nl/cijfers/detail/86272NED), two final 2020 means corroborated in official CBS tables | Descriptive preview accepted only; no cash or cross-country calculations |
-| LI-SRC-016 | GUS (PL) | Household income and expenditure | [2020 annual report](https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5486/9/15/1/budzety_gospodarstw_domowych_w_2020.pdf), p.18, three rounded headline values corroborated by May 2021 release | Descriptive candidate only; no cash or cross-country calculations |
+| LI-SRC-016 | GUS (PL) | Household income and expenditure | [2020 annual report](https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5486/9/15/1/budzety_gospodarstw_domowych_w_2020.pdf), p.18, three rounded headline values corroborated by May 2021 release | Descriptive preview accepted only; no cash or cross-country calculations |
 
 ## Publisher sources
 
@@ -77,4 +77,4 @@ See [complete HBS matrix](HBS_2020_MATRIX_RUN_EVIDENCE.md) and [LI-006B CBS revi
 
 ## LI-006C update
 
-See [GUS descriptive candidate](../project/LI-006C-GUS-DESCRIPTIVE-PREVIEW.md). CBS descriptive version accepted; GUS 2020 three published values pending operator acceptance. No production calculation inputs.
+See [GUS descriptive candidate](../project/LI-006C-GUS-DESCRIPTIVE-PREVIEW.md). CBS descriptive version accepted; GUS 2020 three published values accepted for descriptive display only on 2026-11-28. No production calculation inputs.
