@@ -50,6 +50,16 @@ def static():
                 assert x.get_text(strip=True)==(x['data-value'] if lang=='en' else x['data-value'].replace('.',',')),rel
             assert {x['href'] for x in section.select('a[href]')}=={snapshot['source_url'],snapshot['rights']['notice_url']},rel
             assert 'CC BY 4.0' in section.get_text() and not section.find_all(['input','script','form']),rel
+            gus=json.loads((data_dir/'gus-hbs-pl-2020-v1.json').read_text(encoding='utf-8'))
+            assert gus['review']['calculation_eligible'] is False and gus['review']['production_eligible'] is False,rel
+            assert any(x['version_id']==gus['version_id'] and x['calculation_eligible'] is False for x in inventory['descriptive_preview_candidates']+inventory['descriptive_preview_versions']),rel
+            section=s.select_one('#gus-descriptive-preview')
+            assert section and section['data-version']==gus['version_id'] and section['data-country']=='PL' and section['data-year']=='2020',rel
+            displayed=section.select('[data-observation]')
+            assert len(displayed)==3 and {x['data-observation']:x['data-value'] for x in displayed}=={o['measure']:o['value'] for o in gus['observations']},rel
+            assert all(x.get_text(strip=True)==x['data-value'] for x in displayed),rel
+            assert {x['href'] for x in section.select('a[href]')}=={gus['source_url'],gus['rights']['notice_url'],gus['corroboration'][0]['url']},rel
+            assert not section.find_all(['input','script','form']),rel
             assert all(not x.get('value') for x in s.find_all('input')),rel
             assert all(x.get('id') and s.find('label',attrs={'for':x['id']}) for x in s.find_all(['input','select'])),rel
         else:
@@ -61,6 +71,9 @@ def static():
             if h.startswith('#'): assert s.find(id=h[1:]); continue
             if route=='sources' and h in {r['source_url'] for r in SOURCE_ROWS.values()}:
                 assert a.name=='a' and a.find_parent(attrs={'data-source-id':True}) and 'noreferrer' in a.get('rel',[]),rel
+                continue
+            if route=='dashboard' and h in ("https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5486/9/15/1/budzety_gospodarstw_domowych_w_2020.pdf","https://stat.gov.pl/download/gfx/portalinformacyjny/pl/defaultaktualnosci/5486/3/20/1/sytuacja_gospodarstw_domowych_w_2020_w_swietle_wynikow_badania_budzetow_gospodarstw_domowych.pdf","https://bip.stat.gov.pl/kontakt/ponowne-wykorzystywanie-informacji-sektora-publicznego/?pdf=1"):
+                assert a.name=='a' and a.find_parent(id='gus-descriptive-preview') and 'noreferrer' in a.get('rel',[]),rel
                 continue
             if route=='dashboard' and h in ("https://www.cbs.nl/nl-nl/cijfers/detail/86272NED","https://www.cbs.nl/en-gb/over-ons/website/copyright"):
                 assert a.name=='a' and a.find_parent(id='cbs-descriptive-preview') and 'noreferrer' in a.get('rel',[]),rel

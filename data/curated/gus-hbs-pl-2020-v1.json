@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "version_id": "gus-hbs-pl-2020-v1",
+  "kind": "descriptive_preview",
+  "source_id": "LI-SRC-016",
+  "publisher": "GUS (Statistics Poland)",
+  "dataset": "Household budget survey in 2020",
+  "title": "Budżety gospodarstw domowych w 2020 r.",
+  "source_url": "https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5486/9/15/1/budzety_gospodarstw_domowych_w_2020.pdf",
+  "source_published": "2021-08",
+  "source_locator": "Printed page 18, Synteza — Wstęp, opening paragraph; published whole-PLN summary",
+  "accessed_date": "2026-11-27",
+  "country": "PL",
+  "year": 2020,
+  "period": "month",
+  "basis": "person",
+  "population": "Household budget survey, households total, per household member",
+  "statistic": "mean",
+  "unit": "PLN_per_person_per_month",
+  "source_status": "published_annual_report_summary",
+  "observations": [
+    {
+      "measure": "disposable_income",
+      "source_label": "Przeciętny miesięczny dochód rozporządzalny na osobę",
+      "value": "1919"
+    },
+    {
+      "measure": "total_expenditure",
+      "source_label": "Przeciętne miesięczne wydatki na 1 osobę",
+      "value": "1210"
+    },
+    {
+      "measure": "consumption_expenditure",
+      "source_label": "Wydatki na towary i usługi konsumpcyjne",
+      "value": "1165"
+    }
+  ],
+  "corroboration": [
+    {
+      "dataset": "GUS information release, 31 May 2021",
+      "url": "https://stat.gov.pl/download/gfx/portalinformacyjny/pl/defaultaktualnosci/5486/3/20/1/sytuacja_gospodarstw_domowych_w_2020_w_swietle_wynikow_badania_budzetow_gospodarstw_domowych.pdf",
+      "locator": "Printed page 1, opening paragraphs",
+      "measures": [
+        "disposable_income",
+        "total_expenditure",
+        "consumption_expenditure"
+      ]
+    }
+  ],
+  "rights": {
+    "regime": "GUS public-sector-information reuse terms; not CC BY 4.0",
+    "notice_url": "https://bip.stat.gov.pl/kontakt/ponowne-wykorzystywanie-informacji-sektora-publicznego/?pdf=1",
+    "review": "Official BIP PDF text checked 2026-11-27. Indicate source, creation/acquisition dates and processing; GUS disclaims responsibility for processing results. Annual report requests source attribution. No restricted data or images reused."
+  },
+  "provenance": {
+    "method": "Manual transcription of three whole-PLN headline values from official annual-report extracted PDF text; corroborated against earlier official information release, not independent survey",
+    "raw_bytes_retained": false,
+    "visual_pdf_check": "NOT RUN successfully: screenshot fetch timed out",
+    "transformations": "No numerical transformation; preserve published whole-PLN precision; translated labels and presentation only"
+  },
+  "review": {
+    "source_cells": "verified_publisher_text",
+    "scope": "descriptive_display_only",
+    "operator": "accepted_2026-11-28_PR18",
+    "calculation_eligible": false,
+    "production_eligible": false,
+    "accepted_scope": "descriptive_display_only"
+  },
+  "limitations": [
+    "Income includes noncash components. Total expenditure includes consumption expenditure; do not add the two.",
+    "Different currency, period and population basis from CBS; no direct PL/NL comparison, cash balance, savings or paid-hour result.",
+    "2020 pandemic and switch from direct to telephone interviews; rounded aggregate means, not individual budget."
+  ]
+}

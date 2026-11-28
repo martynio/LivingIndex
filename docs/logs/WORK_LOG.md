@@ -357,3 +357,31 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Decision:** operator explicitly approved PR #17 and version cbs-86272ned-nl-2020-v1 for descriptive display only. Accepted candidate head `a399f0bf856cf06291580d3cc9b77c6d9d12b9a1`.
 - **Change:** record decision in snapshot and manifest, source registry and all three localized dashboard/catalogue statuses. Both original values and source definitions unchanged; approved_versions remains empty; calculation_eligible and production_eligible false. No final release approval.
 - **Next:** merge reviewed PR #17 and verify main; LI-006C GUS review authorized.
+
+## LI-LOG-0034 — Verify CBS acceptance merge
+
+- **Date:** 2026-11-27.
+- **Result:** PR #17 merged at `09e3f4e2a23f57d8ea349cd87eff7f285dd915f6`, both parents verified; approved CBS descriptive version preserved, values unchanged, no calculation approval. Pages run 46045974842 success. Acceptance decision in LI-LOG-0033.
+
+## LI-LOG-0035 — Stage GUS descriptive candidate
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (GPT-6.2, official publisher web review, GitHub connector); operator authorized LI-006C.
+- **Baseline:** `09e3f4e2a23f57d8ea349cd87eff7f285dd915f6`; branch `feat/li-006c-gus-descriptive-preview`; implementation `7dcd12b5396bb546a8c87e0140dab9d763b39981`.
+- **Evidence:** [GUS contract](../project/LI-006C-GUS-DESCRIPTIVE-PREVIEW.md); three rounded values corroborated in two official GUS publications, public-sector reuse notice reviewed via PDF text; screenshots timed out, raw bytes not retained. 15/15 localized CBS/GUS values, 45/45 registry cards/links/context checked, no calculation integration. Initial syntax error corrected before commit. Full browser/Python shell and arithmetic/HBS reruns NOT RUN.
+- **Result:** review ready, GUS candidate only; CBS accepted; no production calculation input or deployment of candidate. Next operator acceptance and LI-006D PPS review.
+
+## LI-LOG-0036 — Recheck GUS candidate after interrupted session
+
+- **Date:** 2026-11-27.
+- **Contributor:** ChatGPT (GPT-6.2; publisher web review, GitHub connector, JavaScript assertions, local git connectivity probe).
+- **Baseline:** main `09e3f4e2a23f57d8ea349cd87eff7f285dd915f6`; existing [PR #18](https://github.com/martynio/LivingIndex/pull/18) head `37d689ae7b26cb31b756e459cb644c3936917ee6`, 19 scoped paths, two commits ahead and zero behind. No duplicate branch or PR.
+- **Evidence:** [LI-006C independent continuation review](../project/LI-006C-GUS-DESCRIPTIVE-PREVIEW.md); three precise table-text values round to the existing published headline values. 3/3 rounded matches, 15/15 localized values, 45/45 cards, accepted CBS snapshot and two engine blobs unchanged; empty calculation inventory, false eligibility flags, append-only previous log. Screenshot requests timed out; local git connectivity failed DNS. No XLSX/raw-byte verification, full shell/browser or arithmetic/HBS rerun.
+- **Decision:** retain the existing rounded v1 candidate and record the more precise table values as additional research evidence only. No data/UI/engine changes, no merge. Await explicit operator acceptance of PR #18 for descriptive display only; LI-006D remains next.
+
+## LI-LOG-0037 — Operator accepts GUS descriptive preview
+
+- **Date:** 2026-11-28.
+- **Contributor:** operator explicit decision; ChatGPT (GPT-6.2, GitHub connector).
+- **Baseline:** reviewed PR #18 head `a1e9fb5e6fa00c0854694a205890f6fd14e276d1`; main `09e3f4e2a23f57d8ea349cd87eff7f285dd915f6`.
+- **Decision:** accept gus-hbs-pl-2020-v1 for descriptive display only, preserve observations, source definitions and limitations; update manifest, snapshot, registry, localized labels and status/roadmap/handoff. No production calculation approval. Merge authorized; LI-006D review next.
