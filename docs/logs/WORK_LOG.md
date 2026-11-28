@@ -385,3 +385,11 @@ See [WORK_PROTOCOL](../governance/WORK_PROTOCOL.md) for required fields; see [HA
 - **Contributor:** operator explicit decision; ChatGPT (GPT-6.2, GitHub connector).
 - **Baseline:** reviewed PR #18 head `a1e9fb5e6fa00c0854694a205890f6fd14e276d1`; main `09e3f4e2a23f57d8ea349cd87eff7f285dd915f6`.
 - **Decision:** accept gus-hbs-pl-2020-v1 for descriptive display only, preserve observations, source definitions and limitations; update manifest, snapshot, registry, localized labels and status/roadmap/handoff. No production calculation approval. Merge authorized; LI-006D review next.
+
+## LI-LOG-0038 — Verify GUS acceptance merge and start LI-006D
+
+- **Date:** 2026-11-28.
+- **Contributor:** operator authorized PR #18 merge and LI-006D; ChatGPT (GPT-6.2, GitHub connector, web review, local Python).
+- **Checkpoint:** PR #18 merged at `ceaad5367c8f5b5c02f2cc516041973dfe2c2f71`, main identical. Acceptance metadata, nine localized GUS values and empty calculation inventory checked before merge; Pages status not independently confirmed.
+- **Evidence:** [LI-006D PPS review](../project/LI-006D-PPS-ADMISSION-REVIEW.md); original archive and report hashes independently matched, 24/24 coordinate/flag checks, 4/4 secondary NL matches; metadata and reuse reviewed. Independent official JSON-stat/SDMX/TSV cells inaccessible; local Git DNS failure. No full regression/browser rerun.
+- **Result:** descriptive GUS acceptance checkpoint PASS; PPS official reconciliation OPEN. Draft review only, no numerical promotion or UI change. Next operator supplies official raw TSV/SDMX export for comparison.
