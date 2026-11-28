@@ -4,16 +4,7 @@
   "approved_versions": [],
   "status": "NO_APPROVED_CALCULATION_DATASETS",
   "note": "Descriptive preview versions are not production calculation inputs. approved_versions remains reserved for separately approved calculation datasets.",
-  "descriptive_preview_candidates": [
-    {
-      "version_id": "gus-hbs-pl-2020-v1",
-      "path": "gus-hbs-pl-2020-v1.json",
-      "source_id": "LI-SRC-016",
-      "status": "REVIEW_READY_OPERATOR_APPROVAL_REQUIRED",
-      "allowed_use": "descriptive_preview_only",
-      "calculation_eligible": false
-    }
-  ],
+  "descriptive_preview_candidates": [],
   "descriptive_preview_versions": [
     {
       "version_id": "cbs-86272ned-nl-2020-v1",
@@ -23,6 +14,15 @@
       "allowed_use": "descriptive_preview_only",
       "calculation_eligible": false,
       "operator_decision": "2026-11-27 PR #17"
+    },
+    {
+      "version_id": "gus-hbs-pl-2020-v1",
+      "path": "gus-hbs-pl-2020-v1.json",
+      "source_id": "LI-SRC-016",
+      "status": "ACCEPTED_DESCRIPTIVE_PREVIEW",
+      "allowed_use": "descriptive_preview_only",
+      "calculation_eligible": false,
+      "operator_decision": "2026-11-28 PR #18"
     }
   ]
 }
